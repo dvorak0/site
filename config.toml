@@ -1,5 +1,4 @@
 baseURL = 'https://yangzhenfei.com'
 languageCode = 'en-us'
-title = 'Site'
+title = 'Seeking Complexity'
 theme = 'smol'
-canonifyURLs = true
