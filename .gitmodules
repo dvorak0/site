@@ -1,0 +1,3 @@
+[submodule "themes/smol"]
+	path = themes/smol
+	url = git@github.com:dvorak0/smol.git
