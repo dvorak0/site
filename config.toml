@@ -2,3 +2,15 @@ baseURL = 'https://yangzhenfei.com'
 languageCode = 'en-us'
 title = 'Seeking Complexity'
 theme = 'smol'
+
+[menu]
+  [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 1
+  [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 2
