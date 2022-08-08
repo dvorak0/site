@@ -1,5 +1,5 @@
 baseURL = 'https://yangzhenfei.com'
-languageCode = 'en-us'
+languageCode = 'zh-cn'
 title = 'Seeking Complexity'
 theme = 'smol'
 
