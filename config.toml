@@ -2,6 +2,7 @@ baseURL = 'https://yangzhenfei.com'
 languageCode = 'zh-cn'
 title = 'Seeking Complexity'
 theme = 'smol'
+refLinksErrorLevel = "WARNING"
 
 [menu]
   [[menu.main]]
