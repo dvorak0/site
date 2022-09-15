@@ -21,8 +21,20 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Setup Font-spider
+        run: npm install font-spider -g
+
       - name: Build
         run: hugo --minify
+
+      - name: Build Font
+        run: font-spider public/*.html public/posts/*.html public/posts/*/*.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
