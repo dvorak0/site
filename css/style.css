@@ -25,6 +25,19 @@
 }
 
 @font-face {
+  font-family: 'myserif_en';
+  src: url('../font/Optima-Regular.eot');
+  src:
+    url('../font/Optima-Regular.eot?#font-spider') format('embedded-opentype'),
+    url('../font/Optima-Regular.woff2') format('woff2'),
+    url('../font/Optima-Regular.woff') format('woff'),
+    url('../font/Optima-Regular.ttf') format('truetype'),
+    url('../font/Optima-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'mymono';
   src: url('../font/JetBrainsMono-Regular.eot');
   src:
@@ -50,7 +63,7 @@ figcaption {color: #888; font: 12px/1.5 monospace; text-align: center;}
 figure {margin: auto}
 img {display: block; max-width: 100%; height: auto; margin: auto}
 blockquote { 
-  font-family: myserif;
+  font-family: myserif_en, myserif;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 50px;
