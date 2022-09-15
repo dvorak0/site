@@ -5,6 +5,9 @@ theme = 'smol'
 refLinksErrorLevel = "WARNING"
 relativeURLs = true
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [menu]
   [[menu.main]]
         identifier = "posts"
