@@ -1,8 +1,18 @@
-<!doctype html><html lang=zh-cn><head><meta name=generator content="Hugo 0.104.1"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><style type=text/css>body{font-family:monospace}</style><title>Seeking Complexity</title><link rel=stylesheet href=../../css/style.css><link rel=alternate type=application/rss+xml href=../../index.xml title="Seeking Complexity"></head><body><header><script>var _hmt=_hmt||[];(function(){var e,t=document.createElement("script");t.src="https://hm.baidu.com/hm.js?41e2e31fcfdb815d942715d44866f9fc",e=document.getElementsByTagName("script")[0],e.parentNode.insertBefore(t,e)})()</script>========================<br>== <a href>Seeking Complexity</a> ==<br>========================<div style=float:right></div><br><p><nav><a href=../../><b>Start</b></a>.
+<!doctype html><html lang=zh-cn><head><meta name=generator content="Hugo 0.105.0"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><style type=text/css>body{font-family:monospace}</style><title>Seeking Complexity</title><link rel=stylesheet href=../../css/style.css><link rel=alternate type=application/rss+xml href=../../index.xml title="Seeking Complexity"></head><body><header><script>var _hmt=_hmt||[];(function(){var e,t=document.createElement("script");t.src="https://hm.baidu.com/hm.js?41e2e31fcfdb815d942715d44866f9fc",e=document.getElementsByTagName("script")[0],e.parentNode.insertBefore(t,e)})()</script>========================<br>== <a href>Seeking Complexity</a> ==<br>========================<div style=float:right></div><br><p><nav><a href=../../><b>Start</b></a>.
 <a href=../../posts/><b>Posts</b></a>.
-<a href=../../about/><b>About</b></a>.</nav></p></header><main><article><h1><a href=../../posts/20220224200513-sicp/>SICP</a></h1><b><time>2022-02-24 20:05:00</time></b>
-<a href=../../tags/public>PUBLIC</a><div>immutability有很多好处，但是对于程序运行效率有很大的影响。 而有一种方法是给语言加上惰性求值的特性，这样就可以编码出来一个“无限长的随机数序列”，但是只有我们访问的时候，才会去真正的生成。
-这个想法也呼应了为什么nix作为配置工具，被设计成函数式语言。</div></article><article><h1><a href=../../posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/>复合思考</a></h1><b><time>2022-02-22 10:12:00</time></b>
+<a href=../../about/><b>About</b></a>.</nav></p></header><main><article><h1><a href=../../posts/20220224200513-sicp/>从SICP说起：重新学习（函数式）编程</a></h1><b><time>2022-02-24 20:05:00</time></b>
+<a href=../../tags/public>PUBLIC</a><div>从SICP说起 2021年开始，我把主力编辑器换成了 emacs ， 折腾的过程里，似懂非懂地写了一部分 elisp ， 也自然地想起了在本科的时候一直藏在收藏夹里的书：SICP。
+惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。 没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。
+对函数式编程的第一印象 看完SICP前几章之后，印象最深刻的特性是：immutable，stateless，pure function。
+这些特性加起来，可以总结出FP的审美倾向：我想要一个static computational graph（directed acyclic graph），而不是一个dynamic state machine（looply graph）。
+结合平常写代码的经历，追踪state的变化和理解不同时刻同一个state的含义，确实消耗了大量心智带宽。
+而自然的，我们常用的冯诺依曼是以存储（也就是状态）为核心的，如何高效地在OOP machine上实现FP呢？
+这就需要一些technique的辅助：lazy evaluation/garbage collection：
+lazy evaluation把所有可能的状态都提前声明，例如一个state在所有timestamp的record，但是只有真正需要的时候才触发计算。 （这里有点像一个把戏，state其实还是在变化的，但是每次变化我们都认为他是一个新的state_i，以此来保证state_0永远是state_0）。 garbage collection：提前声明的变量那么多，自然有许多是用不到了，那就需要GC去释放资源了。 一些参考 比我总结的更好的FP特性：doing it the fp way in cpp
+Immutable variables
+In functional programming, you can’t modify a variable after it’s been initialized. You just can’t. You can create new variables but you can’t modify existing variables.
+No side effects
+<a href=../../posts/20220224200513-sicp/>Read more...</a></div></article><article><h1><a href=../../posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/>复合思考</a></h1><b><time>2022-02-22 10:12:00</time></b>
 <a href=../../tags/public>PUBLIC</a><div>forty-year_career中提到：
 One section in Coders at Work, I believe it was Joe Armstrong’s, described spending four hours a week thinking about the future. Each week, their thinking would compound on the previous week’s, letting them see further and further into the future. Over time they were dreaming far beyond their contemporaries.
 类似的想法还有：
@@ -39,7 +49,11 @@ we love UI: TUI & GUI emacs是一个完整的GUI程序，所以能享受众多GU
 应用 一个理论，被定义属于科学的一个条件：可能被“未来的”某种现象打败。
 补充 证伪的定义主要是为了区分方便，本身是个中立，正如科学在一众宗教的关系。
 不需要区分高下。
-存在许多无法证伪的理论，也可以给我们许多启发，或者至少是一种难得的寄托吧。</div></article><article><h1><a href=../../posts/20211213123003-double_entry_bookkeeping/>double-entry_bookkeeping</a></h1><b><time>2021-12-13 12:30:00</time></b>
+存在许多无法证伪的理论，也可以给我们许多启发，或者至少是一种难得的寄托吧。
+另外一个有趣的事实，这个规则更强调对物理世界的研究，按这个规定，数学也被排除在科学圈外。
+启发 寻找错误，是比证明一个道理，更加有力的。
+我们有时候会以为自己懂了，以为证明出来了。而反例则往往能破除这种幻想。
+难怪，对话体，作为一种常见的知识记录问题，在上古时候特别流行：论语、金刚经、理想国。</div></article><article><h1><a href=../../posts/20211213123003-double_entry_bookkeeping/>double-entry_bookkeeping</a></h1><b><time>2021-12-13 12:30:00</time></b>
 <a href=../../tags/public>PUBLIC</a><div>double entry</div></article><article><h1><a href=../../posts/20211202120838-declarative_programming/>declarative_programming</a></h1><b><time>2021-12-02 12:08:00</time></b>
 <a href=../../tags/public>PUBLIC</a><div>declarative imperative Lisp C TensorFlow PyTorth Nix Apt/Pacman SQL ORM CMake/Makefile build.sh Halide OpenMP/thread pool Symbolic Diff (symforce) Automatic Diff (JAX/Jet)</div></article><div><a href=../../>Previous Page</a>
 2 of 3
