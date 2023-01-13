@@ -31,9 +31,9 @@ draft = false
 {{< figure src="/ox-hugo/2023-01-09_11-48-05_screenshot.png" >}}
 
 -   现有的范式是足够达到MTBF的，这里用到两个曲线：
-    -   模型capacity：算法precision-recall vs data size，对应tesla强调的[software 2.0]({{< relref "20230106110015-concept.md#software-2-dot-0" >}})
+    -   模型capacity：算法precision-recall vs data size，对应tesla强调的[software 2.0]({{< relref "20230106110015-concepts.md#software-2-dot-0" >}})
         经过tesla的教育，大家都理解了。
-    -   冗余度（逆融合）是什么，也可以说是融合更早发生和更晚发生分别有什么优缺点，对应mobileye强调的[True Redundency]({{< relref "20230106110015-concept.md#true-redundency" >}})
+    -   冗余度（逆融合）是什么，也可以说是融合更早发生和更晚发生分别有什么优缺点，对应mobileye强调的[True Redundency]({{< relref "20230106110015-concepts.md#true-redundency" >}})
 
         更早地融合，系统更黑盒，更容易有更好的成绩，有利于拟合。
         更晚地融合，更平行，更独立，有利于测试。
