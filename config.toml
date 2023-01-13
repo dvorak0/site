@@ -1,4 +1,4 @@
-#baseURL = 'https://yangzhenfei.com'
+baseURL = 'https://yangzhenfei.com'
 languageCode = 'zh-cn'
 title = 'Seeking Complexity'
 theme = 'smol'
