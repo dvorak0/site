@@ -6,9 +6,7 @@ refLinksErrorLevel = "WARNING"
 relativeURLs = true
 
 [sitemap]
-  changefreq = 'monthly'
   filename = 'sitemap.xml'
-  priority = 0.5
 
 [markup.goldmark.renderer]
   unsafe= true
