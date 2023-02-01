@@ -7,4 +7,4 @@ draft = false
 
 [double entry](</ox-hugo/xiaoyuzhoufm.com-15Double Entry用复式记账法理解21世纪的游戏规则.pdf>)
 
-\\[income + expenses + equaty + liability = 0\\]
+\\[income + expenses + equity + liability = 0\\]
