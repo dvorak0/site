@@ -7,7 +7,7 @@
 与编辑器交互的command，也就是在解释器里执行新的function。</p><p>lisp本身是一个很有魅力的语言，简洁的语法，彻底的functional programming支持。
 可以在经典教材<a href=/posts/20220224200513-sicp/>SICP</a>中看到很全面的介绍。也可以参考Paul Graham的<a href=http://www.paulgraham.com/lisp.html>lisp 洗脑文</a>。</p><p>另外一点值得一提的是这个lisp解释器的server-client结构。
 vim和其他的编译器也有类似的结构，但是可能是因为语言的原因，使用的并不多。
-而在emacs中就经常见到一些很灵活的操作，一个我比较喜欢的例子是：<a href=https://colekillian.com/posts/org-pomodoro-and-polybar/>org-pomodoro&polybar</a>
+而在emacs中就经常见到一些很灵活的操作，一个我比较喜欢的例子是：<a href=https://colekillian.com/posts/org-pomodoro-and-polybar/>org-pomodoro&amp;polybar</a>
 写一个shell script，通过 <code>emacsclient -e</code> 执行在emacs配置中声明的一个函数，获取一个文本输出。再把这个shell script放到桌面管理器status line的callback里，做到在桌面显示emacs内部的信息。</p><h2 id=org-mode>org-mode</h2><p>org-mode直接看起来是一个类似markdown的东西，一种标记语法。</p><figure><img src=/ox-hugo/2022-04-12_13-24-42_screenshot.png></figure><p>使它看起来独特的原因有下面几个点：</p><h3 id=structure-editing>structure editing</h3><p>包括报表在内，有一套比较方便的键盘操作：交换章节、提高/降低层级、加TODO</p><figure><img src=/ox-hugo/2022-04-12_14-05-01_output.gif></figure><h3 id=literal-programming>literal programming</h3><p>类似jupyter，可以边写代码，边写文档，文档中可以直接包含代码的输出。</p><pre tabindex=0><code class=language-dot data-lang=dot>digraph G {
 splines=false;
   subgraph cluster_1 {
