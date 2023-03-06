@@ -5,12 +5,13 @@ tags = ["PUBLIC"]
 draft = false
 +++
 
-| declarative              | imperative               |
-|--------------------------|--------------------------|
-| Lisp                     | C                        |
-| TensorFlow               | PyTorth                  |
-| Nix                      | Apt/Pacman               |
-| SQL                      | ORM                      |
-| CMake/Makefile           | build.sh                 |
-| Halide                   | OpenMP/thread pool       |
-| Symbolic Diff (symforce) | Automatic Diff (JAX/Jet) |
+| declarative              | imperative                                              |
+|--------------------------|---------------------------------------------------------|
+| Lisp                     | C                                                       |
+| TensorFlow               | PyTorth                                                 |
+| Nix                      | Apt/Pacman                                              |
+| SQL                      | ORM                                                     |
+| CMake/Makefile           | build.sh                                                |
+| Halide                   | OpenMP/thread pool                                      |
+| Symbolic Diff (symforce) | Automatic Diff (JAX/Jet)                                |
+| DP for loop              | DP recursive with cache (used in transformer inference) |
