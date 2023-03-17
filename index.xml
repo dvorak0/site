@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Seeking Complexity</title><link>https://yangzhenfei.com/</link><description>Recent content on Seeking Complexity</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 09 Jan 2023 10:43:00 +0800</lastBuildDate><atom:link href="https://yangzhenfei.com/index.xml" rel="self" type="application/rss+xml"/><item><title>make the world a better place</title><link>https://yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>哈哈，本来挺好的一个愿景，现在变味了。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Seeking Complexity</title><link>https://yangzhenfei.com/</link><description>Recent content on Seeking Complexity</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Mar 2023 16:15:00 +0800</lastBuildDate><atom:link href="https://yangzhenfei.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Universal Caching, lessons learned from NX</title><link>https://yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>TLDR purity + cache = efficient (thus practical) FP
+ChatGPT的一个小趣事 SICP之后，不断的又看到一些FP思想在实际工作中的使用。
+近来ChatGPT大火，其中transformer结构中的self-attention有明显的recursive结构。
+如何高效地推理？
+我的第一反应是，给每个token维护一个 dp[][] ，然后去做状态转移。。。
+这样的问题是把这个细节暴露地太多在 GPT() 外面。
+参考Transformer Inference Arithmetic，实际使用的实现是为QKV准备一个KV cache。
+自然结果是等价的，只是写法不同。但是在我看来，这两种写法再次区分了两种范式：declarative_programming。
+incremental build/test. and run? 增量编译几乎是所有build工具的标配。包括test结果，常见被cache起来。
+但是很少见run也被增量起来（如果是我孤陋寡闻了，请纠正我）。
+是没有用吗？我觉的不是的。工程中常见地用DAG结构去组织不同计算节点。 如果头部的节点变化（不管是binary还是输入）自然需要几乎重跑整个computation graph。
+但是如果只是修改尾部节点呢：
+可以手动指定，从某个节点开始，输入改成之前某次完整graph的结果。 相当于重新为这个节点准备一个graph。
+允许incremental run！
+这里propose一种实现incremental run的方案。
+NX做了什么 NX提供了一种wrapper，为command或者script，提供KV cache，以支持incremental run。
+key如何计算？
+NX认为key可以被总结为：
+By default, the computation hash for - say - nx test remixapp includes:
+All the source files of remixapp and its dependencies Relevant global configuration Versions of external dependencies Runtime values provisioned by the user such as the version of Node CLI Command flags value如何计算：console print + directories</description></item><item><title>make the world a better place</title><link>https://yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>哈哈，本来挺好的一个愿景，现在变味了。
 平常难免屈从于各种各样的短期目标，过程中也感觉到，做的东西是挺好的，但是又不够好。
 还是希望有一个更大更香的胡萝卜在前面。
 现在大概有三类大饼，让我真心向往。
@@ -85,7 +104,7 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 这种字，并感到困惑。
 推荐一个文章：治理fontconfig
 几个有趣的事实： 一个unicode码的显示，不仅跟字体有个，也跟locale有关。 同一个「字」，在不同的语言中显示不同。 中文引号 字体网站的实践 选好Sans Serif Mono的字体 Sans: 霞鹜文楷 Serif: zh,方正清刻本悦宋 en, Optima Mono: JetBrains Mono 用字蛛分析静态网页，抽取出需要的字符 部署</description></item><item><title>anki</title><link>https://yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20220415110303-anki/</guid><description>ankijazz</description></item><item><title>elon_musk_5_step</title><link>https://yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>5-step
-MAKE THE REQUIREMENTS LESS DUMB TRY AND DELETE PART OF THE PROCESS SIMPLIFY OR OPTIMIZE ACCELERATE CYCLE TIME AUTOMATE</description></item><item><title>nix</title><link>https://yangzhenfei.com/posts/20220301101256-nix/</link><pubDate>Tue, 01 Mar 2022 10:12:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20220301101256-nix/</guid><description/></item><item><title>从SICP说起：重新学习（函数式）编程</title><link>https://yangzhenfei.com/posts/20220224200513-sicp/</link><pubDate>Thu, 24 Feb 2022 20:05:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20220224200513-sicp/</guid><description>从SICP说起 2021年开始，我把主力编辑器换成了 emacs ， 折腾的过程里，似懂非懂地写了一部分 elisp ， 也自然地想起了在本科的时候一直藏在收藏夹里的书：SICP。
+MAKE THE REQUIREMENTS LESS DUMB TRY AND DELETE PART OF THE PROCESS SIMPLIFY OR OPTIMIZE ACCELERATE CYCLE TIME AUTOMATE 2023 investor day特别提到</description></item><item><title>nix</title><link>https://yangzhenfei.com/posts/20220301101256-nix/</link><pubDate>Tue, 01 Mar 2022 10:12:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20220301101256-nix/</guid><description/></item><item><title>从SICP说起：重新学习（函数式）编程</title><link>https://yangzhenfei.com/posts/20220224200513-sicp/</link><pubDate>Thu, 24 Feb 2022 20:05:00 +0800</pubDate><guid>https://yangzhenfei.com/posts/20220224200513-sicp/</guid><description>从SICP说起 2021年开始，我把主力编辑器换成了 emacs ， 折腾的过程里，似懂非懂地写了一部分 elisp ， 也自然地想起了在本科的时候一直藏在收藏夹里的书：SICP。
 惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。 没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。
 对函数式编程的第一印象 看完SICP前几章之后，印象最深刻的特性是：immutable，stateless，pure function。
 这些特性加起来，可以总结出FP的审美倾向：我想要一个static computational graph（directed acyclic graph），而不是一个dynamic state machine（looply graph）。
