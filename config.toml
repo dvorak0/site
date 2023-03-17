@@ -5,6 +5,7 @@ theme = 'smol'
 refLinksErrorLevel = "WARNING"
 relativeURLs = true
 
+
 [sitemap]
   filename = 'sitemap.xml'
 
