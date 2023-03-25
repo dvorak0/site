@@ -8,6 +8,10 @@ relativeURLs = true
 [sitemap]
   filename = 'sitemap.xml'
 
+[[module.mounts]]
+  source = 'static/ox-hugo'
+  target = 'assets/ox-hugo'
+
 [markup.goldmark.renderer]
   unsafe= true
 
