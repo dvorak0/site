@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PUBLIC on Seeking Complexity</title><link>https://www.yangzhenfei.com/tags/public/</link><description>Recent content in PUBLIC on Seeking Complexity</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Mar 2023 16:15:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/tags/public/index.xml" rel="self" type="application/rss+xml"/><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>purity + cache = efficient (thus practical) FP&lt;/p></description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure>&lt;img src="../../ox-hugo/2023-01-09_10-44-41_screenshot.png"/>
+&lt;p>purity + cache = efficient (thus practical) FP&lt;/p></description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure>
+&lt;img src="../../ox-hugo/2023-01-09_10-44-41_screenshot_hu93acec1b7e4499b726fc95761cff38b0_187819_720x415_resize_q75_h2_box_3.webp">
 &lt;/figure>
 &lt;p>哈哈，本来挺好的一个愿景，现在变味了。&lt;/p>
 &lt;p>平常难免屈从于各种各样的短期目标，过程中也感觉到，做的东西是挺好的，但是又不够好。&lt;/p>
@@ -54,7 +55,8 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 &lt;p>2021年开始，我把主力编辑器换成了 &lt;code>emacs&lt;/code> ，
 折腾的过程里，似懂非懂地写了一部分 &lt;code>elisp&lt;/code> ，
 也自然地想起了在本科的时候一直藏在收藏夹里的书：&lt;a href="https://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs">SICP&lt;/a>。&lt;/p>
-&lt;figure>&lt;img src="../../ox-hugo/2022-11-02_16-30-11_screenshot.png"/>
+&lt;figure>
+&lt;img src="../../ox-hugo/2022-11-02_16-30-11_screenshot_hu0565c8fc1291b24833f20f23897f2e6c_190139_400x579_resize_q75_h2_box_3.webp">
 &lt;/figure>
 &lt;p>惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。
 没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。&lt;/p></description></item><item><title>复合思考</title><link>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</link><pubDate>Tue, 22 Feb 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</guid><description>&lt;p>&lt;a href="">forty-year_career&lt;/a>中提到：&lt;/p>
