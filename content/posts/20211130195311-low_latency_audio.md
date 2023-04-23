@@ -8,3 +8,4 @@ draft = false
 -   [jacktrip](https://jacktrip.github.io/jacktrip/)
 -   [farplay](https://farplay.io/)
 -   [jamulus](https://jamulus.io/)
+-   [sonobus](https://sonobus.net/)
