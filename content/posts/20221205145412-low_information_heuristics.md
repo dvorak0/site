@@ -17,7 +17,7 @@ draft = false
 
 这一点是有争议的：
 
--   一方面，大家觉的first principle是对的
+-   一方面，大家觉得first principle是对的
 -   一方面，假设你有一个新的解决自动驾驶的方案，又会想，如果这样可行，tesla为什么不这么做。
 
 在这个具体的例子面前，又要回忆起inductive（类比）和deductive（推演）的对称性。
