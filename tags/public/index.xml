@@ -49,7 +49,10 @@ https://wayve.ai/press/wayve-to-scale-deep-learning-for-autonomous-vehicles-with
 &lt;p>人和人的心理机制如此的类似，我们的感受也是有章可循，我们的痛苦也不是那么独一无二。&lt;/p></description></item><item><title>《黑客与画家》</title><link>https://www.yangzhenfei.com/posts/20220913115753-%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</link><pubDate>Tue, 13 Sep 2022 11:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220913115753-%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>一个太久在我列表里的书。&lt;/p>
 &lt;p>主要是paul graham的&lt;a href="http://www.paulgraham.com/articles.html">Essays&lt;/a>博客集（依旧在更新），主要讲述从自己视角和经历出发的对世界的评论：&lt;/p>
-&lt;p>简单来说就是用实际的创业行动来对抗既有规律里的荒谬之处。&lt;/p></description></item><item><title>nimby</title><link>https://www.yangzhenfei.com/posts/20220628105351-nimby/</link><pubDate>Tue, 28 Jun 2022 10:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220628105351-nimby/</guid><description>邻避效应</description></item><item><title>GTD</title><link>https://www.yangzhenfei.com/posts/20220527110715-gtd/</link><pubDate>Fri, 27 May 2022 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220527110715-gtd/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
+&lt;p>简单来说就是用实际的创业行动来对抗既有规律里的荒谬之处。&lt;/p></description></item><item><title>死亡行军</title><link>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</link><pubDate>Fri, 08 Jul 2022 16:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</guid><description>&lt;figure>
+&lt;img src="../../ox-hugo/2022-07-08_16-57-30_screenshot_hu123cbe7597003b0fea4c191c192b6efe_270849_406x500_resize_q75_h2_box_3.webp">
+&lt;/figure>
+&lt;p>一种不算罕见的悲剧现象：当项目还没有实际失败，但是已经事实上失败的时候，大家首先想到的是如何保命。&lt;/p></description></item><item><title>nimby</title><link>https://www.yangzhenfei.com/posts/20220628105351-nimby/</link><pubDate>Tue, 28 Jun 2022 10:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220628105351-nimby/</guid><description>邻避效应</description></item><item><title>GTD</title><link>https://www.yangzhenfei.com/posts/20220527110715-gtd/</link><pubDate>Fri, 27 May 2022 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220527110715-gtd/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;ul>
 &lt;li>2min可以搞定的事情，不要进待办系统，马上做&lt;/li>
 &lt;li>写下来&lt;a href="../../posts/20220510210940-write_it_down/">write it down&lt;/a>, &lt;a href="../../posts/20220209192754-emacs/">using org-mode&lt;/a>&lt;/li>
@@ -70,7 +73,7 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 门关
 这种字，并感到困惑。
 推荐一个文章：治理fontconfig
-几个有趣的事实： 一个unicode码的显示，不仅跟字体有个，也跟locale有关。 同一个「字」，在不同的语言中显示不同。 中文引号 字体网站的实践 选好Sans Serif Mono的字体 Sans: 霞鹜文楷 Serif: zh,方正清刻本悦宋 en, Optima Mono: JetBrains Mono 用字蛛分析静态网页，抽取出需要的字符 部署</description></item><item><title>anki</title><link>https://www.yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220415110303-anki/</guid><description>ankijazz</description></item><item><title>elon_musk_5_step</title><link>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>&lt;p>&lt;a href="../../ox-hugo/evannex.com-Elon%20Musk%20reveals%20his%205-step%20engineering%20protocol.pdf">5-step&lt;/a>:&lt;/p>
+几个有趣的事实： 一个unicode码的显示，不仅跟字体有个，也跟locale有关。 同一个「字」，在不同的语言中显示不同。 中文引号 字体网站的实践 选好Sans Serif Mono的字体 Sans: 霞鹜文楷 Serif: zh,方正清刻本悦宋 en, Optima Mono: JetBrains Mono 用字蛛分析静态网页，抽取出需要的字符 部署</description></item><item><title>anki</title><link>https://www.yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220415110303-anki/</guid><description/></item><item><title>elon_musk_5_step</title><link>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>&lt;p>&lt;a href="../../ox-hugo/evannex.com-Elon%20Musk%20reveals%20his%205-step%20engineering%20protocol.pdf">5-step&lt;/a>:&lt;/p>
 &lt;ol>
 &lt;li>MAKE THE REQUIREMENTS LESS DUMB&lt;/li>
 &lt;li>TRY AND DELETE PART OF THE PROCESS&lt;/li>
@@ -119,7 +122,4 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 一次学习， 终生 受用 不与非开放平台绑定 越用越熟练，上限高，不会浪费时间投入 我的工具 emacs/org-mode/org-roam nix/nixos/home-manager anki activitywatch woboq beancount: double-entry_bookkeeping i3wm+i3block bitwarden chromeos: linux+android rime：跨平台词库同步 双拼 Feedly/RSSHub manim fontconfig low_latency_audio intro nixos i3 emacs lsp rust c++ python javascript</description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>如果尝试把这个网状的事实，用树结构去记录，并且线性地讲述出来。&lt;/p>
 &lt;p>并遭遇挫败。&lt;/p>
-&lt;p>可以试试用网的结构开始。&lt;/p></description></item><item><title>死亡行军</title><link>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</guid><description>&lt;figure>
-&lt;img src="../../ox-hugo/2022-07-08_16-57-30_screenshot_hu123cbe7597003b0fea4c191c192b6efe_270849_406x500_resize_q75_h2_box_3.webp">
-&lt;/figure>
-&lt;p>一种不算罕见的悲剧现象：当项目还没有实际失败，但是已经事实上失败的时候，大家首先想到的是如何保命。&lt;/p></description></item></channel></rss>
+&lt;p>可以试试用网的结构开始。&lt;/p></description></item></channel></rss>
