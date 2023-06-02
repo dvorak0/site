@@ -15,3 +15,4 @@ draft = false
 | Halide                   | OpenMP/thread pool                                      |
 | Symbolic Diff (symforce) | Automatic Diff (JAX/Jet)                                |
 | DP for loop              | DP recursive with cache (used in transformer inference) |
+| Eigen Lazy Evaluation    | OpenBLAS                                                |
