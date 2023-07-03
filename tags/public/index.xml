@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PUBLIC on Seeking Complexity</title><link>https://www.yangzhenfei.com/tags/public/</link><description>Recent content in PUBLIC on Seeking Complexity</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 31 May 2023 14:18:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/tags/public/index.xml" rel="self" type="application/rss+xml"/><item><title>system_1_and_system_2</title><link>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</link><pubDate>Wed, 31 May 2023 14:18:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</guid><description>一种把思维能力二分类的说法：直觉式的反应，和深思熟虑的反应。
-很多地方可以类比。</description></item><item><title>chain_of_thoughts</title><link>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</link><pubDate>Thu, 18 May 2023 15:55:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</guid><description>（再一次蹭LLM的热点）
-在过去的工作经验里面学到的可能是最重要的一点，就是不断追问。
-很简单的一个操作，只要反复做下去，就会有不可思议的效果。
-最后会得到一个很富有争议性的结论，可能是对的，可能是错的。
-但是都比很多白话要有价值：
-本来想举一些例子，写下来发现，确实太有“争议性”了。
-怂了。</description></item><item><title>重新认识geohot</title><link>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</link><pubDate>Wed, 10 May 2023 16:52:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</guid><description>&lt;p>George Hotz。可能为人熟知的标签是：&lt;/p>
+很多地方可以类比。</description></item><item><title>chain_of_thoughts</title><link>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</link><pubDate>Thu, 18 May 2023 15:55:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</guid><description>&lt;p>（再一次蹭LLM的热点）&lt;/p>
+&lt;p>在过去的工作经验里面学到的可能是最重要的一点，就是不断追问。&lt;/p>
+&lt;p>很简单的一个操作，只要反复做下去，就会有不可思议的效果。&lt;/p>
+&lt;p>最后会得到一个很富有争议性的结论，可能是对的，可能是错的。&lt;/p>
+&lt;p>但是都比很多白话要有价值。&lt;/p></description></item><item><title>重新认识geohot</title><link>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</link><pubDate>Wed, 10 May 2023 16:52:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</guid><description>&lt;p>George Hotz。可能为人熟知的标签是：&lt;/p>
 &lt;ol>
 &lt;li>破解小子，iOS和PS 3的越狱&lt;/li>
 &lt;li>用乐视/一加手机做自动驾驶&lt;/li>
 &lt;/ol>
 &lt;p>所以是个玩票的？&lt;/p>
-&lt;p>看看他实际做过什么，在过去的5年里。&lt;/p></description></item><item><title>intelligential honest</title><link>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</link><pubDate>Mon, 17 Apr 2023 10:42:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</guid><description/></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>如果GPT可以生成下一个字符，他大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。
-如果vision GPT可以预测下一张图，他大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。
-后来才从OpenAI的blog看到，这种概念被称为Analysis by Synthesis1，是早期做generative model的人的精神支柱。
-这才是Wayve号称的world model2。
-怪不得微软要投资3。
-原来能解决自动驾驶的公司是OpenAI。
-今日震惊。
-https://openai.com/research/image-gpt&amp;#160;&amp;#x21a9;&amp;#xfe0e;
-https://wayve.ai/thinking/learning-a-world-model-and-a-driving-policy/&amp;#160;&amp;#x21a9;&amp;#xfe0e;
-https://wayve.ai/press/wayve-to-scale-deep-learning-for-autonomous-vehicles-with-microsoft-supercomputing-technologies/&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description></item><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
+&lt;p>看看他实际做过什么，在过去的5年里。&lt;/p></description></item><item><title>intelligential honest</title><link>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</link><pubDate>Mon, 17 Apr 2023 10:42:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</guid><description/></item><item><title>分体键盘</title><link>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</link><pubDate>Thu, 23 Mar 2023 10:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</guid><description>&lt;p>一直对键盘不是特别在意，之前有个有线版的HHKB已经多年不用了。&lt;/p>
+&lt;p>一直在用笔记本键盘，最近意识到手放在身前的小区域内，会破坏背部肌肉拉伸的平衡，不利于颈椎区域休息，所以考虑分体键盘。&lt;/p>
+&lt;p>这里记录一些流行的layout。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，他大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
+&lt;p>如果vision GPT可以预测下一张图，他大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>purity + cache = efficient (thus practical) FP&lt;/p></description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure>
 &lt;img src="../../ox-hugo/2023-01-09_10-44-41_screenshot_hu93acec1b7e4499b726fc95761cff38b0_187819_720x415_resize_q75_h2_box_3.webp">
 &lt;/figure>
@@ -63,17 +55,13 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 &lt;li>帮助自己确定是不是真的想清楚了。会经常出现，在脑海中的一个强烈的自认为清晰的想法，写下来其实很单薄和简单，甚至是错误的。&lt;/li>
 &lt;li>&lt;a href="../../posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/">复合思考&lt;/a>，大脑的cache太小，需要一个机制把历史的思考拿出来，以此为起点，继续思考，以做到较为深入的探索。&lt;/li>
 &lt;li>impact，把你的想法告诉更多人。一方面帮助别人更加了解自己（不确定是不是一定是好处，&lt;a href="../../posts/20220215203814-public_or_private/">public_or_private&lt;/a>），一方面增加与别人联系的机会。&lt;/li>
-&lt;/ol></description></item><item><title>fontconfig</title><link>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</link><pubDate>Mon, 18 Apr 2022 17:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</guid><description>先做一个浏览器测试 遍角次亮采之门 默认
-遍角次亮采之门关 中文(大陆) lang=zh-cn
-遍角次亮采之门关 中文(台湾) lang=zh-tw
-遍角次亮采之门关 中文(香港) lang=zh-hk
-遍角次亮采之门关 日文 lang=ja
-遍角次亮采之门关 韩文 lang=ko
-如果你经常在你在浏览器（有时也出现在PDF）里看到
-门关
-这种字，并感到困惑。
-推荐一个文章：治理fontconfig
-几个有趣的事实： 一个unicode码的显示，不仅跟字体有个，也跟locale有关。 同一个「字」，在不同的语言中显示不同。 中文引号 字体网站的实践 选好Sans Serif Mono的字体 Sans: 霞鹜文楷 Serif: zh,方正清刻本悦宋 en, Optima Mono: JetBrains Mono 用字蛛分析静态网页，抽取出需要的字符 部署</description></item><item><title>anki</title><link>https://www.yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220415110303-anki/</guid><description/></item><item><title>elon_musk_5_step</title><link>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>&lt;p>&lt;a href="../../ox-hugo/evannex.com-Elon%20Musk%20reveals%20his%205-step%20engineering%20protocol.pdf">5-step&lt;/a>:&lt;/p>
+&lt;/ol></description></item><item><title>《置身事内》</title><link>https://www.yangzhenfei.com/posts/20220421145844-%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85/</link><pubDate>Thu, 21 Apr 2022 15:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220421145844-%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85/</guid><description>&lt;p>对于完全不了解这部分内容的我来说，这本书是个很好的科普。&lt;/p>
+&lt;h2 id="tl-dr">TL;DR&lt;/h2>
+&lt;p>谁不希望让生产资料 &lt;strong>有效&lt;/strong> 流动呢。&lt;/p>
+&lt;p>但是如何在尊重现状的情况下做到这一点，就太复杂了。&lt;/p>
+&lt;p>所谓试错，则一定要把错误摊在桌面上去分析。&lt;/p></description></item><item><title>fontconfig</title><link>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</link><pubDate>Mon, 18 Apr 2022 17:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</guid><description>&lt;p>如果你经常在你在浏览器（有时也出现在PDF）里看到&lt;/p>
+&lt;p style="font-family:sans" lang="ja">门关&lt;/p>
+&lt;p>这种字，并感到困惑。&lt;/p></description></item><item><title>anki</title><link>https://www.yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220415110303-anki/</guid><description/></item><item><title>elon_musk_5_step</title><link>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>&lt;p>&lt;a href="../../ox-hugo/evannex.com-Elon%20Musk%20reveals%20his%205-step%20engineering%20protocol.pdf">5-step&lt;/a>:&lt;/p>
 &lt;ol>
 &lt;li>MAKE THE REQUIREMENTS LESS DUMB&lt;/li>
 &lt;li>TRY AND DELETE PART OF THE PROCESS&lt;/li>
@@ -91,7 +79,7 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。&lt;/p></description></item><item><title>复合思考</title><link>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</link><pubDate>Tue, 22 Feb 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</guid><description>&lt;p>&lt;a href="">forty-year_career&lt;/a>中提到：&lt;/p>
 &lt;blockquote>
 &lt;p>One section in Coders at Work, I believe it was Joe Armstrong’s, described spending four hours a week thinking about the future. Each week, their thinking would compound on the previous week’s, letting them see further and further into the future. Over time they were dreaming far beyond their contemporaries.&lt;/p>
-&lt;/blockquote></description></item><item><title>public_or_private</title><link>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</link><pubDate>Tue, 15 Feb 2022 20:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</guid><description>https://news.ycombinator.com/item?id=34223288</description></item><item><title>guide of emacs for vim user</title><link>https://www.yangzhenfei.com/posts/20220209192754-emacs/</link><pubDate>Wed, 09 Feb 2022 19:27:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220209192754-emacs/</guid><description>&lt;h2 id="目标用户">目标用户&lt;/h2>
+&lt;/blockquote></description></item><item><title>public_or_private</title><link>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</link><pubDate>Tue, 15 Feb 2022 20:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</guid><description>https://news.ycombinator.com/item?id=34223288 悲观者常常正确，乐观者往往成功</description></item><item><title>guide of emacs for vim user</title><link>https://www.yangzhenfei.com/posts/20220209192754-emacs/</link><pubDate>Wed, 09 Feb 2022 19:27:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220209192754-emacs/</guid><description>&lt;h2 id="目标用户">目标用户&lt;/h2>
 &lt;h3 id="singularity追求者">singularity追求者&lt;/h3>
 &lt;h2 id="vim">vim&lt;/h2>
 &lt;p>vim的modal editing模式非常受欢迎，尤其是以hjkl motion movement为核心的keybinding。&lt;/p>
