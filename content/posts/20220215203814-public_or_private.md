@@ -6,3 +6,4 @@ draft = false
 +++
 
 <https://news.ycombinator.com/item?id=34223288>
+悲观者常常正确，乐观者往往成功

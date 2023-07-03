@@ -9,6 +9,8 @@ draft = false
 
 如果vision GPT可以预测下一张图，他大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。
 
+<!--more-->
+
 后来才从OpenAI的blog看到，这种概念被称为Analysis by Synthesis[^fn:1]，是早期做generative model的人的精神支柱。
 
 这才是Wayve号称的[world model](https://wayve.ai/thinking/learning-a-world-model-and-a-driving-policy/)[^fn:2]。
