@@ -9,3 +9,5 @@ draft = false
 -   [farplay](https://farplay.io/)
 -   [jamulus](https://jamulus.io/)
 -   [sonobus](https://sonobus.net/)
+
+测量[Audio Latency - Some Measurements](https://www.cs.cmu.edu/~rbd/blog/latency-blog22sep2020.html)
