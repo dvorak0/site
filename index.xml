@@ -114,9 +114,16 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 &lt;p>而鲜为人知的是，我们现有的audio driver stack（因为历史原因）往往设置了不小的buffer去缓冲网络问题。&lt;/p>
 &lt;p>因为这个历史问题，现有的端到端音频的延迟在500ms到1s这个级别。&lt;/p>
 &lt;p>如果在考虑WiFi（网络包更波动）、蓝牙耳机（再加100ms）的因素，我们是在一个&amp;gt;1s的延迟下，妄图在线上做到线下富有特色的small talk。&lt;/p>
-&lt;p>幸运的是，疫情不只推广了zoom，也推广了低延迟音频，感谢执着于在疫情期间也要排练乐团的人们。&lt;/p></description></item><item><title>tools</title><link>https://www.yangzhenfei.com/posts/20211115121752-tools/</link><pubDate>Mon, 15 Nov 2021 12:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115121752-tools/</guid><description>singularity 这里记录能帮助尽快接近singularity的方法。
-一般来说，学习曲线陡峭~=能形成累计优势：
-一次学习， 终生 受用 不与非开放平台绑定 越用越熟练，上限高，不会浪费时间投入 我的工具 emacs/org-mode/org-roam nix/nixos/home-manager anki activitywatch woboq beancount: double-entry_bookkeeping i3wm+i3block bitwarden chromeos: linux+android rime：跨平台词库同步 双拼 Feedly/RSSHub manim fontconfig low_latency_audio intro nixos i3 emacs lsp rust c++ python javascript</description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
+&lt;p>幸运的是，疫情不只推广了zoom，也推广了低延迟音频，感谢执着于在疫情期间也要排练乐团的人们。&lt;/p></description></item><item><title>tools</title><link>https://www.yangzhenfei.com/posts/20211115121752-tools/</link><pubDate>Mon, 15 Nov 2021 12:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115121752-tools/</guid><description>&lt;p>这里记录能帮助尽快接近singularity的方法。&lt;/p>
+&lt;p>一般来说，学习曲线陡峭~=能形成累计优势：&lt;/p>
+&lt;ul>
+&lt;li>一次学习， &lt;strong>终生&lt;/strong> 受用
+&lt;ul>
+&lt;li>不与非开放平台绑定&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>越用越熟练，上限高，不会浪费时间投入&lt;/li>
+&lt;/ul></description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>如果尝试把这个网状的事实，用树结构去记录，并且线性地讲述出来。&lt;/p>
 &lt;p>并遭遇挫败。&lt;/p>
 &lt;p>可以试试用网的结构开始。&lt;/p></description></item></channel></rss>
