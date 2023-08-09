@@ -2,14 +2,16 @@
 &lt;p>关于投资的论断经常和一些似是而非的词关联在一起：“认知”，“心性”，“信仰”。&lt;/p>
 &lt;p>如果在某个瞬间觉得这种描述过于主观，有没有solid一些的理论可以用？&lt;/p>
 &lt;p>我意识到写这一篇内容的目的，是最符合我做这个site的初心的。&lt;/p>
-&lt;p>那就是，如果你也关心这个内容，请务必&lt;a href="">let&amp;rsquo;s_have_a_talk&lt;/a>。&lt;/p></description></item><item><title>how first principles thinking fails</title><link>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</link><pubDate>Fri, 09 Jun 2023 10:36:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</guid><description>当我被elon musk的first principle折服的时候，我也意识到，first principle的对面一定也是有价值的。
-这类似inductive和deductive的区别。
-在历史上，也存在相当长的一段时间是以归纳作为最根本的真理的一段时期。
-归纳问题的经典哲学处理，意味着为归纳推理找到了正当理由，是苏格兰人大卫·休谟完成的。休谟突出了依据重复经验的模式的我们的日常推理，而不是演绎上的有效论证。比如我们相信面包对我们有益，因为过去一直如此，但是面包将来对我们有害至少是可以想象的。
-休谟说对所有事情都坚持可靠的演绎上的正当有理的人会饿死的。替代激进怀疑论关于所有事物的无所作为，他提倡基于常识的实用怀疑论，这里接受归纳法是必然的。
-今天才看到一个针对两个思考模型进行对比的文章。
-文章的出发点是：如何平衡first principle和pattern matching。
-how first principles thinking fails</description></item><item><title>system_1_and_system_2</title><link>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</link><pubDate>Wed, 31 May 2023 14:18:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</guid><description>一种把思维能力二分类的说法：直觉式的反应，和深思熟虑的反应。
+&lt;p>那就是，如果你也关心这个内容，请务必&lt;a href="">let&amp;rsquo;s_have_a_talk&lt;/a>。&lt;/p></description></item><item><title>how first principles thinking fails</title><link>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</link><pubDate>Fri, 09 Jun 2023 10:36:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</guid><description>&lt;p>当我被elon musk的first principle折服的时候，我也意识到，first principle的对面一定也是有价值的。&lt;/p>
+&lt;p>这类似inductive和deductive的区别。&lt;/p>
+&lt;p>在历史上，也存在相当长的一段时间是以归纳作为最根本的真理的一段时期。&lt;/p>
+&lt;blockquote>
+&lt;p>归纳问题的经典哲学处理，意味着为归纳推理找到了正当理由，是苏格兰人大卫·休谟完成的。休谟突出了依据重复经验的模式的我们的日常推理，而不是演绎上的有效论证。比如我们相信面包对我们有益，因为过去一直如此，但是面包将来对我们有害至少是可以想象的。&lt;/p>
+&lt;p>休谟说对所有事情都坚持可靠的演绎上的正当有理的人会饿死的。替代激进怀疑论关于所有事物的无所作为，他提倡基于常识的实用怀疑论，这里接受归纳法是必然的。&lt;/p>
+&lt;/blockquote>
+&lt;p>今天才看到一个针对两个思考模型进行对比的文章。&lt;/p>
+&lt;p>文章的出发点是：如何平衡first principle和pattern matching。&lt;/p>
+&lt;p>&lt;a href="../ox-hugo/commoncog.com-How%20First%20Principles%20Thinking%20Fails.pdf">how first principles thinking fails&lt;/a>&lt;/p></description></item><item><title>system_1_and_system_2</title><link>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</link><pubDate>Wed, 31 May 2023 14:18:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</guid><description>一种把思维能力二分类的说法：直觉式的反应，和深思熟虑的反应。
 很多地方可以类比。</description></item><item><title>chain_of_thoughts</title><link>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</link><pubDate>Thu, 18 May 2023 15:55:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</guid><description>&lt;p>（再一次蹭LLM的热点）&lt;/p>
 &lt;p>在过去的工作经验里面学到的可能是最重要的一点，就是不断追问。&lt;/p>
 &lt;p>很简单的一个操作，只要反复做下去，就会有不可思议的效果。&lt;/p>
@@ -119,7 +121,8 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 &lt;li>不是发呆，是一种刻意练习，也许要技巧的辅助，并不轻松&lt;/li>
 &lt;/ul></description></item><item><title>证伪</title><link>https://www.yangzhenfei.com/posts/20211213123539-%E8%AF%81%E4%BC%AA/</link><pubDate>Mon, 13 Dec 2021 12:35:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123539-%E8%AF%81%E4%BC%AA/</guid><description>&lt;h2 id="motivation">Motivation&lt;/h2>
 &lt;p>如果一个理论可以强大地推导出任意理论，可能反而是无意义的。&lt;/p>
-&lt;p>历史上一个参考是弗洛伊德的对梦的解释。还有被熟知的：房间里有一头无法被任何方法探测的大象。&lt;/p></description></item><item><title>double-entry_bookkeeping</title><link>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</link><pubDate>Mon, 13 Dec 2021 12:30:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</guid><description>&lt;p>\[income + expenses + equity + liability = 0\]&lt;/p></description></item><item><title>declarative_programming</title><link>https://www.yangzhenfei.com/posts/20211202120838-declarative_programming/</link><pubDate>Thu, 02 Dec 2021 12:08:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211202120838-declarative_programming/</guid><description> declarative imperative Lisp C TensorFlow PyTorth Nix Apt/Pacman SQL ORM CMake/Makefile build.sh Halide OpenMP/thread pool Symbolic Diff (symforce) Automatic Diff (JAX/Jet) DP for loop DP recursive with cache (used in transformer inference) Eigen Lazy Evaluation OpenBLAS</description></item><item><title>low_latency_audio</title><link>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</link><pubDate>Tue, 30 Nov 2021 19:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</guid><description>&lt;p>当我们讨论元宇宙的时候，能不能先把线上讨论的音频延迟问题解决。。。&lt;/p>
+&lt;p>历史上一个参考是弗洛伊德的对梦的解释。还有被熟知的：房间里有一头无法被任何方法探测的大象。&lt;/p></description></item><item><title>double-entry_bookkeeping</title><link>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</link><pubDate>Mon, 13 Dec 2021 12:30:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</guid><description>&lt;p>\[income + expenses + equity + liability = 0\]&lt;/p></description></item><item><title>declarative_programming</title><link>https://www.yangzhenfei.com/posts/20211202120838-declarative_programming/</link><pubDate>Thu, 02 Dec 2021 12:08:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211202120838-declarative_programming/</guid><description>过程式和声明式的范式对比，出现在很多地方，这里罗列一些。
+declarative imperative Lisp C TensorFlow PyTorth Nix Apt/Pacman SQL ORM CMake/Makefile build.sh Halide OpenMP/thread pool Symbolic Diff (symforce) Automatic Diff (JAX/Jet) DP for loop DP recursive with cache (used in transformer inference) Eigen Lazy Evaluation OpenBLAS</description></item><item><title>low_latency_audio</title><link>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</link><pubDate>Tue, 30 Nov 2021 19:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</guid><description>&lt;p>当我们讨论元宇宙的时候，能不能先把线上讨论的音频延迟问题解决。。。&lt;/p>
 &lt;p>这个问题解决是乐观的，因为我们通常认为影响延迟的部分（真实的网络延迟，中美做到200ms并不难，但是做到100ms几乎在物理上是不可能的）在这个问题里面并不占主要部分。&lt;/p>
 &lt;p>而鲜为人知的是，我们现有的audio driver stack（因为历史原因）往往设置了不小的buffer去缓冲网络问题。&lt;/p>
 &lt;p>因为这个历史问题，现有的端到端音频的延迟在500ms到1s这个级别。&lt;/p>
