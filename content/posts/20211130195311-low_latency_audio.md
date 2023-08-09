@@ -25,3 +25,5 @@ draft = false
 -   [sonobus](https://sonobus.net/)
 
 测量[Audio Latency - Some Measurements](https://www.cs.cmu.edu/~rbd/blog/latency-blog22sep2020.html)
+
+[latency_test]({{< relref "20230510173526-latency_test.md" >}})
