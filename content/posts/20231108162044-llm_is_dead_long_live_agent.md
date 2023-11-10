@@ -5,7 +5,8 @@ tags = ["PUBLIC"]
 draft = false
 +++
 
-![](/ox-hugo/2023-11-08_16-22-44_screenshot.png)
+{{< figure src="/ox-hugo/2023-11-08_16-22-44_screenshot.png" >}}
+
 是这样吗？
 
 <!--more-->
