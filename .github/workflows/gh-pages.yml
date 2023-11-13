@@ -32,6 +32,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Add CName
+        run: touch public/CNAME && echo 'www.yangzhenfei.com' > public/CNAME
+
       - name: Build Font
         run: font-spider public/*.html public/*/*.html public/*/*/*.html
 
