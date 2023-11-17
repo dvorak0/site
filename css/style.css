@@ -9,6 +9,7 @@
     url('../font/LXGWWenKai-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -22,6 +23,7 @@
     url('../font/FZQKBYS.svg') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +37,7 @@
     url('../font/Optima-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -48,6 +51,7 @@
     url('../font/JetBrainsMono-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 
