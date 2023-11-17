@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PUBLIC on Seeking Complexity</title><link>https://www.yangzhenfei.com/tags/public/</link><description>Recent content in PUBLIC on Seeking Complexity</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 08 Nov 2023 16:20:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/tags/public/index.xml" rel="self" type="application/rss+xml"/><item><title>LLM is dead, long live agent</title><link>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</link><pubDate>Wed, 08 Nov 2023 16:20:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</guid><description>&lt;figure>
-&lt;img src="../../ox-hugo/2023-11-08_16-22-44_screenshot_hub7097e7d50373e2bed1e8fe0bca8498d_594068_1179x780_resize_q75_h2_box_3.webp" height="780" width="1179">
+&lt;img src="../../ox-hugo/2023-11-08_16-22-44_screenshot_hub7097e7d50373e2bed1e8fe0bca8498d_594068_1280x0_resize_q75_h2_box_3.webp" height="847" width="1280">
 &lt;/figure>
 &lt;p>是这样吗？&lt;/p></description></item><item><title>用打卡帮助习惯养成-Streaks</title><link>https://www.yangzhenfei.com/posts/20231023124926-%E7%94%A8%E6%89%93%E5%8D%A1%E5%B8%AE%E5%8A%A9%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/</link><pubDate>Mon, 23 Oct 2023 12:49:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231023124926-%E7%94%A8%E6%89%93%E5%8D%A1%E5%B8%AE%E5%8A%A9%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/</guid><description>&lt;p>参与了一次&lt;a href="https://www.knowyourself.cc/">knowyourself&lt;/a>组织的21天&lt;a href="../../posts/20211213123832-%E5%86%A5%E6%83%B3/">冥想&lt;/a>打卡，本来觉得应该是简单的，结果在第10天中断了。&lt;/p>
 &lt;p>实话说相当沮丧，不过也意识到，打卡确实是一个不错的习惯养成的方法。&lt;/p>
 &lt;p>找了一个不错的APP：&lt;a href="https://loophabits.org/">Loop Habit Tracker&lt;/a>。&lt;/p>
 &lt;figure>
-&lt;img src="../../ox-hugo/2023-10-23_12-53-00_screenshot_hu97959cfb0eb6b15bf3520fbed1c29886_326912_2463x1901_resize_q75_h2_box_3.webp" height="1901" width="2463">
+&lt;img src="../../ox-hugo/2023-10-23_12-53-00_screenshot_hu97959cfb0eb6b15bf3520fbed1c29886_326912_1280x0_resize_q75_h2_box_3.webp" height="988" width="1280">
 &lt;/figure></description></item><item><title>portfolio</title><link>https://www.yangzhenfei.com/posts/20230730115117-portfolio/</link><pubDate>Sun, 30 Jul 2023 11:51:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230730115117-portfolio/</guid><description>&lt;p>如果想要理解投资，应该从哪里开始？&lt;/p>
 &lt;p>关于投资的论断经常和一些似是而非的词关联在一起：“认知”，“心性”，“信仰”。&lt;/p>
 &lt;p>如果在某个瞬间觉得这种描述过于主观，有没有solid一些的理论可以用？&lt;/p>
@@ -35,7 +35,7 @@
 &lt;p>这里记录一些流行的layout。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，他大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
 &lt;p>如果vision GPT可以预测下一张图，他大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>purity + cache = efficient (thus practical) FP&lt;/p></description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure>
-&lt;img src="../../ox-hugo/2023-01-09_10-44-41_screenshot_hu93acec1b7e4499b726fc95761cff38b0_187819_720x415_resize_q75_h2_box_3.webp" height="415" width="720">
+&lt;img src="../../ox-hugo/2023-01-09_10-44-41_screenshot_hu93acec1b7e4499b726fc95761cff38b0_187819_1280x0_resize_q75_h2_box_3.webp" height="738" width="1280">
 &lt;/figure>
 &lt;p>哈哈，本来挺好的一个愿景，现在变味了。&lt;/p>
 &lt;p>平常难免屈从于各种各样的短期目标，过程中也感觉到，做的东西是挺好的，但是又不够好。&lt;/p>
@@ -66,7 +66,7 @@
 &lt;p>如果你因为某个事情没有被做到而深深的低落。&lt;/p>
 &lt;p>这件事不一定是你需要做的，甚至可能是你从没打算做的，只是在某个时候，你因为这件事没有发生而沉思。&lt;/p>
 &lt;p>这件事很可能是你的热爱所在。&lt;/p></description></item><item><title>死亡行军</title><link>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</link><pubDate>Fri, 08 Jul 2022 16:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</guid><description>&lt;figure>
-&lt;img src="../../ox-hugo/2022-07-08_16-57-30_screenshot_hu123cbe7597003b0fea4c191c192b6efe_270849_406x500_resize_q75_h2_box_3.webp" height="500" width="406">
+&lt;img src="../../ox-hugo/2022-07-08_16-57-30_screenshot_hu123cbe7597003b0fea4c191c192b6efe_270849_1280x0_resize_q75_h2_box_3.webp" height="1576" width="1280">
 &lt;/figure>
 &lt;p>一种不算罕见的悲剧现象：当项目还没有实际失败，但是已经事实上失败的时候，大家首先想到的是如何保命。&lt;/p></description></item><item><title>nimby</title><link>https://www.yangzhenfei.com/posts/20220628105351-nimby/</link><pubDate>Tue, 28 Jun 2022 10:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220628105351-nimby/</guid><description>邻避效应</description></item><item><title>GTD</title><link>https://www.yangzhenfei.com/posts/20220527110715-gtd/</link><pubDate>Fri, 27 May 2022 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220527110715-gtd/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;ul>
@@ -97,7 +97,7 @@ https://taku-y.github.io/notebook/20170919/slam_advi.html</description></item><i
 折腾的过程里，似懂非懂地写了一部分 &lt;code>elisp&lt;/code> ，
 也自然地想起了在本科的时候一直藏在收藏夹里的书：&lt;a href="https://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs">SICP&lt;/a>。&lt;/p>
 &lt;figure>
-&lt;img src="../../ox-hugo/2022-11-02_16-30-11_screenshot_hu0565c8fc1291b24833f20f23897f2e6c_190139_400x579_resize_q75_h2_box_3.webp" height="579" width="400">
+&lt;img src="../../ox-hugo/2022-11-02_16-30-11_screenshot_hu0565c8fc1291b24833f20f23897f2e6c_190139_1280x0_resize_q75_h2_box_3.webp" height="1853" width="1280">
 &lt;/figure>
 &lt;p>惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。
 没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。&lt;/p></description></item><item><title>复合思考</title><link>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</link><pubDate>Tue, 22 Feb 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</guid><description>&lt;p>&lt;a href="">forty-year_career&lt;/a>中提到：&lt;/p>
