@@ -31,4 +31,13 @@ relativeURLs = true
         name = "About"
         url = "/about/"
         weight = 3
+  [[menu.footer]]
+        name = "Github"
+        url = "https://github.com/dvorak0"
+        weight = 1
+  [[menu.footer]]
+        name = "Twitter"
+        url = "https://twitter.com/dvorak0"
+        weight = 2
+
 
