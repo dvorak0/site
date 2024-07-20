@@ -12,7 +12,7 @@ draft = false
 <!--more-->
 
 
-## 腾讯语音 {#腾讯语音}
+## 微信语音 {#微信语音}
 
 {{< figure src="/ox-hugo/2024-07-20_11-53-29_screenshot.png" >}}
 
