@@ -49,7 +49,7 @@ draft = false
 ### Mumble {#mumble}
 
 ![](/ox-hugo/2024-07-21_14-54-28_screenshot.png)
-\\[2.351-1.618=0.733\\]
+\\[2.351-1.618=0.733s\\]
 
 
 ### lltalk {#lltalk}
