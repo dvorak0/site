@@ -49,6 +49,13 @@ draft = false
 \\[2.561-2.253=0.308s\\]
 
 
+### Lark wired {#lark-wired}
+
+{{< figure src="/ox-hugo/2024-09-13_18-09-04_screenshot.png" >}}
+
+\\[6.458-6.180=0.278s\\]
+
+
 ### Mumble {#mumble}
 
 {{< figure src="/ox-hugo/2024-07-21_14-54-28_screenshot.png" >}}
