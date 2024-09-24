@@ -21,6 +21,13 @@ draft = false
 ## 测试结果 {#测试结果}
 
 
+### lltalk {#lltalk}
+
+{{< figure src="/ox-hugo/2024-07-20_11-56-44_screenshot.png" >}}
+
+\\[2.173-2.145=0.028s\\]
+
+
 ### 微信语音 {#微信语音}
 
 {{< figure src="/ox-hugo/2024-07-20_11-53-29_screenshot.png" >}}
@@ -56,15 +63,15 @@ draft = false
 \\[6.458-6.180=0.278s\\]
 
 
+### [VDO.ninja](https://vdo.ninja/) WebRTC {#vdo-dot-ninja-webrtc}
+
+{{< figure src="/ox-hugo/2024-09-24_21-39-20_screenshot.png" >}}
+
+\\[3.643-3.350 =0.293\\]
+
+
 ### Mumble {#mumble}
 
 {{< figure src="/ox-hugo/2024-07-21_14-54-28_screenshot.png" >}}
 
 \\[2.351-1.618=0.733s\\]
-
-
-### lltalk {#lltalk}
-
-{{< figure src="/ox-hugo/2024-07-20_11-56-44_screenshot.png" >}}
-
-\\[2.173-2.145=0.028s\\]
