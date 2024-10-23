@@ -233,46 +233,46 @@ mental strength是可以被锻炼的。
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">declarative&lt;/th>
- &lt;th style="text-align: left">imperative&lt;/th>
+ &lt;th>declarative&lt;/th>
+ &lt;th>imperative&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">Lisp&lt;/td>
- &lt;td style="text-align: left">C&lt;/td>
+ &lt;td>Lisp&lt;/td>
+ &lt;td>C&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">TensorFlow&lt;/td>
- &lt;td style="text-align: left">PyTorth&lt;/td>
+ &lt;td>TensorFlow&lt;/td>
+ &lt;td>PyTorth&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Nix&lt;/td>
- &lt;td style="text-align: left">Apt/Pacman&lt;/td>
+ &lt;td>Nix&lt;/td>
+ &lt;td>Apt/Pacman&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">SQL&lt;/td>
- &lt;td style="text-align: left">ORM&lt;/td>
+ &lt;td>SQL&lt;/td>
+ &lt;td>ORM&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">CMake/Makefile&lt;/td>
- &lt;td style="text-align: left">build.sh&lt;/td>
+ &lt;td>CMake/Makefile&lt;/td>
+ &lt;td>build.sh&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Halide&lt;/td>
- &lt;td style="text-align: left">OpenMP/thread pool&lt;/td>
+ &lt;td>Halide&lt;/td>
+ &lt;td>OpenMP/thread pool&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Symbolic Diff (symforce)&lt;/td>
- &lt;td style="text-align: left">Automatic Diff (JAX/Jet)&lt;/td>
+ &lt;td>Symbolic Diff (symforce)&lt;/td>
+ &lt;td>Automatic Diff (JAX/Jet)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">DP for loop&lt;/td>
- &lt;td style="text-align: left">DP recursive with cache (used in transformer inference)&lt;/td>
+ &lt;td>DP for loop&lt;/td>
+ &lt;td>DP recursive with cache (used in transformer inference)&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">Eigen Lazy Evaluation&lt;/td>
- &lt;td style="text-align: left">OpenBLAS&lt;/td>
+ &lt;td>Eigen Lazy Evaluation&lt;/td>
+ &lt;td>OpenBLAS&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>low latency audio</title><link>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</link><pubDate>Tue, 30 Nov 2021 19:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</guid><description>&lt;p>当我们讨论元宇宙的时候，能不能先把线上讨论的音频延迟问题解决。。。&lt;/p>
@@ -288,4 +288,5 @@ mental strength是可以被锻炼的。
 &lt;/ul></description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>如果尝试把这个网状的事实，用树结构去记录，并且线性地讲述出来。&lt;/p>
 &lt;p>并遭遇挫败。&lt;/p>
-&lt;p>可以试试用网的结构开始。&lt;/p></description></item></channel></rss>
+&lt;p>可以试试用网的结构开始。&lt;/p></description></item><item><title>计划经济不在了，我很想他</title><link>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;p>有⼀些复杂的多约束问题需要决策，从过去来看，过于复杂的问题由于种种原因，经常陷⼊低效的讨论。&lt;/p>
+&lt;p>最近受⼀些事情启发，发现了决策⽅法论的⼀个可能的探索⽅向：计划经济与线性规划。&lt;/p></description></item></channel></rss>
