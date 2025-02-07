@@ -75,3 +75,8 @@ draft = false
 {{< figure src="/ox-hugo/2024-07-21_14-54-28_screenshot.png" >}}
 
 \\[2.351-1.618=0.733s\\]
+
+
+### 腾讯会议 PC Wired {#腾讯会议-pc-wired}
+
+{{< figure src="/ox-hugo/2024-12-13_16-12-36_screenshot.png" >}}
