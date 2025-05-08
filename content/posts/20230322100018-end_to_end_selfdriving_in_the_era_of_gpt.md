@@ -1,7 +1,7 @@
 +++
 title = "E2E Self-Driving in the Era of GPT"
 date = 2023-03-22T10:00:00+08:00
-tags = ["PUBLIC", "DM"]
+tags = ["e2e", "PUBLIC", "DM"]
 draft = false
 +++
 

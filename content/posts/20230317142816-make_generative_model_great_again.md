@@ -1,7 +1,7 @@
 +++
 title = "make generative model great again"
 date = 2023-03-17T14:28:00+08:00
-tags = ["PUBLIC"]
+tags = ["e2e", "PUBLIC"]
 draft = false
 +++
 
