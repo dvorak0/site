@@ -4,14 +4,14 @@
 &lt;li>
 &lt;p>Internet-Scale Data&lt;/p>
 &lt;p>无监督的训练掌握 &lt;strong>常识&lt;/strong>&lt;/p>
-&lt;p>DINOv2变成de faco image encoder&lt;/p>
+&lt;p>DINOv2变成de facto image encoder&lt;/p>
 &lt;p>自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>人类示教数据&lt;/p>
 &lt;p>模仿学习的数据介绍 &lt;strong>领域知识&lt;/strong>&lt;/p>
 &lt;p>Behavior Cloning + Video Generation-based Augmentation&lt;/p>
-&lt;p>更fancy的说法是world model，或者lecun的JEPA&lt;/p>
+&lt;p>更fancy的说法是world model，或者LeCun的JEPA&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>打分数据&lt;/p>
@@ -21,5 +21,5 @@
 &lt;/li>
 &lt;/ol>
 &lt;p>看起来能统一地解决自动驾驶和机械臂的问题。&lt;/p>
-&lt;p>今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p></description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p>(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p></description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p>大模型可以解决什么问题。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，他大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
-&lt;p>如果vision GPT可以预测下一张图，他大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item></channel></rss>
+&lt;p>今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p></description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p>(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p></description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p>大模型可以解决什么问题。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，它大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
+&lt;p>如果vision GPT可以预测下一张图，它大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item></channel></rss>
