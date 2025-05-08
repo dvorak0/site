@@ -14,7 +14,7 @@ draft = false
 
 抛开“L4做不成”的观点，讨论“L4哪里做不成”的事实。
 
-mobileye认为robotaxi的质变点在于MTBF=10^7小时。那当前各家做到了什么水平呢。
+Mobileye认为Robotaxi的质变点在于MTBF=10^7小时。那当前各家做到了什么水平呢：
 
 小道消息：
 
@@ -22,9 +22,9 @@ mobileye认为robotaxi的质变点在于MTBF=10^7小时。那当前各家做到�
 -   华为阿维塔，“200公里勉勉强强”
 -   元戎 “比200公里低”
 
-各家以200-1000人不等的工程师，去克服这个问题，各个模块都尽可能地follow tesla，现在做到的水平就是这样。
+各家投入了200至1000名工程师，去克服这个问题，各个模块都尽可能地follow tesla，目前达到的水平就是如此。
 
-是不是说明这条路很难scale up（不管是测试量，还是实际的MTBF。这里要考虑，证明MTBF是10^7，一定需要比10^7高一个数量级的测试量）
+是不是说明这条路很难scale up？无论是测试量，还是实际的MTBF，都需要考虑：证明MTBF是10^7，一定需要比10^7高一个数量级的测试量。
 
 有没有绝对无法解决的问题？[why_L4_is_hard]({{< relref "20211214114010-why_l4_is_hard.md" >}})
 
@@ -48,7 +48,7 @@ GeoHot是搞怪的还是认真做的。
 
 我们对prediction/planning + control，不陌生。
 
-新的熵减来自，pre-trained large model，如何做到，以及有多大帮助（寻找scaling law）。
+新的熵减来自，pre-trained large model。关键在于如何做到，以及做到之后有多大帮助（寻找scaling law）。
 
 找pre-trained large model，约等于找数据在无标注下能利用的内在一致性是什么，比如：
 
@@ -83,7 +83,7 @@ GeoHot是搞怪的还是认真做的。
 | UniAD[^fn:3] | Shanghai AI lab | 模块化的网络结果，但是只用轨迹做监督 | 数据很少                      |
 | comma.ai     |                 | EKF(orb-slam, GPS) | 做的很早(提一嘴，live coding，11个小时搞定) |
 
-这么看，commaai才是那个做 **难且正确** 的事的人。
+这么看，comma ai才是那个做 **难且正确** 的事的人。
 
 所以这像是两个圈子被隔绝开，能准备数据的人不会大规模训练，会大规模训练的人无法做轨迹的自动化标注（也就是建图）。
 
@@ -127,7 +127,7 @@ UniAD汇报的结果：
 
 {{< figure src="/ox-hugo/2023-04-10_16-15-47_screenshot.png" >}}
 
-是不是对指标理解不对。从youtube上众多comma three的结果来看，都要比这个更自然。
+是不是对指标理解存在偏差？从youtube上众多comma three的结果来看，其表现都要比这更自然。
 
 
 ## a key {#a-key}
