@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 07 Feb 2025 17:13:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>外星人</title><link>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</link><pubDate>Fri, 07 Feb 2025 17:13:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</guid><description>&lt;p>我记得哪个盲人的电影里面说过，对于盲人来说，正常人像是不同的物种，更像是“超人”。一个印象深刻的画面。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 08 May 2025 12:14:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p>连载第三篇，有一种感觉：我又行了，哈哈。&lt;/p>
+&lt;p>一个漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p>
+&lt;p>从能吃下数据的尺度来排序：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Internet-Scale Data&lt;/p>
+&lt;p>无监督的训练掌握 &lt;strong>常识&lt;/strong>&lt;/p>
+&lt;p>DINOv2变成de faco image encoder&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>人类示教数据&lt;/p>
+&lt;p>模仿学习的数据介绍领域知识&lt;/p>
+&lt;p>Behavior Cloning + Video Generation-based Augmentation&lt;/p>
+&lt;p>更fancy的说法是world model，或者lecun的JEPA&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>打分数据&lt;/p>
+&lt;p>在两个采样中，A比B更好&lt;/p>
+&lt;p>用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL。&lt;/p>
+&lt;p>有一个机器臂的工作用了这个方法，&lt;a href="https://hil-serl.github.io/">HiL-serl&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>看起来能统一地解决自动驾驶和机械臂的问题。&lt;/p>
+&lt;p>今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p></description></item><item><title>《解构现代化：温铁军演讲录》</title><link>https://www.yangzhenfei.com/posts/20250506140144-%E8%A7%A3%E6%9E%84%E7%8E%B0%E4%BB%A3%E5%8C%96_%E6%B8%A9%E9%93%81%E5%86%9B%E6%BC%94%E8%AE%B2%E5%BD%95/</link><pubDate>Tue, 06 May 2025 14:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250506140144-%E8%A7%A3%E6%9E%84%E7%8E%B0%E4%BB%A3%E5%8C%96_%E6%B8%A9%E9%93%81%E5%86%9B%E6%BC%94%E8%AE%B2%E5%BD%95/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
+&lt;p>温铁军的视角中，农村问题等于中国的现代化问题，中国的现代化问题等于农村问题。怎么提供足够大的“发展”使得农民和农村资源有新的加入经济的角色。&lt;/p>
+&lt;p>在理想视角里面，我们可以认为现代化是一个单向的农村劳动力被城市需求转化为城市劳动力的过程，而城市劳动力是由现在的出口需求支撑的，这种支撑可以持续吗，如果不是，如何持续下去。&lt;/p>
+&lt;p>温铁军的研究展示出一种调研大于理论的求真风格，仅以农村纪实的叙事角度来看，也是很好的文本资料。&lt;/p></description></item><item><title>外星人</title><link>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</link><pubDate>Fri, 07 Feb 2025 17:13:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</guid><description>&lt;p>我记得哪个盲人的电影里面说过，对于盲人来说，正常人像是不同的物种，更像是“超人”。一个印象深刻的画面。&lt;/p>
 &lt;p>最近忽然发现，对于会下围棋的人来说，一眼看出局部的死活，棋的拙行，不也是像超人一样吗。&lt;/p>
 &lt;p>再想到，其实写代码也类似，对于外人来说，能写一个有功能的app可能也像超人吧。&lt;/p>
 &lt;p>那种，别人自然流露，自己却完全雾里云里的体验。&lt;/p>
@@ -23,7 +49,7 @@ mental strength是可以被锻炼的。
 快乐无法脱离痛苦而存在，但是痛苦可以独立存在。这不是一个很强的论据吗。&lt;/li>
 &lt;/ol>
 &lt;p>无意间，自己竟然成为一名斯多葛主义的信仰者吗。&lt;/p>
-&lt;h2 id="所以-究竟什么是斯多葛主义">所以，究竟什么是斯多葛主义&lt;/h2></description></item><item><title>AVP体验</title><link>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</link><pubDate>Wed, 31 Jan 2024 14:37:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</guid><description>&lt;p>早晨起来看到许多新闻开始介绍AVP，应该是评测解禁了，这里介绍下自己之前试用的感觉：&lt;/p></description></item><item><title>全自动驾驶的里程碑，吗？</title><link>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</link><pubDate>Tue, 30 Jan 2024 18:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</guid><description>&lt;p>2023年底（12月20日），Waymo宣布了一项进展：&lt;a href="https://waymo.com/blog/2023/12/waymo-significantly-outperforms-comparable-human-benchmarks-over-7-million/">Waymo significantly outperforms comparable human benchmarks over 7+ million miles of rider-only driving&lt;/a>。&lt;/p>
+&lt;h2 id="所以-究竟什么是斯多葛主义">所以，究竟什么是斯多葛主义&lt;/h2></description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p>(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p></description></item><item><title>AVP体验</title><link>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</link><pubDate>Wed, 31 Jan 2024 14:37:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</guid><description>&lt;p>早晨起来看到许多新闻开始介绍AVP，应该是评测解禁了，这里介绍下自己之前试用的感觉：&lt;/p></description></item><item><title>全自动驾驶的里程碑，吗？</title><link>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</link><pubDate>Tue, 30 Jan 2024 18:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</guid><description>&lt;p>2023年底（12月20日），Waymo宣布了一项进展：&lt;a href="https://waymo.com/blog/2023/12/waymo-significantly-outperforms-comparable-human-benchmarks-over-7-million/">Waymo significantly outperforms comparable human benchmarks over 7+ million miles of rider-only driving&lt;/a>。&lt;/p>
 &lt;p>但是（在我看到的范围）并没有引起太多关注。&lt;/p>
 &lt;p>我反省，似乎又被打脸了（见&lt;a href="../posts/20230109104349-make_the_world_a_better_place/">make the world a better place&lt;/a>）。&lt;/p>
 &lt;p>先简述下这个文章做了什么：&lt;/p></description></item><item><title>LLM is dead, long live agent</title><link>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</link><pubDate>Wed, 08 Nov 2023 16:20:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</guid><description>&lt;figure>
@@ -97,7 +123,7 @@ mental strength是可以被锻炼的。
 &lt;p>所以是个玩票的？&lt;/p>
 &lt;p>看看他实际做过什么，在过去的5年里。&lt;/p></description></item><item><title>intelligential honest</title><link>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</link><pubDate>Mon, 17 Apr 2023 10:42:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</guid><description>&lt;p>比如stated preference（陈述式偏好） v.s. revealed preference（揭示式偏好）&lt;/p></description></item><item><title>分体键盘</title><link>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</link><pubDate>Thu, 23 Mar 2023 10:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</guid><description>&lt;p>一直对键盘不是特别在意，之前有个有线版的HHKB已经多年不用了。&lt;/p>
 &lt;p>一直在用笔记本键盘，最近意识到手放在身前的小区域内，会破坏背部肌肉拉伸的平衡，不利于颈椎区域休息，所以考虑分体键盘。&lt;/p>
-&lt;p>这里记录一些流行的layout。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，他大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
+&lt;p>这里记录一些流行的layout。&lt;/p></description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p>大模型可以解决什么问题。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，他大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
 &lt;p>如果vision GPT可以预测下一张图，他大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>purity + cache = efficient (thus practical) FP&lt;/p></description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure>
  
@@ -281,7 +307,8 @@ mental strength是可以被锻炼的。
  &lt;/tr>
  &lt;/tbody>
 &lt;/table></description></item><item><title>low latency audio</title><link>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</link><pubDate>Tue, 30 Nov 2021 19:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</guid><description>&lt;p>当我们讨论元宇宙的时候，能不能先把线上讨论的音频延迟问题解决。。。&lt;/p>
-&lt;p>这个问题解决是乐观的，因为我们通常认为影响延迟的部分（真实的网络延迟，中美做到200ms并不难，但是做到100ms几乎在物理上是不可能的）在这个问题里面并不占主要部分。&lt;/p></description></item><item><title>tools</title><link>https://www.yangzhenfei.com/posts/20211115121752-tools/</link><pubDate>Mon, 15 Nov 2021 12:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115121752-tools/</guid><description>&lt;p>这里记录能帮助尽快接近singularity的方法。&lt;/p>
+&lt;p>这个问题解决是乐观的，因为我们通常认为影响延迟的部分（真实的网络延迟，中美做到200ms并不难，但是做到100ms几乎在物理上是不可能的）在这个问题里面并不占主要部分。&lt;/p></description></item><item><title>计划经济不在了，我很想他</title><link>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Thu, 25 Nov 2021 11:47:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;p>有⼀些复杂的多约束问题需要决策，从过去来看，过于复杂的问题由于种种原因，经常陷⼊低效的讨论。&lt;/p>
+&lt;p>最近受⼀些事情启发，发现了决策⽅法论的⼀个可能的探索⽅向：计划经济与线性规划。&lt;/p></description></item><item><title>tools</title><link>https://www.yangzhenfei.com/posts/20211115121752-tools/</link><pubDate>Mon, 15 Nov 2021 12:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115121752-tools/</guid><description>&lt;p>这里记录能帮助尽快接近singularity的方法。&lt;/p>
 &lt;p>一般来说，学习曲线陡峭~=能形成累计优势：&lt;/p>
 &lt;ul>
 &lt;li>一次学习， &lt;strong>终生&lt;/strong> 受用
@@ -293,5 +320,4 @@ mental strength是可以被锻炼的。
 &lt;/ul></description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
 &lt;p>如果尝试把这个网状的事实，用树结构去记录，并且线性地讲述出来。&lt;/p>
 &lt;p>并遭遇挫败。&lt;/p>
-&lt;p>可以试试用网的结构开始。&lt;/p></description></item><item><title>计划经济不在了，我很想他</title><link>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;p>有⼀些复杂的多约束问题需要决策，从过去来看，过于复杂的问题由于种种原因，经常陷⼊低效的讨论。&lt;/p>
-&lt;p>最近受⼀些事情启发，发现了决策⽅法论的⼀个可能的探索⽅向：计划经济与线性规划。&lt;/p></description></item></channel></rss>
+&lt;p>可以试试用网的结构开始。&lt;/p></description></item></channel></rss>
