@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 08 May 2025 12:14:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p>连载第三篇，有一种感觉：我又行了，哈哈。&lt;/p>
-&lt;p>一个漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 08 May 2025 12:14:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p>一条漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p>
 &lt;p>从能吃下数据的尺度来排序：&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>Internet-Scale Data&lt;/p>
 &lt;p>无监督的训练掌握 &lt;strong>常识&lt;/strong>&lt;/p>
 &lt;p>DINOv2变成de faco image encoder&lt;/p>
+&lt;p>自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>人类示教数据&lt;/p>
-&lt;p>模仿学习的数据介绍领域知识&lt;/p>
+&lt;p>模仿学习的数据介绍 &lt;strong>领域知识&lt;/strong>&lt;/p>
 &lt;p>Behavior Cloning + Video Generation-based Augmentation&lt;/p>
 &lt;p>更fancy的说法是world model，或者lecun的JEPA&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>打分数据&lt;/p>
-&lt;p>在两个采样中，A比B更好&lt;/p>
-&lt;p>用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL。&lt;/p>
+&lt;p>在两个采样中，A比B更好，表达 &lt;strong>偏好&lt;/strong>&lt;/p>
+&lt;p>用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL&lt;/p>
 &lt;p>有一个机器臂的工作用了这个方法，&lt;a href="https://hil-serl.github.io/">HiL-serl&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
