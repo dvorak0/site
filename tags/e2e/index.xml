@@ -4,7 +4,7 @@
 &lt;li>
 &lt;p>Internet-Scale Data&lt;/p>
 &lt;p>无监督的训练掌握 &lt;strong>常识&lt;/strong>&lt;/p>
-&lt;p>DINOv2变成de facto image encoder&lt;/p>
+&lt;p>DINOv2变成de facto image encoder，VLM公认有“常识”，所以可以帮助action变成VLA&lt;/p>
 &lt;p>自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p>
 &lt;/li>
 &lt;li>
