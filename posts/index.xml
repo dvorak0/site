@@ -199,8 +199,11 @@ mental strength是可以被锻炼的。
 &lt;ul>
 &lt;li>2min可以搞定的事情，不要进待办系统，马上做&lt;/li>
 &lt;li>写下来&lt;a href="../posts/20220510210940-write_it_down/">write it down&lt;/a>, &lt;a href="../posts/20220209192754-emacs/">using org-mode&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>probabilistic_programming</title><link>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</link><pubDate>Fri, 20 May 2022 11:19:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</guid><description>&lt;p>say bye to a gaussian world&lt;/p>
-&lt;p>&lt;a href="https://taku-y.github.io/notebook/20170919/slam_advi.html">https://taku-y.github.io/notebook/20170919/slam_advi.html&lt;/a>&lt;/p></description></item><item><title>write_it_down</title><link>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</link><pubDate>Tue, 10 May 2022 21:09:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</guid><description>&lt;p>&lt;a href="http://www.paulgraham.com/words.html">putting ideas into words&lt;/a>&lt;/p>
+&lt;/ul></description></item><item><title>双目相机的观测距离是怎么算出来的：Probabilistic Programming</title><link>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</link><pubDate>Fri, 20 May 2022 11:19:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</guid><description>&lt;p>我们都知道贝叶斯定理，也知道围绕这个定理的一些反直觉的故事：比如在一定的假设下，去医院即使检测出疾病，也是不得病的概率更大。&lt;/p>
+&lt;p>但是我们没有一个很好用的工具，回答一系列这样的问题：在设定一些假设并经历一系列事件后，哪个结果出现的概率更高？&lt;/p>
+&lt;p>从计算机的角度看，我们缺少一个可以操作概率分布的工具库。&lt;/p>
+&lt;p>当然，这样一个轮子已经被发明了。&lt;/p>
+&lt;p>介绍一个我觉得很实用，但是并不常听说的编程工具：Probabilistic Programming Language&lt;/p></description></item><item><title>write_it_down</title><link>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</link><pubDate>Tue, 10 May 2022 21:09:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</guid><description>&lt;p>&lt;a href="http://www.paulgraham.com/words.html">putting ideas into words&lt;/a>&lt;/p>
 &lt;p>把想法写下来有很多好处：&lt;/p>
 &lt;ol>
 &lt;li>帮助自己确定是不是真的想清楚了。会经常出现，在脑海中的一个强烈的自认为清晰的想法，写下来其实很单薄和简单，甚至是错误的。&lt;/li>
