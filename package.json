@@ -1,0 +1,19 @@
+{
+  "name": "dvorak",
+  "version": "1.0.0",
+  "description": "Your project description here",
+  "main": "index.js",
+  "scripts": {
+    "spider": "font-spider public/*.html public/*/*.html public/*/*/*.html"
+  },
+  "dependencies": {
+    "excalidraw_export": "^1.1.0",
+    "font-spider": "^1.3.5"
+  },
+  "overrides": {
+    "fonteditor-core": "2.1.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
+
