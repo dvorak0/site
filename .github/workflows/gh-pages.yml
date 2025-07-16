@@ -32,8 +32,11 @@ jobs:
       - name: Add CName
         run: touch public/CNAME && echo 'www.yangzhenfei.com' > public/CNAME
 
-      - name: Build Font
-        run: npx font-spider public/*.html public/*/*.html public/*/*/*.html
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Font Spider
+        run: npm run spider
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
