@@ -26,9 +26,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Setup Font-spider
-        run: npm install font-spider -g
-
       - name: Build
         run: hugo --minify
 
@@ -36,7 +33,7 @@ jobs:
         run: touch public/CNAME && echo 'www.yangzhenfei.com' > public/CNAME
 
       - name: Build Font
-        run: font-spider public/*.html public/*/*.html public/*/*/*.html
+        run: npx font-spider public/*.html public/*/*.html public/*/*/*.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
