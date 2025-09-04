@@ -1,72 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Seeking Complexity</title><link>https://www.yangzhenfei.com/</link><description>Recent content on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Jul 2025 10:28:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/index.xml" rel="self" type="application/rss+xml"/><item><title>OOP considered harmful</title><link>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</link><pubDate>Fri, 18 Jul 2025 10:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</guid><description>&lt;p>一直想记录一下这一点。&lt;/p>
-&lt;p>现在互联网上很讲究“觉醒”，类似忽然发现小时候习以为常的事情，其实是PUA什么的。&lt;/p>
-&lt;p>虽然用在这里不是很恰当，但是感觉在我所需要的领域里面，OOP确实带来的都是不好的体验。&lt;/p>
-&lt;p>但是这个不好来自哪里，做了很多次尝试才慢慢清晰。&lt;/p>
-&lt;p>这个起点应该是从&lt;a href="./posts/20220224200513-sicp/">从SICP说起：重新学习（函数式）编程&lt;/a>开始，到今天看到一个youtube视频&lt;a href="https://www.youtube.com/watch?v=wo84LFzx5nI">Casey Muratori – The Big OOPs: Anatomy of a Thirty-five-year Mistake – BSC 2025&lt;/a>觉得值得写下来记录一下。&lt;/p></description></item><item><title>人类CoT典范，张祥雨的Line of Research</title><link>https://www.yangzhenfei.com/posts/20250605170140-%E4%BA%BA%E7%B1%BBcot%E5%85%B8%E8%8C%83_%E5%BC%A0%E7%A5%A5%E9%9B%A8%E7%9A%84line_of_research/</link><pubDate>Thu, 05 Jun 2025 17:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250605170140-%E4%BA%BA%E7%B1%BBcot%E5%85%B8%E8%8C%83_%E5%BC%A0%E7%A5%A5%E9%9B%A8%E7%9A%84line_of_research/</guid><description>&lt;p>这个访谈似乎在张小珺自己的一系列访谈里，显得比较突出。&lt;/p>
-&lt;p>我自己是在听到一半的时候，决定要记录一下。&lt;/p>
-&lt;p>主要是被张祥雨清晰的表达震撼，明显感觉他的表达的context很长，能维持一个很长的逻辑链，有的逻辑分支走完了还能回溯。&lt;/p>
-&lt;p>说回内容。&lt;/p>
-&lt;p>可以概括为，一个发自内心对智能有追求的人，是如何对AI发展中的节点进行审美的。&lt;/p></description></item><item><title>Music Theory: Building from the Scratch</title><link>https://www.yangzhenfei.com/posts/20250516101712-building_music_theory_from_the_scratch/</link><pubDate>Fri, 16 May 2025 10:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250516101712-building_music_theory_from_the_scratch/</guid><description>&lt;p>如何用比较数学和推理的方法去理解和掌握音乐。&lt;/p>
-&lt;p>说一个有争议的话题，类似中医和西医。不分高下地做一个对比，西医更像是演绎法，中医更像是归纳法。&lt;/p>
-&lt;p>就像是&lt;a href="./posts/20230609103642-first_principle/">how first principles thinking fails&lt;/a>里面提到的inductive v.s. deductive。&lt;/p>
-&lt;p>不是说归纳法不好，而是演绎法可能更适合我这样的天赋不佳的人去理解。你跟我说，“感觉一下”，我太难理解了。&lt;/p>
-&lt;p>Building from the Scratch是模仿Linux From Scratch (LFS)。&lt;/p></description></item><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p>一条漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p>
-&lt;p>从能吃下数据的尺度来排序：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Internet-Scale Data&lt;/p>
-&lt;p>无监督的训练掌握 &lt;strong>常识&lt;/strong>&lt;/p>
-&lt;p>DINOv2变成de facto image encoder，VLM公认有“常识”，所以可以帮助action变成VLA&lt;/p>
-&lt;p>自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>人类示教数据&lt;/p>
-&lt;p>模仿学习的数据介绍 &lt;strong>领域知识&lt;/strong>&lt;/p>
-&lt;p>Behavior Cloning + Video Generation-based Augmentation&lt;/p>
-&lt;p>更fancy的说法是world model，或者LeCun的JEPA&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>打分数据&lt;/p>
-&lt;p>在两个采样中，A比B更好，表达 &lt;strong>偏好&lt;/strong>&lt;/p>
-&lt;p>用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL&lt;/p>
-&lt;p>有一个机器臂的工作用了这个方法，&lt;a href="https://hil-serl.github.io/">HiL-serl&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>看起来能统一地解决自动驾驶和机械臂的问题。&lt;/p>
-&lt;p>今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p></description></item><item><title>《李光耀观天下》</title><link>https://www.yangzhenfei.com/posts/20250506141744-%E6%9D%8E%E5%85%89%E8%80%80%E8%A7%82%E5%A4%A9%E4%B8%8B/</link><pubDate>Tue, 06 May 2025 14:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250506141744-%E6%9D%8E%E5%85%89%E8%80%80%E8%A7%82%E5%A4%A9%E4%B8%8B/</guid><description>&lt;p>李光耀的采访，很诚恳，听起来也是挺客观的。&lt;/p>
-&lt;p>如果说他真的把新加坡当作自己的家，他应该算是一个努力过好自己生活的人。&lt;/p>
-&lt;p>很久之前看的，最近想起来把记录摘出来，竟然发现微信读书下架了，幸好一些笔记还在。&lt;/p></description></item><item><title>《解构现代化：温铁军演讲录》</title><link>https://www.yangzhenfei.com/posts/20250506140144-%E8%A7%A3%E6%9E%84%E7%8E%B0%E4%BB%A3%E5%8C%96_%E6%B8%A9%E9%93%81%E5%86%9B%E6%BC%94%E8%AE%B2%E5%BD%95/</link><pubDate>Tue, 06 May 2025 14:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250506140144-%E8%A7%A3%E6%9E%84%E7%8E%B0%E4%BB%A3%E5%8C%96_%E6%B8%A9%E9%93%81%E5%86%9B%E6%BC%94%E8%AE%B2%E5%BD%95/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>温铁军的视角中，农村问题等于中国的现代化问题，中国的现代化问题等于农村问题。怎么提供足够大的“发展”使得农民和农村资源有新的加入经济的角色。&lt;/p>
-&lt;p>在理想视角里面，我们可以认为现代化是一个单向的农村劳动力被城市需求转化为城市劳动力的过程，而城市劳动力是由现在的出口需求支撑的，这种支撑可以持续吗，如果不是，如何持续下去。&lt;/p>
-&lt;p>温铁军的研究展示出一种调研大于理论的求真风格，仅以农村纪实的叙事角度来看，也是很好的文本资料。&lt;/p></description></item><item><title>外星人</title><link>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</link><pubDate>Fri, 07 Feb 2025 17:13:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</guid><description>&lt;p>我记得哪个盲人的电影里面说过，对于盲人来说，正常人像是不同的物种，更像是“超人”。一个印象深刻的画面。&lt;/p>
-&lt;p>最近忽然发现，对于会下围棋的人来说，一眼看出局部的死活，棋的拙行，不也是像超人一样吗。&lt;/p>
-&lt;p>再想到，其实写代码也类似，对于外人来说，能写一个有功能的app可能也像超人吧。&lt;/p>
-&lt;p>那种，别人自然流露，自己却完全雾里云里的体验。&lt;/p>
-&lt;p>可能就像是面对外星人或者超人一样吧。&lt;/p>
-&lt;p>原来又是一个拙劣的“观察”。&lt;/p></description></item><item><title>练习时长一年半的Kickstarter Creator</title><link>https://www.yangzhenfei.com/posts/20250102143600-%E7%BB%83%E4%B9%A0%E6%97%B6%E9%95%BF%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84kickstartercreator/</link><pubDate>Thu, 02 Jan 2025 14:36:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250102143600-%E7%BB%83%E4%B9%A0%E6%97%B6%E9%95%BF%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84kickstartercreator/</guid><description>&lt;p>在去年的这个时候，我觉得如果有这么一篇文章带我大概窥探一下Kickstarter发行项目的全过程，我会100分地感谢他，但是当时没有找到这样的内容。&lt;/p>
-&lt;p>一年过去，我的项目也算是在某个阶段意义上做完了，我觉得有必要写一点自己的感受，记录一下这个跌跌撞撞的过程。&lt;/p>
-&lt;p>如果能帮到其他人，甚至有人看到后愿意跟我说&lt;a href="">let&amp;rsquo;s_have_a_talk&lt;/a>，都会觉得是一件很不错的事情。&lt;/p></description></item><item><title>精力管理</title><link>https://www.yangzhenfei.com/posts/20241010100410-%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/</link><pubDate>Thu, 10 Oct 2024 10:04:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20241010100410-%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/</guid><description>&lt;p>首先，我想先讨论这个标题。&lt;/p>
-&lt;p>我第一次写下这个笔记的时候用的tag是energy，我认为这是对这个问题的恰当描述。&lt;/p>
-&lt;p>后来有遇到一些词，感觉是在描述同样一个问题：mental strengh，tiredness，fatigue，burn out。&lt;/p>
-&lt;p>昨天一个朋友推荐我一个文章，用life force来描述这个问题，我觉得也很贴切。&lt;/p>
-&lt;p>总结来说：为什么我们会进入一种这样的状态，它令人不适，难以改变，描述和刻画这个状态都很困难，更谈不上解决。&lt;/p></description></item><item><title>low latency audio: measurement</title><link>https://www.yangzhenfei.com/posts/20240720130238-low_latency_audio_measurement/</link><pubDate>Sat, 20 Jul 2024 13:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240720130238-low_latency_audio_measurement/</guid><description>&lt;p>终于有时间做一个测试，回答长久以来(见&lt;a href="./posts/20211130195311-low_latency_audio/">low latency audio&lt;/a>)很有疑问的一个问题。&lt;/p>
-&lt;p>我们常用的语音通话服务的延迟究竟是多少。&lt;/p></description></item><item><title>斯多葛主义(Stoicism)</title><link>https://www.yangzhenfei.com/posts/20240527151116-stoicism/</link><pubDate>Mon, 27 May 2024 15:11:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240527151116-stoicism/</guid><description>&lt;p>connect the dots.&lt;/p>
-&lt;p>今天忽然意识到，这样一个晦涩的词，串联起来许多片段：&lt;/p>
-&lt;ol>
-&lt;li>我意识到自省的重要性&lt;a href="">reflection&lt;/a>，特别是以日记的方式写下来&lt;a href="./posts/20220510210940-write_it_down/">write_it_down&lt;/a>。&lt;/li>
-&lt;li>无意中买了《沉思录》。被他的封面吸引，但是因为他的游荡的语言感无法完成阅读。
-现在才意识到，这是他的每日自省，果然和我自己平常写下来的东西一样不着东西。&lt;/li>
-&lt;li>&lt;a href="./posts/20211213123832-%E5%86%A5%E6%83%B3/">冥想&lt;/a>自不用说，甚至今天才意识到《沉思录》的原文就是Meditations。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Seeking Complexity</title><link>https://www.yangzhenfei.com/</link><description>Recent content on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Sep 2025 17:54:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/index.xml" rel="self" type="application/rss+xml"/><item><title>鱼和熊掌我要兼得：ROS2适合量产吗</title><link>https://www.yangzhenfei.com/posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/</link><pubDate>Wed, 03 Sep 2025 17:54:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/</guid><description>&lt;p&gt;之前在学校的时候用ROS，在DJI的时候用一整套DJI自研的中间件。&lt;/p&gt;
+&lt;p&gt;大家不怀疑ROS的易用度，但是也都觉得ROS是低效和实验室原型的代名词。&lt;/p&gt;
+&lt;p&gt;所以在产品上，毫不犹豫地选择了高效，弄了一整套的中间件。&lt;/p&gt;
+&lt;p&gt;我长期关注C++的&lt;a href="https://en.cppreference.com/w/cpp/language/Zero-overhead_principle.html"&gt;zero-overhead principle&lt;/a&gt;信条。始终觉得很不服气，为什么中间件做不到又好用，又高效。&lt;/p&gt;
+&lt;p&gt;很有趣，最近用了一些时间做了一些实验，感觉整个过程是一个很值得讨论的技巧分享。&lt;/p&gt;
+&lt;p&gt;所以记录下来。&lt;/p&gt;
+&lt;p&gt;先说结论：在一个接近真实场景的case里面，从第一个版本的144% CPU占用，优化到了3.8%，提高了接近40倍的效率。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="./ox-hugo/2025-09-04_12-29-23_screenshot_hu_373410ceadf09221.webp" height="704" width="1280"&gt;
+ 
+
+ 
+
+ 
+&lt;/figure&gt;</description></item><item><title>OOP considered harmful</title><link>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</link><pubDate>Fri, 18 Jul 2025 10:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</guid><description>&lt;p&gt;一直想记录一下这一点。&lt;/p&gt;
+&lt;p&gt;现在互联网上很讲究“觉醒”，类似忽然发现小时候习以为常的事情，其实是PUA什么的。&lt;/p&gt;
+&lt;p&gt;虽然用在这里不是很恰当，但是感觉在我所需要的领域里面，OOP确实带来的都是不好的体验。&lt;/p&gt;
+&lt;p&gt;但是这个不好来自哪里，做了很多次尝试才慢慢清晰。&lt;/p&gt;
+&lt;p&gt;这个起点应该是从&lt;a href="./posts/20220224200513-sicp/"&gt;从SICP说起：重新学习（函数式）编程&lt;/a&gt;开始，到今天看到一个youtube视频&lt;a href="https://www.youtube.com/watch?v=wo84LFzx5nI"&gt;Casey Muratori – The Big OOPs: Anatomy of a Thirty-five-year Mistake – BSC 2025&lt;/a&gt;觉得值得写下来记录一下。&lt;/p&gt;</description></item><item><title>人类CoT典范，张祥雨的Line of Research</title><link>https://www.yangzhenfei.com/posts/20250605170140-%E4%BA%BA%E7%B1%BBcot%E5%85%B8%E8%8C%83_%E5%BC%A0%E7%A5%A5%E9%9B%A8%E7%9A%84line_of_research/</link><pubDate>Thu, 05 Jun 2025 17:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250605170140-%E4%BA%BA%E7%B1%BBcot%E5%85%B8%E8%8C%83_%E5%BC%A0%E7%A5%A5%E9%9B%A8%E7%9A%84line_of_research/</guid><description>&lt;p&gt;这个访谈似乎在张小珺自己的一系列访谈里，显得比较突出。&lt;/p&gt;
+&lt;p&gt;我自己是在听到一半的时候，决定要记录一下。&lt;/p&gt;
+&lt;p&gt;主要是被张祥雨清晰的表达震撼，明显感觉他的表达的context很长，能维持一个很长的逻辑链，有的逻辑分支走完了还能回溯。&lt;/p&gt;
+&lt;p&gt;说回内容。&lt;/p&gt;
+&lt;p&gt;可以概括为，一个发自内心对智能有追求的人，是如何对AI发展中的节点进行审美的。&lt;/p&gt;</description></item><item><title>Music Theory: Building from the Scratch</title><link>https://www.yangzhenfei.com/posts/20250516101712-building_music_theory_from_the_scratch/</link><pubDate>Fri, 16 May 2025 10:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250516101712-building_music_theory_from_the_scratch/</guid><description>&lt;p&gt;如何用比较数学和推理的方法去理解和掌握音乐。&lt;/p&gt;
+&lt;p&gt;说一个有争议的话题，类似中医和西医。不分高下地做一个对比，西医更像是演绎法，中医更像是归纳法。&lt;/p&gt;
+&lt;p&gt;就像是&lt;a href="./posts/20230609103642-first_principle/"&gt;how first principles thinking fails&lt;/a&gt;里面提到的inductive v.s. deductive。&lt;/p&gt;
+&lt;p&gt;不是说归纳法不好，而是演绎法可能更适合我这样的天赋不佳的人去理解。你跟我说，“感觉一下”，我太难理解了。&lt;/p&gt;
+&lt;p&gt;Building from the Scratch是模仿Linux From Scratch (LFS)。&lt;/p&gt;</description></item><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p&gt;一条漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p&gt;
+&lt;p&gt;从能吃下数据的尺度来排序：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Internet-Scale Data&lt;/p&gt;
+&lt;p&gt;无监督的训练掌握 &lt;strong&gt;常识&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DINOv2变成de facto image encoder，VLM公认有“常识”，所以可以帮助action变成VLA&lt;/p&gt;
+&lt;p&gt;自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;人类示教数据&lt;/p&gt;
+&lt;p&gt;模仿学习的数据介绍 &lt;strong&gt;领域知识&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Behavior Cloning + Video Generation-based Augmentation&lt;/p&gt;
+&lt;p&gt;更fancy的说法是world model，或者LeCun的JEPA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打分数据&lt;/p&gt;
+&lt;p&gt;在两个采样中，A比B更好，表达 &lt;strong&gt;偏好&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL&lt;/p&gt;
+&lt;p&gt;有一个机器臂的工作用了这个方法，&lt;a href="https://hil-serl.github.io/"&gt;HiL-serl&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;看起来能统一地解决自动驾驶和机械臂的问题。&lt;/p&gt;
+&lt;p&gt;今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p&gt;</description></item><item><title>《李光耀观天下》</title><link>https://www.yangzhenfei.com/posts/20250506141744-%E6%9D%8E%E5%85%89%E8%80%80%E8%A7%82%E5%A4%A9%E4%B8%8B/</link><pubDate>Tue, 06 May 2025 14:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250506141744-%E6%9D%8E%E5%85%89%E8%80%80%E8%A7%82%E5%A4%A9%E4%B8%8B/</guid><description>&lt;p&gt;李光耀的采访，很诚恳，听起来也是挺客观的。&lt;/p&gt;
+&lt;p&gt;如果说他真的把新加坡当作自己的家，他应该算是一个努力过好自己生活的人。&lt;/p&gt;
+&lt;p&gt;很久之前看的，最近想起来把记录摘出来，竟然发现微信读书下架了，幸好一些笔记还在。&lt;/p&gt;</description></item><item><title>《解构现代化：温铁军演讲录》</title><link>https://www.yangzhenfei.com/posts/20250506140144-%E8%A7%A3%E6%9E%84%E7%8E%B0%E4%BB%A3%E5%8C%96_%E6%B8%A9%E9%93%81%E5%86%9B%E6%BC%94%E8%AE%B2%E5%BD%95/</link><pubDate>Tue, 06 May 2025 14:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250506140144-%E8%A7%A3%E6%9E%84%E7%8E%B0%E4%BB%A3%E5%8C%96_%E6%B8%A9%E9%93%81%E5%86%9B%E6%BC%94%E8%AE%B2%E5%BD%95/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;温铁军的视角中，农村问题等于中国的现代化问题，中国的现代化问题等于农村问题。怎么提供足够大的“发展”使得农民和农村资源有新的加入经济的角色。&lt;/p&gt;
+&lt;p&gt;在理想视角里面，我们可以认为现代化是一个单向的农村劳动力被城市需求转化为城市劳动力的过程，而城市劳动力是由现在的出口需求支撑的，这种支撑可以持续吗，如果不是，如何持续下去。&lt;/p&gt;
+&lt;p&gt;温铁军的研究展示出一种调研大于理论的求真风格，仅以农村纪实的叙事角度来看，也是很好的文本资料。&lt;/p&gt;</description></item><item><title>外星人</title><link>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</link><pubDate>Fri, 07 Feb 2025 17:13:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250207171318-%E5%A4%96%E6%98%9F%E4%BA%BA/</guid><description>&lt;p&gt;我记得哪个盲人的电影里面说过，对于盲人来说，正常人像是不同的物种，更像是“超人”。一个印象深刻的画面。&lt;/p&gt;
+&lt;p&gt;最近忽然发现，对于会下围棋的人来说，一眼看出局部的死活，棋的拙行，不也是像超人一样吗。&lt;/p&gt;
+&lt;p&gt;再想到，其实写代码也类似，对于外人来说，能写一个有功能的app可能也像超人吧。&lt;/p&gt;
+&lt;p&gt;那种，别人自然流露，自己却完全雾里云里的体验。&lt;/p&gt;
+&lt;p&gt;可能就像是面对外星人或者超人一样吧。&lt;/p&gt;
+&lt;p&gt;原来又是一个拙劣的“观察”。&lt;/p&gt;</description></item><item><title>练习时长一年半的Kickstarter Creator</title><link>https://www.yangzhenfei.com/posts/20250102143600-%E7%BB%83%E4%B9%A0%E6%97%B6%E9%95%BF%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84kickstartercreator/</link><pubDate>Thu, 02 Jan 2025 14:36:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250102143600-%E7%BB%83%E4%B9%A0%E6%97%B6%E9%95%BF%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84kickstartercreator/</guid><description>&lt;p&gt;在去年的这个时候，我觉得如果有这么一篇文章带我大概窥探一下Kickstarter发行项目的全过程，我会100分地感谢他，但是当时没有找到这样的内容。&lt;/p&gt;
+&lt;p&gt;一年过去，我的项目也算是在某个阶段意义上做完了，我觉得有必要写一点自己的感受，记录一下这个跌跌撞撞的过程。&lt;/p&gt;
+&lt;p&gt;如果能帮到其他人，甚至有人看到后愿意跟我说&lt;a href=""&gt;let&amp;rsquo;s_have_a_talk&lt;/a&gt;，都会觉得是一件很不错的事情。&lt;/p&gt;</description></item><item><title>精力管理</title><link>https://www.yangzhenfei.com/posts/20241010100410-%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/</link><pubDate>Thu, 10 Oct 2024 10:04:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20241010100410-%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;首先，我想先讨论这个标题。&lt;/p&gt;
+&lt;p&gt;我第一次写下这个笔记的时候用的tag是energy，我认为这是对这个问题的恰当描述。&lt;/p&gt;
+&lt;p&gt;后来有遇到一些词，感觉是在描述同样一个问题：mental strengh，tiredness，fatigue，burn out。&lt;/p&gt;
+&lt;p&gt;昨天一个朋友推荐我一个文章，用life force来描述这个问题，我觉得也很贴切。&lt;/p&gt;
+&lt;p&gt;总结来说：为什么我们会进入一种这样的状态，它令人不适，难以改变，描述和刻画这个状态都很困难，更谈不上解决。&lt;/p&gt;</description></item><item><title>low latency audio: measurement</title><link>https://www.yangzhenfei.com/posts/20240720130238-low_latency_audio_measurement/</link><pubDate>Sat, 20 Jul 2024 13:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240720130238-low_latency_audio_measurement/</guid><description>&lt;p&gt;终于有时间做一个测试，回答长久以来(见&lt;a href="./posts/20211130195311-low_latency_audio/"&gt;low latency audio&lt;/a&gt;)很有疑问的一个问题。&lt;/p&gt;
+&lt;p&gt;我们常用的语音通话服务的延迟究竟是多少。&lt;/p&gt;</description></item><item><title>斯多葛主义(Stoicism)</title><link>https://www.yangzhenfei.com/posts/20240527151116-stoicism/</link><pubDate>Mon, 27 May 2024 15:11:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240527151116-stoicism/</guid><description>&lt;p&gt;connect the dots.&lt;/p&gt;
+&lt;p&gt;今天忽然意识到，这样一个晦涩的词，串联起来许多片段：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我意识到自省的重要性&lt;a href=""&gt;reflection&lt;/a&gt;，特别是以日记的方式写下来&lt;a href="./posts/20220510210940-write_it_down/"&gt;write_it_down&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;无意中买了《沉思录》。被他的封面吸引，但是因为他的游荡的语言感无法完成阅读。
+现在才意识到，这是他的每日自省，果然和我自己平常写下来的东西一样不着东西。&lt;/li&gt;
+&lt;li&gt;&lt;a href="./posts/20211213123832-%E5%86%A5%E6%83%B3/"&gt;冥想&lt;/a&gt;自不用说，甚至今天才意识到《沉思录》的原文就是Meditations。
 mental strength是可以被锻炼的。
-斯多葛主义主张很多类型的刻意练习，在冥想之外，还有困境假想：在想象中的困境中感受痛苦，以提高自己的忍耐力。&lt;/li>
-&lt;li>意识到痛苦比快乐更本质，尤其是&lt;a href="">困境的意义&lt;/a>所描述的。
-快乐无法脱离痛苦而存在，但是痛苦可以独立存在。这不是一个很强的论据吗。&lt;/li>
-&lt;/ol>
-&lt;p>无意间，自己竟然成为一名斯多葛主义的信仰者吗。&lt;/p>
-&lt;h2 id="所以-究竟什么是斯多葛主义">所以，究竟什么是斯多葛主义&lt;/h2></description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p>(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p></description></item><item><title>AVP体验</title><link>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</link><pubDate>Wed, 31 Jan 2024 14:37:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</guid><description>&lt;p>早晨起来看到许多新闻开始介绍AVP，应该是评测解禁了，这里介绍下自己之前试用的感觉：&lt;/p></description></item><item><title>全自动驾驶的里程碑，吗？</title><link>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</link><pubDate>Tue, 30 Jan 2024 18:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</guid><description>&lt;p>2023年底（12月20日），Waymo宣布了一项进展：&lt;a href="https://waymo.com/blog/2023/12/waymo-significantly-outperforms-comparable-human-benchmarks-over-7-million/">Waymo significantly outperforms comparable human benchmarks over 7+ million miles of rider-only driving&lt;/a>。&lt;/p>
-&lt;p>但是（在我看到的范围）并没有引起太多关注。&lt;/p>
-&lt;p>我反省，似乎又被打脸了（见&lt;a href="./posts/20230109104349-make_the_world_a_better_place/">make the world a better place&lt;/a>）。&lt;/p>
-&lt;p>先简述下这个文章做了什么：&lt;/p></description></item><item><title>LLM is dead, long live agent</title><link>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</link><pubDate>Wed, 08 Nov 2023 16:20:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</guid><description>&lt;figure>
+斯多葛主义主张很多类型的刻意练习，在冥想之外，还有困境假想：在想象中的困境中感受痛苦，以提高自己的忍耐力。&lt;/li&gt;
+&lt;li&gt;意识到痛苦比快乐更本质，尤其是&lt;a href=""&gt;困境的意义&lt;/a&gt;所描述的。
+快乐无法脱离痛苦而存在，但是痛苦可以独立存在。这不是一个很强的论据吗。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;无意间，自己竟然成为一名斯多葛主义的信仰者吗。&lt;/p&gt;
+&lt;h2 id="所以-究竟什么是斯多葛主义"&gt;所以，究竟什么是斯多葛主义&lt;/h2&gt;</description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p&gt;(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p&gt;</description></item><item><title>AVP体验</title><link>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</link><pubDate>Wed, 31 Jan 2024 14:37:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240131143759-avp%E4%BD%93%E9%AA%8C/</guid><description>&lt;p&gt;早晨起来看到许多新闻开始介绍AVP，应该是评测解禁了，这里介绍下自己之前试用的感觉：&lt;/p&gt;</description></item><item><title>全自动驾驶的里程碑，吗？</title><link>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</link><pubDate>Tue, 30 Jan 2024 18:01:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240130180127-%E5%85%A8%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E7%9A%84%E9%87%8C%E7%A8%8B%E7%A2%91_%E5%90%97/</guid><description>&lt;p&gt;2023年底（12月20日），Waymo宣布了一项进展：&lt;a href="https://waymo.com/blog/2023/12/waymo-significantly-outperforms-comparable-human-benchmarks-over-7-million/"&gt;Waymo significantly outperforms comparable human benchmarks over 7+ million miles of rider-only driving&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;但是（在我看到的范围）并没有引起太多关注。&lt;/p&gt;
+&lt;p&gt;我反省，似乎又被打脸了（见&lt;a href="./posts/20230109104349-make_the_world_a_better_place/"&gt;make the world a better place&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;先简述下这个文章做了什么：&lt;/p&gt;</description></item><item><title>LLM is dead, long live agent</title><link>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</link><pubDate>Wed, 08 Nov 2023 16:20:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231108162044-llm_is_dead_long_live_agent/</guid><description>&lt;figure&gt;
  
 
  
@@ -76,43 +99,19 @@ mental strength是可以被锻炼的。
  
  
  
- &lt;img src="./ox-hugo/2023-11-08_16-22-44_screenshot_hu_d33cfe398fb9ca8b.webp" height="847" width="1280">
-
- 
-&lt;/figure>
-
-
-&lt;p>是这样吗？&lt;/p></description></item><item><title>用打卡帮助习惯养成-Streaks</title><link>https://www.yangzhenfei.com/posts/20231023124926-%E7%94%A8%E6%89%93%E5%8D%A1%E5%B8%AE%E5%8A%A9%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/</link><pubDate>Mon, 23 Oct 2023 12:49:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231023124926-%E7%94%A8%E6%89%93%E5%8D%A1%E5%B8%AE%E5%8A%A9%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/</guid><description>&lt;p>参与了一次&lt;a href="https://www.knowyourself.cc/">knowyourself&lt;/a>组织的21天&lt;a href="./posts/20211213123832-%E5%86%A5%E6%83%B3/">冥想&lt;/a>打卡，本来觉得应该是简单的，结果在第10天中断了。&lt;/p>
-&lt;p>实话说相当沮丧，不过也意识到，打卡确实是一个不错的习惯养成的方法。&lt;/p>
-&lt;p>找了一个不错的APP：&lt;a href="https://loophabits.org/">Loop Habit Tracker&lt;/a>。&lt;/p>
-&lt;figure>
+ &lt;img src="./ox-hugo/2023-11-08_16-22-44_screenshot_hu_d33cfe398fb9ca8b.webp" height="847" width="1280"&gt;
  
 
  
- 
 
  
- 
- 
- 
- &lt;img src="./ox-hugo/2023-10-23_12-53-00_screenshot_hu_6779bac1e98f3a54.webp" height="988" width="1280">
+&lt;/figure&gt;
 
- 
-&lt;/figure></description></item><item><title>MBTI</title><link>https://www.yangzhenfei.com/posts/20230918200243-mbti/</link><pubDate>Mon, 18 Sep 2023 20:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230918200243-mbti/</guid><description>&lt;p>也许应该把MBTI当作一种比较性研究的框架。&lt;/p></description></item><item><title>portfolio</title><link>https://www.yangzhenfei.com/posts/20230730115117-portfolio/</link><pubDate>Sun, 30 Jul 2023 11:51:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230730115117-portfolio/</guid><description>&lt;p>如果想要理解投资，应该从哪里开始？&lt;/p>
-&lt;p>关于投资的论断经常和一些似是而非的词关联在一起：“认知”，“心性”，“信仰”。&lt;/p>
-&lt;p>如果在某个瞬间觉得这种描述过于主观，有没有solid一些的理论可以用？&lt;/p>
-&lt;p>我意识到写这一篇内容的目的，是最符合我做这个site的初心的。&lt;/p>
-&lt;p>那就是，如果你也关心这个内容，请务必&lt;a href="">let&amp;rsquo;s_have_a_talk&lt;/a>。&lt;/p></description></item><item><title>how first principles thinking fails</title><link>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</link><pubDate>Fri, 09 Jun 2023 10:36:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</guid><description>&lt;p>当我被elon musk的first principle折服的时候，我也意识到，first principle的对面一定也是有价值的。&lt;/p>
-&lt;p>这类似inductive和deductive的区别。&lt;/p>
-&lt;p>在历史上，也存在相当长的一段时间是以归纳作为最根本的真理的一段时期。&lt;/p>
-&lt;blockquote>
-&lt;p>归纳问题的经典哲学处理，意味着为归纳推理找到了正当理由，是苏格兰人大卫·休谟完成的。休谟突出了依据重复经验的模式的我们的日常推理，而不是演绎上的有效论证。比如我们相信面包对我们有益，因为过去一直如此，但是面包将来对我们有害至少是可以想象的。&lt;/p>
-&lt;p>休谟说对所有事情都坚持可靠的演绎上的正当有理的人会饿死的。替代激进怀疑论关于所有事物的无所作为，他提倡基于常识的实用怀疑论，这里接受归纳法是必然的。&lt;/p>&lt;/blockquote>
-&lt;p>今天才看到一个针对两个思考模型进行对比的文章。&lt;/p>
-&lt;p>文章的出发点是：如何平衡first principle和pattern matching。&lt;/p>
-&lt;p>&lt;a href="./ox-hugo/commoncog.com-How%20First%20Principles%20Thinking%20Fails.pdf">how first principles thinking fails&lt;/a>&lt;/p></description></item><item><title>system_1_and_system_2</title><link>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</link><pubDate>Wed, 31 May 2023 14:18:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</guid><description>&lt;p>一种把思维能力二分类的说法：直觉式的反应，和深思熟虑的反应。&lt;/p>
-&lt;p>很多地方可以类比。&lt;/p>
-&lt;figure>
+
+&lt;p&gt;是这样吗？&lt;/p&gt;</description></item><item><title>用打卡帮助习惯养成-Streaks</title><link>https://www.yangzhenfei.com/posts/20231023124926-%E7%94%A8%E6%89%93%E5%8D%A1%E5%B8%AE%E5%8A%A9%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/</link><pubDate>Mon, 23 Oct 2023 12:49:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20231023124926-%E7%94%A8%E6%89%93%E5%8D%A1%E5%B8%AE%E5%8A%A9%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/</guid><description>&lt;p&gt;参与了一次&lt;a href="https://www.knowyourself.cc/"&gt;knowyourself&lt;/a&gt;组织的21天&lt;a href="./posts/20211213123832-%E5%86%A5%E6%83%B3/"&gt;冥想&lt;/a&gt;打卡，本来觉得应该是简单的，结果在第10天中断了。&lt;/p&gt;
+&lt;p&gt;实话说相当沮丧，不过也意识到，打卡确实是一个不错的习惯养成的方法。&lt;/p&gt;
+&lt;p&gt;找了一个不错的APP：&lt;a href="https://loophabits.org/"&gt;Loop Habit Tracker&lt;/a&gt;。&lt;/p&gt;
+&lt;figure&gt;
  
 
  
@@ -122,68 +121,104 @@ mental strength是可以被锻炼的。
  
  
  
- &lt;img src="./ox-hugo/2023-05-31_14-19-51_screenshot_hu_5f42e59be12c01cc.webp" height="591" width="1280">
-
- 
-&lt;/figure></description></item><item><title>chain_of_thoughts</title><link>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</link><pubDate>Thu, 18 May 2023 15:55:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</guid><description>&lt;p>（再一次蹭LLM的热点）&lt;/p>
-&lt;p>在过去的工作经验里面学到的可能是最重要的一点，就是不断追问。&lt;/p>
-&lt;p>很简单的一个操作，只要反复做下去，就会有不可思议的效果。&lt;/p>
-&lt;p>最后会得到一个很富有争议性的结论，可能是对的，可能是错的。&lt;/p>
-&lt;p>但是都比很多白话要有价值。&lt;/p></description></item><item><title>重新认识geohot</title><link>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</link><pubDate>Wed, 10 May 2023 16:52:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</guid><description>&lt;p>George Hotz。可能为人熟知的标签是：&lt;/p>
-&lt;ol>
-&lt;li>破解小子，iOS和PS 3的越狱&lt;/li>
-&lt;li>用乐视/一加手机做自动驾驶&lt;/li>
-&lt;/ol>
-&lt;p>所以是个玩票的？&lt;/p>
-&lt;p>看看他实际做过什么，在过去的5年里。&lt;/p></description></item><item><title>intelligential honest</title><link>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</link><pubDate>Mon, 17 Apr 2023 10:42:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</guid><description>&lt;p>比如stated preference（陈述式偏好） v.s. revealed preference（揭示式偏好）&lt;/p></description></item><item><title>分体键盘</title><link>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</link><pubDate>Thu, 23 Mar 2023 10:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</guid><description>&lt;p>一直对键盘不是特别在意，之前有个有线版的HHKB已经多年不用了。&lt;/p>
-&lt;p>一直在用笔记本键盘，最近意识到手放在身前的小区域内，会破坏背部肌肉拉伸的平衡，不利于颈椎区域休息，所以考虑分体键盘。&lt;/p>
-&lt;p>这里记录一些流行的layout。&lt;/p></description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p>大模型可以解决什么问题。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，它大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
-&lt;p>如果vision GPT可以预测下一张图，它大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>purity + cache = efficient (thus practical) FP&lt;/p></description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure>
+ &lt;img src="./ox-hugo/2023-10-23_12-53-00_screenshot_hu_6779bac1e98f3a54.webp" height="988" width="1280"&gt;
  
 
  
+
+ 
+&lt;/figure&gt;</description></item><item><title>MBTI</title><link>https://www.yangzhenfei.com/posts/20230918200243-mbti/</link><pubDate>Mon, 18 Sep 2023 20:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230918200243-mbti/</guid><description>&lt;p&gt;也许应该把MBTI当作一种比较性研究的框架。&lt;/p&gt;</description></item><item><title>portfolio</title><link>https://www.yangzhenfei.com/posts/20230730115117-portfolio/</link><pubDate>Sun, 30 Jul 2023 11:51:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230730115117-portfolio/</guid><description>&lt;p&gt;如果想要理解投资，应该从哪里开始？&lt;/p&gt;
+&lt;p&gt;关于投资的论断经常和一些似是而非的词关联在一起：“认知”，“心性”，“信仰”。&lt;/p&gt;
+&lt;p&gt;如果在某个瞬间觉得这种描述过于主观，有没有solid一些的理论可以用？&lt;/p&gt;
+&lt;p&gt;我意识到写这一篇内容的目的，是最符合我做这个site的初心的。&lt;/p&gt;
+&lt;p&gt;那就是，如果你也关心这个内容，请务必&lt;a href=""&gt;let&amp;rsquo;s_have_a_talk&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>how first principles thinking fails</title><link>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</link><pubDate>Fri, 09 Jun 2023 10:36:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230609103642-first_principle/</guid><description>&lt;p&gt;当我被elon musk的first principle折服的时候，我也意识到，first principle的对面一定也是有价值的。&lt;/p&gt;
+&lt;p&gt;这类似inductive和deductive的区别。&lt;/p&gt;
+&lt;p&gt;在历史上，也存在相当长的一段时间是以归纳作为最根本的真理的一段时期。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归纳问题的经典哲学处理，意味着为归纳推理找到了正当理由，是苏格兰人大卫·休谟完成的。休谟突出了依据重复经验的模式的我们的日常推理，而不是演绎上的有效论证。比如我们相信面包对我们有益，因为过去一直如此，但是面包将来对我们有害至少是可以想象的。&lt;/p&gt;
+&lt;p&gt;休谟说对所有事情都坚持可靠的演绎上的正当有理的人会饿死的。替代激进怀疑论关于所有事物的无所作为，他提倡基于常识的实用怀疑论，这里接受归纳法是必然的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;今天才看到一个针对两个思考模型进行对比的文章。&lt;/p&gt;
+&lt;p&gt;文章的出发点是：如何平衡first principle和pattern matching。&lt;/p&gt;
+&lt;p&gt;&lt;a href="./ox-hugo/commoncog.com-How%20First%20Principles%20Thinking%20Fails.pdf"&gt;how first principles thinking fails&lt;/a&gt;&lt;/p&gt;</description></item><item><title>system_1_and_system_2</title><link>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</link><pubDate>Wed, 31 May 2023 14:18:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</guid><description>&lt;p&gt;一种把思维能力二分类的说法：直觉式的反应，和深思熟虑的反应。&lt;/p&gt;
+&lt;p&gt;很多地方可以类比。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
  
 
  
  
  
  
- &lt;img src="./ox-hugo/2023-01-09_10-44-41_screenshot_hu_b841734c5a88e4e0.webp" height="738" width="1280">
+ &lt;img src="./ox-hugo/2023-05-31_14-19-51_screenshot_hu_5f42e59be12c01cc.webp" height="591" width="1280"&gt;
+ 
 
  
-&lt;/figure>
+
+ 
+&lt;/figure&gt;</description></item><item><title>chain_of_thoughts</title><link>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</link><pubDate>Thu, 18 May 2023 15:55:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230518155549-chain_of_thoughts/</guid><description>&lt;p&gt;（再一次蹭LLM的热点）&lt;/p&gt;
+&lt;p&gt;在过去的工作经验里面学到的可能是最重要的一点，就是不断追问。&lt;/p&gt;
+&lt;p&gt;很简单的一个操作，只要反复做下去，就会有不可思议的效果。&lt;/p&gt;
+&lt;p&gt;最后会得到一个很富有争议性的结论，可能是对的，可能是错的。&lt;/p&gt;
+&lt;p&gt;但是都比很多白话要有价值。&lt;/p&gt;</description></item><item><title>重新认识geohot</title><link>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</link><pubDate>Wed, 10 May 2023 16:52:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/</guid><description>&lt;p&gt;George Hotz。可能为人熟知的标签是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;破解小子，iOS和PS 3的越狱&lt;/li&gt;
+&lt;li&gt;用乐视/一加手机做自动驾驶&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以是个玩票的？&lt;/p&gt;
+&lt;p&gt;看看他实际做过什么，在过去的5年里。&lt;/p&gt;</description></item><item><title>intelligential honest</title><link>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</link><pubDate>Mon, 17 Apr 2023 10:42:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230417104236-intelligential_honest/</guid><description>&lt;p&gt;比如stated preference（陈述式偏好） v.s. revealed preference（揭示式偏好）&lt;/p&gt;</description></item><item><title>分体键盘</title><link>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</link><pubDate>Thu, 23 Mar 2023 10:02:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230323100244-split_keyboards/</guid><description>&lt;p&gt;一直对键盘不是特别在意，之前有个有线版的HHKB已经多年不用了。&lt;/p&gt;
+&lt;p&gt;一直在用笔记本键盘，最近意识到手放在身前的小区域内，会破坏背部肌肉拉伸的平衡，不利于颈椎区域休息，所以考虑分体键盘。&lt;/p&gt;
+&lt;p&gt;这里记录一些流行的layout。&lt;/p&gt;</description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p&gt;大模型可以解决什么问题。&lt;/p&gt;</description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p&gt;如果GPT可以生成下一个字符，它大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p&gt;
+&lt;p&gt;如果vision GPT可以预测下一张图，它大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p&gt;</description></item><item><title>Universal Caching, lessons learned from NX</title><link>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</link><pubDate>Wed, 15 Mar 2023 16:15:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230315161517-incremental_run/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;purity + cache = efficient (thus practical) FP&lt;/p&gt;</description></item><item><title>make the world a better place</title><link>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</link><pubDate>Mon, 09 Jan 2023 10:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230109104349-make_the_world_a_better_place/</guid><description>&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="./ox-hugo/2023-01-09_10-44-41_screenshot_hu_b841734c5a88e4e0.webp" height="738" width="1280"&gt;
+ 
+
+ 
+
+ 
+&lt;/figure&gt;
 
 
-&lt;p>哈哈，本来挺好的一个愿景，现在变味了。&lt;/p>
-&lt;p>平常难免屈从于各种各样的短期目标，过程中也感觉到，做的东西是挺好的，但是又不够好。&lt;/p>
-&lt;p>还是希望有一个更大更香的胡萝卜在前面。&lt;/p>
-&lt;p>现在大概有三类大饼，让我真心向往。&lt;/p></description></item><item><title>low_information_heuristics</title><link>https://www.yangzhenfei.com/posts/20221205145412-low_information_heuristics/</link><pubDate>Mon, 05 Dec 2022 14:54:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20221205145412-low_information_heuristics/</guid><description>&lt;p>作者选工作的时候有两个选择：
+&lt;p&gt;哈哈，本来挺好的一个愿景，现在变味了。&lt;/p&gt;
+&lt;p&gt;平常难免屈从于各种各样的短期目标，过程中也感觉到，做的东西是挺好的，但是又不够好。&lt;/p&gt;
+&lt;p&gt;还是希望有一个更大更香的胡萝卜在前面。&lt;/p&gt;
+&lt;p&gt;现在大概有三类大饼，让我真心向往。&lt;/p&gt;</description></item><item><title>low_information_heuristics</title><link>https://www.yangzhenfei.com/posts/20221205145412-low_information_heuristics/</link><pubDate>Mon, 05 Dec 2022 14:54:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20221205145412-low_information_heuristics/</guid><description>&lt;p&gt;作者选工作的时候有两个选择：
 一个是自己熟悉，亲身看到运转良好的公司，一个是被机构用行为证明看好，并顺利融资的公司。
-他选择了前者，被证明是正确的选择，后者后来出了一些问题。&lt;/p>
-&lt;p>所以他觉得要避免所谓的low information heuristics。&lt;/p>
-&lt;p>是这样吗。&lt;/p></description></item><item><title>《也许你该找个人聊聊》</title><link>https://www.yangzhenfei.com/posts/20220919103210-%E4%B9%9F%E8%AE%B8%E4%BD%A0%E8%AF%A5%E6%89%BE%E4%B8%AA%E4%BA%BA%E8%81%8A%E8%81%8A/</link><pubDate>Mon, 19 Sep 2022 10:32:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220919103210-%E4%B9%9F%E8%AE%B8%E4%BD%A0%E8%AF%A5%E6%89%BE%E4%B8%AA%E4%BA%BA%E8%81%8A%E8%81%8A/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>心理咨询师的工作笔记，记录了：&lt;/p>
-&lt;ul>
-&lt;li>一个四十多岁、事业成功、自以为是，认为身边所有人都是蠢货的好莱坞制片人；
-拒绝让人理解他，用“别人是愚蠢的”来使自己“满足”，才不至于陷入失去儿子的痛苦。&lt;/li>
-&lt;li>一个三十多岁、刚刚新婚就被诊断出患有绝症，时日不多的大学女教师；
-想去做收银员，就去做了。&lt;/li>
-&lt;li>一个六十九岁、离过三次婚，感觉孤独绝望，声称生活再不好转就要在七十岁生日当天自杀的老太太；
-我们都是有机会弥补错误的，永远有机会。&lt;/li>
-&lt;li>一个二十多岁、有原生家庭创伤和酗酒问题，在爱情中频频受挫的姑娘。
-先把酒戒了？印象最不深的一个人。&lt;/li>
-&lt;li>更重要的，作者自己
-逃避不喜欢的工作，带来了”无可弥补“的损失。偶尔可以跳出来看自己，更多时候是个普通的咨询者。&lt;/li>
-&lt;/ul>
-&lt;p>的治疗记录。&lt;/p>
-&lt;p>人和人的心理机制如此的类似，我们的感受也是有章可循，我们的痛苦也不是那么独一无二。&lt;/p></description></item><item><title>《黑客与画家》</title><link>https://www.yangzhenfei.com/posts/20220913115753-%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</link><pubDate>Tue, 13 Sep 2022 11:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220913115753-%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>一个太久在我列表里的书。&lt;/p>
-&lt;p>主要是paul graham的&lt;a href="http://www.paulgraham.com/articles.html">Essays&lt;/a>博客集（依旧在更新），主要讲述从自己视角和经历出发的对世界的评论：&lt;/p>
-&lt;p>简单来说就是用实际的创业行动来对抗既有规律里的荒谬之处。&lt;/p></description></item><item><title>pay_attention_to_your_frustration</title><link>https://www.yangzhenfei.com/posts/20220812183104-pay_attention_to_your_frustration/</link><pubDate>Fri, 12 Aug 2022 18:31:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220812183104-pay_attention_to_your_frustration/</guid><description>&lt;p>from otto scharmer.&lt;/p>
-&lt;p>如果你因为某个事情没有被做到而深深的低落。&lt;/p>
-&lt;p>这件事不一定是你需要做的，甚至可能是你从没打算做的，只是在某个时候，你因为这件事没有发生而沉思。&lt;/p>
-&lt;p>这件事很可能是你的热爱所在。&lt;/p></description></item><item><title>死亡行军</title><link>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</link><pubDate>Fri, 08 Jul 2022 16:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</guid><description>&lt;figure>
+他选择了前者，被证明是正确的选择，后者后来出了一些问题。&lt;/p&gt;
+&lt;p&gt;所以他觉得要避免所谓的low information heuristics。&lt;/p&gt;
+&lt;p&gt;是这样吗。&lt;/p&gt;</description></item><item><title>《也许你该找个人聊聊》</title><link>https://www.yangzhenfei.com/posts/20220919103210-%E4%B9%9F%E8%AE%B8%E4%BD%A0%E8%AF%A5%E6%89%BE%E4%B8%AA%E4%BA%BA%E8%81%8A%E8%81%8A/</link><pubDate>Mon, 19 Sep 2022 10:32:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220919103210-%E4%B9%9F%E8%AE%B8%E4%BD%A0%E8%AF%A5%E6%89%BE%E4%B8%AA%E4%BA%BA%E8%81%8A%E8%81%8A/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;心理咨询师的工作笔记，记录了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个四十多岁、事业成功、自以为是，认为身边所有人都是蠢货的好莱坞制片人；
+拒绝让人理解他，用“别人是愚蠢的”来使自己“满足”，才不至于陷入失去儿子的痛苦。&lt;/li&gt;
+&lt;li&gt;一个三十多岁、刚刚新婚就被诊断出患有绝症，时日不多的大学女教师；
+想去做收银员，就去做了。&lt;/li&gt;
+&lt;li&gt;一个六十九岁、离过三次婚，感觉孤独绝望，声称生活再不好转就要在七十岁生日当天自杀的老太太；
+我们都是有机会弥补错误的，永远有机会。&lt;/li&gt;
+&lt;li&gt;一个二十多岁、有原生家庭创伤和酗酒问题，在爱情中频频受挫的姑娘。
+先把酒戒了？印象最不深的一个人。&lt;/li&gt;
+&lt;li&gt;更重要的，作者自己
+逃避不喜欢的工作，带来了”无可弥补“的损失。偶尔可以跳出来看自己，更多时候是个普通的咨询者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;的治疗记录。&lt;/p&gt;
+&lt;p&gt;人和人的心理机制如此的类似，我们的感受也是有章可循，我们的痛苦也不是那么独一无二。&lt;/p&gt;</description></item><item><title>《黑客与画家》</title><link>https://www.yangzhenfei.com/posts/20220913115753-%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</link><pubDate>Tue, 13 Sep 2022 11:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220913115753-%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;一个太久在我列表里的书。&lt;/p&gt;
+&lt;p&gt;主要是paul graham的&lt;a href="http://www.paulgraham.com/articles.html"&gt;Essays&lt;/a&gt;博客集（依旧在更新），主要讲述从自己视角和经历出发的对世界的评论：&lt;/p&gt;
+&lt;p&gt;简单来说就是用实际的创业行动来对抗既有规律里的荒谬之处。&lt;/p&gt;</description></item><item><title>pay_attention_to_your_frustration</title><link>https://www.yangzhenfei.com/posts/20220812183104-pay_attention_to_your_frustration/</link><pubDate>Fri, 12 Aug 2022 18:31:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220812183104-pay_attention_to_your_frustration/</guid><description>&lt;p&gt;from otto scharmer.&lt;/p&gt;
+&lt;p&gt;如果你因为某个事情没有被做到而深深的低落。&lt;/p&gt;
+&lt;p&gt;这件事不一定是你需要做的，甚至可能是你从没打算做的，只是在某个时候，你因为这件事没有发生而沉思。&lt;/p&gt;
+&lt;p&gt;这件事很可能是你的热爱所在。&lt;/p&gt;</description></item><item><title>死亡行军</title><link>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</link><pubDate>Fri, 08 Jul 2022 16:57:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220708165718-%E6%AD%BB%E4%BA%A1%E8%A1%8C%E5%86%9B/</guid><description>&lt;figure&gt;
  
 
  
@@ -193,150 +228,110 @@ mental strength是可以被锻炼的。
  
  
  
- &lt;img src="./ox-hugo/2022-07-08_16-57-30_screenshot_hu_abdee2ca57cd5241.webp" height="1576" width="1280">
-
- 
-&lt;/figure>
-
-
-&lt;p>一种不算罕见的悲剧现象：当项目还没有实际失败，但是已经事实上失败的时候，大家首先想到的是如何保命。&lt;/p></description></item><item><title>nimby</title><link>https://www.yangzhenfei.com/posts/20220628105351-nimby/</link><pubDate>Tue, 28 Jun 2022 10:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220628105351-nimby/</guid><description>&lt;p>邻避效应&lt;/p></description></item><item><title>GTD</title><link>https://www.yangzhenfei.com/posts/20220527110715-gtd/</link><pubDate>Fri, 27 May 2022 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220527110715-gtd/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;ul>
-&lt;li>2min可以搞定的事情，不要进待办系统，马上做&lt;/li>
-&lt;li>写下来&lt;a href="./posts/20220510210940-write_it_down/">write it down&lt;/a>, &lt;a href="./posts/20220209192754-emacs/">using org-mode&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>双目相机的观测距离是怎么算出来的：Probabilistic Programming</title><link>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</link><pubDate>Fri, 20 May 2022 11:19:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</guid><description>&lt;p>我们都知道贝叶斯定理，也知道围绕这个定理的一些反直觉的故事：比如在一定的假设下，去医院即使检测出疾病，也是不得病的概率更大。&lt;/p>
-&lt;p>但是我们没有一个很好用的工具，回答一系列这样的问题：在设定一些假设并经历一系列事件后，哪个结果出现的概率更高？&lt;/p>
-&lt;p>从计算机的角度看，我们缺少一个可以操作概率分布的工具库。&lt;/p>
-&lt;p>当然，这样一个轮子已经被发明了。&lt;/p>
-&lt;p>介绍一个我觉得很实用，但是并不常听说的编程工具：Probabilistic Programming Language&lt;/p></description></item><item><title>write_it_down</title><link>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</link><pubDate>Tue, 10 May 2022 21:09:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</guid><description>&lt;p>&lt;a href="http://www.paulgraham.com/words.html">putting ideas into words&lt;/a>&lt;/p>
-&lt;p>把想法写下来有很多好处：&lt;/p>
-&lt;ol>
-&lt;li>帮助自己确定是不是真的想清楚了。会经常出现，在脑海中的一个强烈的自认为清晰的想法，写下来其实很单薄和简单，甚至是错误的。&lt;/li>
-&lt;li>&lt;a href="./posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/">复合思考&lt;/a>，大脑的cache太小，需要一个机制把历史的思考拿出来，以此为起点，继续思考，以做到较为深入的探索。&lt;/li>
-&lt;li>impact，把你的想法告诉更多人。一方面帮助别人更加了解自己（不确定是不是一定是好处，&lt;a href="./posts/20220215203814-public_or_private/">public_or_private&lt;/a>），一方面增加与别人联系的机会。&lt;/li>
-&lt;/ol></description></item><item><title>《置身事内》</title><link>https://www.yangzhenfei.com/posts/20220421145844-%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85/</link><pubDate>Thu, 21 Apr 2022 15:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220421145844-%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85/</guid><description>&lt;p>对于完全不了解这部分内容的我来说，这本书是个很好的科普。&lt;/p>
-&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>谁不希望让生产资料 &lt;strong>有效&lt;/strong> 流动呢。&lt;/p>
-&lt;p>但是如何在尊重现状的情况下做到这一点，就太复杂了。&lt;/p>
-&lt;p>所谓试错，则一定要把错误摊在桌面上去分析。&lt;/p></description></item><item><title>fontconfig</title><link>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</link><pubDate>Mon, 18 Apr 2022 17:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</guid><description>&lt;p>如果你经常在你在浏览器（有时也出现在PDF）里看到&lt;/p>
-&lt;p style="font-family:sans" lang="ja">门关&lt;/p>
-&lt;p>这种字，并感到困惑。&lt;/p></description></item><item><title>anki</title><link>https://www.yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220415110303-anki/</guid><description/></item><item><title>elon_musk_5_step</title><link>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>&lt;p>&lt;a href="./ox-hugo/evannex.com-Elon%20Musk%20reveals%20his%205-step%20engineering%20protocol.pdf">5-step&lt;/a>:&lt;/p>
-&lt;ol>
-&lt;li>MAKE THE REQUIREMENTS LESS DUMB&lt;/li>
-&lt;li>TRY AND DELETE PART OF THE PROCESS&lt;/li>
-&lt;li>SIMPLIFY OR OPTIMIZE&lt;/li>
-&lt;li>ACCELERATE CYCLE TIME&lt;/li>
-&lt;li>AUTOMATE&lt;/li>
-&lt;/ol></description></item><item><title>nix</title><link>https://www.yangzhenfei.com/posts/20220301101256-nix/</link><pubDate>Tue, 01 Mar 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220301101256-nix/</guid><description/></item><item><title>从SICP说起：重新学习（函数式）编程</title><link>https://www.yangzhenfei.com/posts/20220224200513-sicp/</link><pubDate>Thu, 24 Feb 2022 20:05:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220224200513-sicp/</guid><description>&lt;h2 id="从sicp说起">从SICP说起&lt;/h2>
-&lt;p>2021年开始，我把主力编辑器换成了 &lt;code>emacs&lt;/code> ，
-折腾的过程里，似懂非懂地写了一部分 &lt;code>elisp&lt;/code> ，
-也自然地想起了在本科的时候一直藏在收藏夹里的书：&lt;a href="https://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs">SICP&lt;/a>。&lt;/p>
-&lt;figure>
+ &lt;img src="./ox-hugo/2022-07-08_16-57-30_screenshot_hu_abdee2ca57cd5241.webp" height="1576" width="1280"&gt;
  
 
  
+
+ 
+&lt;/figure&gt;
+
+
+&lt;p&gt;一种不算罕见的悲剧现象：当项目还没有实际失败，但是已经事实上失败的时候，大家首先想到的是如何保命。&lt;/p&gt;</description></item><item><title>nimby</title><link>https://www.yangzhenfei.com/posts/20220628105351-nimby/</link><pubDate>Tue, 28 Jun 2022 10:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220628105351-nimby/</guid><description>&lt;p&gt;邻避效应&lt;/p&gt;</description></item><item><title>GTD</title><link>https://www.yangzhenfei.com/posts/20220527110715-gtd/</link><pubDate>Fri, 27 May 2022 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220527110715-gtd/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2min可以搞定的事情，不要进待办系统，马上做&lt;/li&gt;
+&lt;li&gt;写下来&lt;a href="./posts/20220510210940-write_it_down/"&gt;write it down&lt;/a&gt;, &lt;a href="./posts/20220209192754-emacs/"&gt;using org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>双目相机的观测距离是怎么算出来的：Probabilistic Programming</title><link>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</link><pubDate>Fri, 20 May 2022 11:19:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220520111929-probabilistic_programming/</guid><description>&lt;p&gt;我们都知道贝叶斯定理，也知道围绕这个定理的一些反直觉的故事：比如在一定的假设下，去医院即使检测出疾病，也是不得病的概率更大。&lt;/p&gt;
+&lt;p&gt;但是我们没有一个很好用的工具，回答一系列这样的问题：在设定一些假设并经历一系列事件后，哪个结果出现的概率更高？&lt;/p&gt;
+&lt;p&gt;从计算机的角度看，我们缺少一个可以操作概率分布的工具库。&lt;/p&gt;
+&lt;p&gt;当然，这样一个轮子已经被发明了。&lt;/p&gt;
+&lt;p&gt;介绍一个我觉得很实用，但是并不常听说的编程工具：Probabilistic Programming Language&lt;/p&gt;</description></item><item><title>write_it_down</title><link>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</link><pubDate>Tue, 10 May 2022 21:09:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220510210940-write_it_down/</guid><description>&lt;p&gt;&lt;a href="http://www.paulgraham.com/words.html"&gt;putting ideas into words&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;把想法写下来有很多好处：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;帮助自己确定是不是真的想清楚了。会经常出现，在脑海中的一个强烈的自认为清晰的想法，写下来其实很单薄和简单，甚至是错误的。&lt;/li&gt;
+&lt;li&gt;&lt;a href="./posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/"&gt;复合思考&lt;/a&gt;，大脑的cache太小，需要一个机制把历史的思考拿出来，以此为起点，继续思考，以做到较为深入的探索。&lt;/li&gt;
+&lt;li&gt;impact，把你的想法告诉更多人。一方面帮助别人更加了解自己（不确定是不是一定是好处，&lt;a href="./posts/20220215203814-public_or_private/"&gt;public_or_private&lt;/a&gt;），一方面增加与别人联系的机会。&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>《置身事内》</title><link>https://www.yangzhenfei.com/posts/20220421145844-%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85/</link><pubDate>Thu, 21 Apr 2022 15:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220421145844-%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85/</guid><description>&lt;p&gt;对于完全不了解这部分内容的我来说，这本书是个很好的科普。&lt;/p&gt;
+&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;谁不希望让生产资料 &lt;strong&gt;有效&lt;/strong&gt; 流动呢。&lt;/p&gt;
+&lt;p&gt;但是如何在尊重现状的情况下做到这一点，就太复杂了。&lt;/p&gt;
+&lt;p&gt;所谓试错，则一定要把错误摊在桌面上去分析。&lt;/p&gt;</description></item><item><title>fontconfig</title><link>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</link><pubDate>Mon, 18 Apr 2022 17:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220418170338-fontconfig/</guid><description>&lt;p&gt;如果你经常在你在浏览器（有时也出现在PDF）里看到&lt;/p&gt;
+&lt;p style="font-family:sans" lang="ja"&gt;门关&lt;/p&gt;
+&lt;p&gt;这种字，并感到困惑。&lt;/p&gt;</description></item><item><title>anki</title><link>https://www.yangzhenfei.com/posts/20220415110303-anki/</link><pubDate>Fri, 15 Apr 2022 11:03:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220415110303-anki/</guid><description/></item><item><title>elon_musk_5_step</title><link>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</link><pubDate>Mon, 21 Mar 2022 14:56:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220321145625-elon_musk_5_step/</guid><description>&lt;p&gt;&lt;a href="./ox-hugo/evannex.com-Elon%20Musk%20reveals%20his%205-step%20engineering%20protocol.pdf"&gt;5-step&lt;/a&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MAKE THE REQUIREMENTS LESS DUMB&lt;/li&gt;
+&lt;li&gt;TRY AND DELETE PART OF THE PROCESS&lt;/li&gt;
+&lt;li&gt;SIMPLIFY OR OPTIMIZE&lt;/li&gt;
+&lt;li&gt;ACCELERATE CYCLE TIME&lt;/li&gt;
+&lt;li&gt;AUTOMATE&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>nix</title><link>https://www.yangzhenfei.com/posts/20220301101256-nix/</link><pubDate>Tue, 01 Mar 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220301101256-nix/</guid><description/></item><item><title>从SICP说起：重新学习（函数式）编程</title><link>https://www.yangzhenfei.com/posts/20220224200513-sicp/</link><pubDate>Thu, 24 Feb 2022 20:05:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220224200513-sicp/</guid><description>&lt;h2 id="从sicp说起"&gt;从SICP说起&lt;/h2&gt;
+&lt;p&gt;2021年开始，我把主力编辑器换成了 &lt;code&gt;emacs&lt;/code&gt; ，
+折腾的过程里，似懂非懂地写了一部分 &lt;code&gt;elisp&lt;/code&gt; ，
+也自然地想起了在本科的时候一直藏在收藏夹里的书：&lt;a href="https://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs"&gt;SICP&lt;/a&gt;。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
  
 
  
  
  
  
- &lt;img src="./ox-hugo/2022-11-02_16-30-11_screenshot_hu_74f1de4349d8bfc5.webp" height="1853" width="1280">
+ &lt;img src="./ox-hugo/2022-11-02_16-30-11_screenshot_hu_74f1de4349d8bfc5.webp" height="1853" width="1280"&gt;
+ 
 
  
-&lt;/figure>
+
+ 
+&lt;/figure&gt;
 
 
-&lt;p>惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。
-没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。&lt;/p></description></item><item><title>复合思考</title><link>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</link><pubDate>Tue, 22 Feb 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</guid><description>&lt;p>&lt;a href="">forty-year_career&lt;/a>中提到：&lt;/p>
-&lt;blockquote>
-&lt;p>One section in Coders at Work, I believe it was Joe Armstrong’s, described spending four hours a week thinking about the future. Each week, their thinking would compound on the previous week’s, letting them see further and further into the future. Over time they were dreaming far beyond their contemporaries.&lt;/p>&lt;/blockquote></description></item><item><title>public_or_private</title><link>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</link><pubDate>Tue, 15 Feb 2022 20:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</guid><description>&lt;p>&lt;a href="https://news.ycombinator.com/item?id=34223288">https://news.ycombinator.com/item?id=34223288&lt;/a>&lt;/p>
-&lt;p>悲观者常常正确，乐观者往往成功&lt;/p>
-&lt;p>反省，忽略了&lt;a href="">forty-year_career&lt;/a>中的内容。&lt;/p></description></item><item><title>guide of emacs for vim user</title><link>https://www.yangzhenfei.com/posts/20220209192754-emacs/</link><pubDate>Wed, 09 Feb 2022 19:27:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220209192754-emacs/</guid><description>&lt;h2 id="目标用户">目标用户&lt;/h2>
-&lt;h3 id="singularity追求者">singularity追求者&lt;/h3>
-&lt;h2 id="vim">vim&lt;/h2>
-&lt;p>vim的modal editing模式非常受欢迎，尤其是以hjkl motion movement为核心的keybinding。&lt;/p>
-&lt;p>而vim keybinding比vim本身更加流行，浏览器 各种IDE，一些terminal都有vim keybinding。
-所以值得一问：&lt;/p>
-&lt;p>我是喜欢vim还是喜欢vim keybinding&lt;/p></description></item><item><title>《刘擎西方现代思想讲义》</title><link>https://www.yangzhenfei.com/posts/20220204124152-%E5%88%98%E6%93%8E%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E6%80%9D%E6%83%B3%E8%AE%B2%E4%B9%89/</link><pubDate>Fri, 04 Feb 2022 12:41:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220204124152-%E5%88%98%E6%93%8E%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E6%80%9D%E6%83%B3%E8%AE%B2%E4%B9%89/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>文艺复兴带来了启蒙，也带来了信仰的破灭。&lt;/p>
-&lt;p>了解一下新世纪的哲学动向，发现问题依旧无解。&lt;/p></description></item><item><title>about</title><link>https://www.yangzhenfei.com/about/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/about/</guid><description>&lt;p>YANG, Zhenfei&lt;/p></description></item><item><title>numbers</title><link>https://www.yangzhenfei.com/posts/20211217144946-latency_numbers/</link><pubDate>Fri, 17 Dec 2021 14:49:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211217144946-latency_numbers/</guid><description>&lt;p>记住一些数据，有助于防诈骗&lt;/p>
-&lt;h2 id="生命窗口">生命窗口&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>宇宙出现时间 130亿&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>地球出现时间 46亿&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>太阳剩余寿命 50亿&lt;/p>
-&lt;/li>
-&lt;/ul></description></item><item><title>geometric_algebra</title><link>https://www.yangzhenfei.com/posts/20211215182434-geometric_algebra/</link><pubDate>Wed, 15 Dec 2021 18:24:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211215182434-geometric_algebra/</guid><description>&lt;p>&lt;a href="https://www.youtube.com/watch?v=60z_hpEAtD8">A Swift Introduction to Geometric Algebra&lt;/a>&lt;/p></description></item><item><title>冥想</title><link>https://www.yangzhenfei.com/posts/20211213123832-%E5%86%A5%E6%83%B3/</link><pubDate>Mon, 13 Dec 2021 12:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123832-%E5%86%A5%E6%83%B3/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;ul>
-&lt;li>大脑的gym&lt;/li>
-&lt;li>不是发呆，是一种刻意练习，也许要技巧的辅助，并不轻松&lt;/li>
-&lt;/ul></description></item><item><title>证伪</title><link>https://www.yangzhenfei.com/posts/20211213123539-%E8%AF%81%E4%BC%AA/</link><pubDate>Mon, 13 Dec 2021 12:35:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123539-%E8%AF%81%E4%BC%AA/</guid><description>&lt;h2 id="motivation">Motivation&lt;/h2>
-&lt;p>如果一个理论可以强大地推导出任意理论，可能反而是无意义的。&lt;/p>
-&lt;p>历史上一个参考是弗洛伊德的对梦的解释。还有被熟知的：房间里有一头无法被任何方法探测的大象。&lt;/p></description></item><item><title>FIRE是什么，FIRE不是什么</title><link>https://www.yangzhenfei.com/posts/20211213123123-fire/</link><pubDate>Mon, 13 Dec 2021 12:31:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123123-fire/</guid><description>&lt;p>FIRE(financial independence retire early)是一个很吸引人的词。&lt;/p>
-&lt;p>基本上第一次听到这个词之后，所有人都会对它印象深刻，更不要说它的中文“财富自由”是多么让人浮想联翩了。&lt;/p>
-&lt;p>但是我又来我的&lt;a href="">杠精&lt;/a>想法了，我想去掉一些歧义，聊聊在我的想法里，FIRE是什么，FIRE不是什么。&lt;/p></description></item><item><title>double-entry_bookkeeping</title><link>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</link><pubDate>Mon, 13 Dec 2021 12:30:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</guid><description>&lt;p>\[income + expenses + equity + liability = 0\]&lt;/p></description></item><item><title>declarative_programming</title><link>https://www.yangzhenfei.com/posts/20211202120838-declarative_programming/</link><pubDate>Thu, 02 Dec 2021 12:08:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211202120838-declarative_programming/</guid><description>&lt;p>过程式和声明式的范式对比，出现在很多地方，这里罗列一些。&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>declarative&lt;/th>
- &lt;th>imperative&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Lisp&lt;/td>
- &lt;td>C&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>TensorFlow&lt;/td>
- &lt;td>PyTorth&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Nix&lt;/td>
- &lt;td>Apt/Pacman&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>SQL&lt;/td>
- &lt;td>ORM&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>CMake/Makefile&lt;/td>
- &lt;td>build.sh&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Halide&lt;/td>
- &lt;td>OpenMP/thread pool&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Symbolic Diff (symforce)&lt;/td>
- &lt;td>Automatic Diff (JAX/Jet)&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>DP for loop&lt;/td>
- &lt;td>DP recursive with cache (used in transformer inference)&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Eigen Lazy Evaluation&lt;/td>
- &lt;td>OpenBLAS&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>low latency audio</title><link>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</link><pubDate>Tue, 30 Nov 2021 19:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</guid><description>&lt;p>当我们讨论元宇宙的时候，能不能先把线上讨论的音频延迟问题解决。。。&lt;/p>
-&lt;p>这个问题解决是乐观的，因为我们通常认为影响延迟的部分（真实的网络延迟，中美做到200ms并不难，但是做到100ms几乎在物理上是不可能的）在这个问题里面并不占主要部分。&lt;/p></description></item><item><title>计划经济不在了，我很想他</title><link>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Thu, 25 Nov 2021 11:47:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;p>有⼀些复杂的多约束问题需要决策，从过去来看，过于复杂的问题由于种种原因，经常陷⼊低效的讨论。&lt;/p>
-&lt;p>最近受⼀些事情启发，发现了决策⽅法论的⼀个可能的探索⽅向：计划经济与线性规划。&lt;/p></description></item><item><title>tools</title><link>https://www.yangzhenfei.com/posts/20211115121752-tools/</link><pubDate>Mon, 15 Nov 2021 12:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115121752-tools/</guid><description>&lt;p>这里记录能帮助尽快接近singularity的方法。&lt;/p>
-&lt;p>一般来说，学习曲线陡峭~=能形成累计优势：&lt;/p>
-&lt;ul>
-&lt;li>一次学习， &lt;strong>终生&lt;/strong> 受用
-&lt;ul>
-&lt;li>不与非开放平台绑定&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>越用越熟练，上限高，不会浪费时间投入&lt;/li>
-&lt;/ul></description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr">TL;DR&lt;/h2>
-&lt;p>如果尝试把这个网状的事实，用树结构去记录，并且线性地讲述出来。&lt;/p>
-&lt;p>并遭遇挫败。&lt;/p>
-&lt;p>可以试试用网的结构开始。&lt;/p></description></item></channel></rss>
+&lt;p&gt;惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。
+没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。&lt;/p&gt;</description></item><item><title>复合思考</title><link>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</link><pubDate>Tue, 22 Feb 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</guid><description>&lt;p&gt;&lt;a href=""&gt;forty-year_career&lt;/a&gt;中提到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One section in Coders at Work, I believe it was Joe Armstrong’s, described spending four hours a week thinking about the future. Each week, their thinking would compound on the previous week’s, letting them see further and further into the future. Over time they were dreaming far beyond their contemporaries.&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>public_or_private</title><link>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</link><pubDate>Tue, 15 Feb 2022 20:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</guid><description>&lt;p&gt;&lt;a href="https://news.ycombinator.com/item?id=34223288"&gt;https://news.ycombinator.com/item?id=34223288&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;悲观者常常正确，乐观者往往成功&lt;/p&gt;
+&lt;p&gt;反省，忽略了&lt;a href=""&gt;forty-year_career&lt;/a&gt;中的内容。&lt;/p&gt;</description></item><item><title>guide of emacs for vim user</title><link>https://www.yangzhenfei.com/posts/20220209192754-emacs/</link><pubDate>Wed, 09 Feb 2022 19:27:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220209192754-emacs/</guid><description>&lt;h2 id="目标用户"&gt;目标用户&lt;/h2&gt;
+&lt;h3 id="singularity追求者"&gt;singularity追求者&lt;/h3&gt;
+&lt;h2 id="vim"&gt;vim&lt;/h2&gt;
+&lt;p&gt;vim的modal editing模式非常受欢迎，尤其是以hjkl motion movement为核心的keybinding。&lt;/p&gt;
+&lt;p&gt;而vim keybinding比vim本身更加流行，浏览器 各种IDE，一些terminal都有vim keybinding。
+所以值得一问：&lt;/p&gt;
+&lt;p&gt;我是喜欢vim还是喜欢vim keybinding&lt;/p&gt;</description></item><item><title>《刘擎西方现代思想讲义》</title><link>https://www.yangzhenfei.com/posts/20220204124152-%E5%88%98%E6%93%8E%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E6%80%9D%E6%83%B3%E8%AE%B2%E4%B9%89/</link><pubDate>Fri, 04 Feb 2022 12:41:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220204124152-%E5%88%98%E6%93%8E%E8%A5%BF%E6%96%B9%E7%8E%B0%E4%BB%A3%E6%80%9D%E6%83%B3%E8%AE%B2%E4%B9%89/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;文艺复兴带来了启蒙，也带来了信仰的破灭。&lt;/p&gt;
+&lt;p&gt;了解一下新世纪的哲学动向，发现问题依旧无解。&lt;/p&gt;</description></item><item><title>about</title><link>https://www.yangzhenfei.com/about/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/about/</guid><description>&lt;p&gt;YANG, Zhenfei&lt;/p&gt;</description></item><item><title>numbers</title><link>https://www.yangzhenfei.com/posts/20211217144946-latency_numbers/</link><pubDate>Fri, 17 Dec 2021 14:49:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211217144946-latency_numbers/</guid><description>&lt;p&gt;记住一些数据，有助于防诈骗&lt;/p&gt;
+&lt;h2 id="生命窗口"&gt;生命窗口&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;宇宙出现时间 130亿&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;地球出现时间 46亿&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;太阳剩余寿命 50亿&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>geometric_algebra</title><link>https://www.yangzhenfei.com/posts/20211215182434-geometric_algebra/</link><pubDate>Wed, 15 Dec 2021 18:24:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211215182434-geometric_algebra/</guid><description>&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=60z_hpEAtD8"&gt;A Swift Introduction to Geometric Algebra&lt;/a&gt;&lt;/p&gt;</description></item><item><title>冥想</title><link>https://www.yangzhenfei.com/posts/20211213123832-%E5%86%A5%E6%83%B3/</link><pubDate>Mon, 13 Dec 2021 12:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123832-%E5%86%A5%E6%83%B3/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;大脑的gym&lt;/li&gt;
+&lt;li&gt;不是发呆，是一种刻意练习，也许要技巧的辅助，并不轻松&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>证伪</title><link>https://www.yangzhenfei.com/posts/20211213123539-%E8%AF%81%E4%BC%AA/</link><pubDate>Mon, 13 Dec 2021 12:35:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123539-%E8%AF%81%E4%BC%AA/</guid><description>&lt;h2 id="motivation"&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;如果一个理论可以强大地推导出任意理论，可能反而是无意义的。&lt;/p&gt;
+&lt;p&gt;历史上一个参考是弗洛伊德的对梦的解释。还有被熟知的：房间里有一头无法被任何方法探测的大象。&lt;/p&gt;</description></item><item><title>FIRE是什么，FIRE不是什么</title><link>https://www.yangzhenfei.com/posts/20211213123123-fire/</link><pubDate>Mon, 13 Dec 2021 12:31:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123123-fire/</guid><description>&lt;p&gt;FIRE(financial independence retire early)是一个很吸引人的词。&lt;/p&gt;
+&lt;p&gt;基本上第一次听到这个词之后，所有人都会对它印象深刻，更不要说它的中文“财富自由”是多么让人浮想联翩了。&lt;/p&gt;
+&lt;p&gt;但是我又来我的&lt;a href=""&gt;杠精&lt;/a&gt;想法了，我想去掉一些歧义，聊聊在我的想法里，FIRE是什么，FIRE不是什么。&lt;/p&gt;</description></item><item><title>double-entry_bookkeeping</title><link>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</link><pubDate>Mon, 13 Dec 2021 12:30:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211213123003-double_entry_bookkeeping/</guid><description>&lt;p&gt;\[income + expenses + equity + liability = 0\]&lt;/p&gt;</description></item><item><title>low latency audio</title><link>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</link><pubDate>Tue, 30 Nov 2021 19:53:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211130195311-low_latency_audio/</guid><description>&lt;p&gt;当我们讨论元宇宙的时候，能不能先把线上讨论的音频延迟问题解决。。。&lt;/p&gt;
+&lt;p&gt;这个问题解决是乐观的，因为我们通常认为影响延迟的部分（真实的网络延迟，中美做到200ms并不难，但是做到100ms几乎在物理上是不可能的）在这个问题里面并不占主要部分。&lt;/p&gt;</description></item><item><title>计划经济不在了，我很想他</title><link>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Thu, 25 Nov 2021 11:47:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211125114728-%E5%A4%8D%E6%9D%82%E9%97%AE%E9%A2%98%E5%86%B3%E7%AD%96%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;p&gt;有⼀些复杂的多约束问题需要决策，从过去来看，过于复杂的问题由于种种原因，经常陷⼊低效的讨论。&lt;/p&gt;
+&lt;p&gt;最近受⼀些事情启发，发现了决策⽅法论的⼀个可能的探索⽅向：计划经济与线性规划。&lt;/p&gt;</description></item><item><title>tools</title><link>https://www.yangzhenfei.com/posts/20211115121752-tools/</link><pubDate>Mon, 15 Nov 2021 12:17:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115121752-tools/</guid><description>&lt;p&gt;这里记录能帮助尽快接近singularity的方法。&lt;/p&gt;
+&lt;p&gt;一般来说，学习曲线陡峭~=能形成累计优势：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一次学习， &lt;strong&gt;终生&lt;/strong&gt; 受用
+&lt;ul&gt;
+&lt;li&gt;不与非开放平台绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;越用越熟练，上限高，不会浪费时间投入&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>zettelkasten</title><link>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</link><pubDate>Mon, 15 Nov 2021 11:07:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20211115110725-zettelkasten/</guid><description>&lt;h2 id="tl-dr"&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;如果尝试把这个网状的事实，用树结构去记录，并且线性地讲述出来。&lt;/p&gt;
+&lt;p&gt;并遭遇挫败。&lt;/p&gt;
+&lt;p&gt;可以试试用网的结构开始。&lt;/p&gt;</description></item></channel></rss>

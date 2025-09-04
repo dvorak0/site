@@ -1,0 +1,323 @@
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=description content="self-reflections of Zhenfei Yang"><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><style type=text/css>body{font-family:monospace}</style><title>鱼和熊掌我要兼得：ROS2适合量产吗</title><link rel=stylesheet href=../../css/style.css></head><body><header><script defer src=https://worker.yangzhenfei.com/a.js></script><script defer>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-JHXS14NDHV")</script><script defer src=https://cloud.umami.is/script.js data-website-id=045b5d99-a38d-410c-984f-5ac9e7cc7b76></script>========================<br>== <a href=https://www.yangzhenfei.com/>Seeking Complexity</a> ==<br>========================<div style=float:right></div><br><p><nav><a href=../../><b>Start</b></a>.
+<a href=../../posts/><b>Posts</b></a>.
+<a href=../../tags/><b>Tags</b></a>.
+<a href=../../about/><b>About</b></a>.</nav></p></header><main><article><h1>鱼和熊掌我要兼得：ROS2适合量产吗</h1><b><time>2025-09-03 17:54:00</time></b>
+<a href=../../tags/public>PUBLIC</a><div><p>之前在学校的时候用ROS，在DJI的时候用一整套DJI自研的中间件。</p><p>大家不怀疑ROS的易用度，但是也都觉得ROS是低效和实验室原型的代名词。</p><p>所以在产品上，毫不犹豫地选择了高效，弄了一整套的中间件。</p><p>我长期关注C++的<a href=https://en.cppreference.com/w/cpp/language/Zero-overhead_principle.html>zero-overhead principle</a>信条。始终觉得很不服气，为什么中间件做不到又好用，又高效。</p><p>很有趣，最近用了一些时间做了一些实验，感觉整个过程是一个很值得讨论的技巧分享。</p><p>所以记录下来。</p><p>先说结论：在一个接近真实场景的case里面，从第一个版本的144% CPU占用，优化到了3.8%，提高了接近40倍的效率。</p><figure><img src=../../ox-hugo/2025-09-04_12-29-23_screenshot_hu_373410ceadf09221.webp height=704 width=1280></figure><h2 id=前情提要>前情提要</h2><p><a href>小电脑和大电脑</a>中记录一些优化分析的技巧。总结下来可能就是一句话，了解你的硬件的极限。</p><p>对于中间件来说，无非这些功能：进程内和进程间的消息传递；记录文本log；记录二进制log；可视化工具。</p><p>抛开可视化不管，前面的功能就是为了在功能保证的前提下，用最少的CPU，毕竟我们希望CPU都用在有用的计算上。</p><p>依次分析：</p><ol><li>通信，基础的实现是复制，大家的追求是zero-copy。所以应该几乎不占用CPU。</li><li>记录，寄出的实现是fwrite，大家追求的是async。所以也应该几乎不占用CPU。</li></ol><p>讲到这里我们就知道，我们的目标就是中间件几乎不占用CPU，可能就是单核的个位数。</p><p>接下来我们看看ROS2是否可以到达这个目标。</p><h2 id=先测量-再优化-基线版本-144>先测量，再优化，基线版本 144%</h2><p>在这里假设一个场景。</p><figure><img src=../../ox-hugo/2025-09-03_20-19-52_screenshot_hu_b5abd8cec980506c.webp height=313 width=1280></figure><p>一个完全mock的<a href=https://github.com/UniflexAI/tinynav>tinynav</a>。传感器是20hz的720p灰度图双目相机和200hz的IMU。</p><p>计算设备是<a href=https://www.waveshare.com/rdk-x5.htm>地平线x5</a>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sunrise@ubuntu:~/workspace/data$ lscpu
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Architecture:             aarch64
+</span></span><span style=display:flex><span>  CPU op-mode<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span>:         32-bit, 64-bit
+</span></span><span style=display:flex><span>  Byte Order:             Little Endian
+</span></span><span style=display:flex><span>CPU<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span>:                   <span style=color:#ae81ff>8</span>
+</span></span><span style=display:flex><span>  On-line CPU<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span> list:    0-7
+</span></span><span style=display:flex><span>Vendor ID:                ARM
+</span></span><span style=display:flex><span>  Model name:             Cortex-A55
+</span></span><span style=display:flex><span>    Model:                <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    Thread<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span> per core:   <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    Core<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span> per cluster:  <span style=color:#ae81ff>8</span>
+</span></span><span style=display:flex><span>    Socket<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span>:            -
+</span></span><span style=display:flex><span>    Cluster<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span>:           <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    Stepping:             r2p0
+</span></span><span style=display:flex><span>    Frequency boost:      disabled
+</span></span><span style=display:flex><span>    CPU max MHz:          1500.0000
+</span></span><span style=display:flex><span>    CPU min MHz:          300.0000
+</span></span><span style=display:flex><span>    BogoMIPS:             48.00
+</span></span><span style=display:flex><span>    Flags:                fp asimd evtstrm crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+</span></span><span style=display:flex><span>Caches <span style=color:#f92672>(</span>sum of all<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>  L1d:                    <span style=color:#ae81ff>256</span> KiB <span style=color:#f92672>(</span><span style=color:#ae81ff>8</span> instances<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  L1i:                    <span style=color:#ae81ff>256</span> KiB <span style=color:#f92672>(</span><span style=color:#ae81ff>8</span> instances<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  L2:                     <span style=color:#ae81ff>512</span> KiB <span style=color:#f92672>(</span><span style=color:#ae81ff>8</span> instances<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  L3:                     <span style=color:#ae81ff>1</span> MiB <span style=color:#f92672>(</span><span style=color:#ae81ff>1</span> instance<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>Vulnerabilities:
+</span></span><span style=display:flex><span>  Gather data sampling:   Not affected
+</span></span><span style=display:flex><span>  Itlb multihit:          Not affected
+</span></span><span style=display:flex><span>  L1tf:                   Not affected
+</span></span><span style=display:flex><span>  Mds:                    Not affected
+</span></span><span style=display:flex><span>  Meltdown:               Not affected
+</span></span><span style=display:flex><span>  Mmio stale data:        Not affected
+</span></span><span style=display:flex><span>  Reg file data sampling: Not affected
+</span></span><span style=display:flex><span>  Retbleed:               Not affected
+</span></span><span style=display:flex><span>  Spec rstack overflow:   Not affected
+</span></span><span style=display:flex><span>  Spec store bypass:      Not affected
+</span></span><span style=display:flex><span>  Spectre v1:             Mitigation; __user pointer sanitization
+</span></span><span style=display:flex><span>  Spectre v2:             Not affected
+</span></span><span style=display:flex><span>  Srbds:                  Not affected
+</span></span><span style=display:flex><span>  Tsx async abort:        Not affected
+</span></span></code></pre></div><p>先来一个baseline：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>.
+</span></span><span style=display:flex><span>|-- camera_node.cpp
+</span></span><span style=display:flex><span>|-- control_node.cpp
+</span></span><span style=display:flex><span>|-- imu_node.cpp
+</span></span><span style=display:flex><span>|-- perception_node.cpp
+</span></span><span style=display:flex><span><span style=color:#e6db74>`</span>-- planning_node.cpp
+</span></span></code></pre></div><p>每个node一个文件。拿最简单的 <code>imu_node.cpp</code> 看下：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cpp data-lang=cpp><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;rclcpp/rclcpp.hpp&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sensor_msgs/msg/imu.hpp&gt;</span><span style=color:#75715e>
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std<span style=color:#f92672>::</span>chrono_literals;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ImuNode</span> <span style=color:#f92672>:</span> <span style=color:#66d9ef>public</span> rclcpp<span style=color:#f92672>::</span>Node {
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>  ImuNode() <span style=color:#f92672>:</span> Node(<span style=color:#e6db74>&#34;imu_node&#34;</span>) {
+</span></span><span style=display:flex><span>    publisher_ <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>create_publisher<span style=color:#f92672>&lt;</span>sensor_msgs<span style=color:#f92672>::</span>msg<span style=color:#f92672>::</span>Imu<span style=color:#f92672>&gt;</span>(<span style=color:#e6db74>&#34;imu/data&#34;</span>, <span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>    timer_ <span style=color:#f92672>=</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>create_wall_timer(<span style=color:#ae81ff>5</span>ms, std<span style=color:#f92672>::</span>bind(<span style=color:#f92672>&amp;</span>ImuNode<span style=color:#f92672>::</span>timer_callback, <span style=color:#66d9ef>this</span>));
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>private</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>void</span> timer_callback() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>auto</span> msg <span style=color:#f92672>=</span> sensor_msgs<span style=color:#f92672>::</span>msg<span style=color:#f92672>::</span>Imu();
+</span></span><span style=display:flex><span>    msg.header.stamp <span style=color:#f92672>=</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>now();
+</span></span><span style=display:flex><span>    msg.header.frame_id <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;imu_frame&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    msg.angular_velocity.x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>    msg.angular_velocity.y <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>    msg.angular_velocity.z <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.1</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    msg.linear_acceleration.x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>    msg.linear_acceleration.y <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>    msg.linear_acceleration.z <span style=color:#f92672>=</span> <span style=color:#ae81ff>9.81</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    publisher_<span style=color:#f92672>-&gt;</span>publish(msg);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  rclcpp<span style=color:#f92672>::</span>Publisher<span style=color:#f92672>&lt;</span>sensor_msgs<span style=color:#f92672>::</span>msg<span style=color:#f92672>::</span>Imu<span style=color:#f92672>&gt;::</span>SharedPtr publisher_;
+</span></span><span style=display:flex><span>  rclcpp<span style=color:#f92672>::</span>TimerBase<span style=color:#f92672>::</span>SharedPtr timer_;
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(<span style=color:#66d9ef>int</span> argc, <span style=color:#66d9ef>char</span> <span style=color:#f92672>*</span>argv[]) {
+</span></span><span style=display:flex><span>  rclcpp<span style=color:#f92672>::</span>init(argc, argv);
+</span></span><span style=display:flex><span>  rclcpp<span style=color:#f92672>::</span>spin(std<span style=color:#f92672>::</span>make_shared<span style=color:#f92672>&lt;</span>ImuNode<span style=color:#f92672>&gt;</span>());
+</span></span><span style=display:flex><span>  rclcpp<span style=color:#f92672>::</span>shutdown();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>好了，我们开始测量。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>perf stat -p <span style=color:#e6db74>`</span>pidof perception_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4273&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          5,235.91 msec task-clock:u                     <span style=color:#75715e>#    0.523 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>     1,427,684,811      cycles:u                         <span style=color:#75715e>#    0.273 GHz</span>
+</span></span><span style=display:flex><span>       647,318,281      instructions:u                   <span style=color:#75715e>#    0.45  insn per cycle</span>
+</span></span><span style=display:flex><span>        80,985,594      branches:u                       <span style=color:#75715e>#   15.467 M/sec</span>
+</span></span><span style=display:flex><span>         8,084,009      branch-misses:u                  <span style=color:#75715e>#    9.98% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.008814607 seconds time elapsed
+</span></span></code></pre></div><p>好的，果然很慢，其他node都不想看了。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>perf stat -p <span style=color:#e6db74>`</span>pidof camera_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4269&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          3,853.95 msec task-clock:u                     <span style=color:#75715e>#    0.385 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>            83,600      page-faults:u                    <span style=color:#75715e>#   21.692 K/sec</span>
+</span></span><span style=display:flex><span>       744,176,154      cycles:u                         <span style=color:#75715e>#    0.193 GHz</span>
+</span></span><span style=display:flex><span>       334,364,721      instructions:u                   <span style=color:#75715e>#    0.45  insn per cycle</span>
+</span></span><span style=display:flex><span>        37,471,342      branches:u                       <span style=color:#75715e>#    9.723 M/sec</span>
+</span></span><span style=display:flex><span>         1,250,800      branch-misses:u                  <span style=color:#75715e>#    3.34% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.005158820 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>perf stat -p <span style=color:#e6db74>`</span>pidof imu_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4271&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          1,489.53 msec task-clock:u                     <span style=color:#75715e>#    0.149 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       367,451,810      cycles:u                         <span style=color:#75715e>#    0.247 GHz</span>
+</span></span><span style=display:flex><span>       157,764,377      instructions:u                   <span style=color:#75715e>#    0.43  insn per cycle</span>
+</span></span><span style=display:flex><span>        21,899,768      branches:u                       <span style=color:#75715e>#   14.703 M/sec</span>
+</span></span><span style=display:flex><span>         3,772,083      branch-misses:u                  <span style=color:#75715e>#   17.22% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.005567466 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>perf stat -p <span style=color:#e6db74>`</span>pidof planning_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4275&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          1,085.09 msec task-clock:u                     <span style=color:#75715e>#    0.108 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       287,269,466      cycles:u                         <span style=color:#75715e>#    0.265 GHz</span>
+</span></span><span style=display:flex><span>       133,133,318      instructions:u                   <span style=color:#75715e>#    0.46  insn per cycle</span>
+</span></span><span style=display:flex><span>        16,560,378      branches:u                       <span style=color:#75715e>#   15.262 M/sec</span>
+</span></span><span style=display:flex><span>         1,443,901      branch-misses:u                  <span style=color:#75715e>#    8.72% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.007625344 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>perf stat -p <span style=color:#e6db74>`</span>pidof control_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4277&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          2,838.80 msec task-clock:u                     <span style=color:#75715e>#    0.284 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       725,161,289      cycles:u                         <span style=color:#75715e>#    0.255 GHz</span>
+</span></span><span style=display:flex><span>       370,651,301      instructions:u                   <span style=color:#75715e>#    0.51  insn per cycle</span>
+</span></span><span style=display:flex><span>        52,844,557      branches:u                       <span style=color:#75715e>#   18.615 M/sec</span>
+</span></span><span style=display:flex><span>         7,309,073      branch-misses:u                  <span style=color:#75715e>#   13.83% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.005027786 seconds time elapsed
+</span></span></code></pre></div><p>加合起来是1.44个核。</p><h2 id=v0-锁住cpu频率-37>V0 锁住CPU频率 37%</h2><p>理解你的硬件，是否错过了关键的控制变量。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#66d9ef>for</span> cpu in /sys/devices/system/cpu/cpu<span style=color:#f92672>[</span>0-9<span style=color:#f92672>]</span>*; <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    echo performance | sudo tee $cpu/cpufreq/scaling_governor
+</span></span><span style=display:flex><span><span style=color:#66d9ef>done</span>
+</span></span></code></pre></div><p>我们喜欢静态的系统，体现在方方面面，静态的内存。静态的CPU频率。以及作为结果的静态的CPU负载。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sunrise@ubunperf stat -p <span style=color:#e6db74>`</span>pidof perception_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4273&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          1,553.52 msec task-clock:u                     <span style=color:#75715e>#    0.155 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>     1,868,415,448      cycles:u                         <span style=color:#75715e>#    1.203 GHz</span>
+</span></span><span style=display:flex><span>       660,517,840      instructions:u                   <span style=color:#75715e>#    0.35  insn per cycle</span>
+</span></span><span style=display:flex><span>        82,970,194      branches:u                       <span style=color:#75715e>#   53.408 M/sec</span>
+</span></span><span style=display:flex><span>         8,116,746      branch-misses:u                  <span style=color:#75715e>#    9.78% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.004774491 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sunrise@ubuntu:~/workspace/data$ perf stat -p <span style=color:#e6db74>`</span>pidof camera_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4269&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            720.49 msec task-clock:u                     <span style=color:#75715e>#    0.072 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       951,908,198      cycles:u                         <span style=color:#75715e>#    1.321 GHz</span>
+</span></span><span style=display:flex><span>       334,262,236      instructions:u                   <span style=color:#75715e>#    0.35  insn per cycle</span>
+</span></span><span style=display:flex><span>        37,364,399      branches:u                       <span style=color:#75715e>#   51.860 M/sec</span>
+</span></span><span style=display:flex><span>         1,122,648      branch-misses:u                  <span style=color:#75715e>#    3.00% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.004771016 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sunrise@ubuntu:~/workspace/data$ perf stat -p <span style=color:#e6db74>`</span>pidof imu_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4271&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            442.39 msec task-clock:u                     <span style=color:#75715e>#    0.044 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       481,199,305      cycles:u                         <span style=color:#75715e>#    1.088 GHz</span>
+</span></span><span style=display:flex><span>       158,023,331      instructions:u                   <span style=color:#75715e>#    0.33  insn per cycle</span>
+</span></span><span style=display:flex><span>        21,924,993      branches:u                       <span style=color:#75715e>#   49.560 M/sec</span>
+</span></span><span style=display:flex><span>         3,771,693      branch-misses:u                  <span style=color:#75715e>#   17.20% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.004882884 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sunrise@ubuntu:~/workspace/data$ perf stat -p <span style=color:#e6db74>`</span>pidof planning_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4275&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            365.89 msec task-clock:u                     <span style=color:#75715e>#    0.037 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       419,252,329      cycles:u                         <span style=color:#75715e>#    1.146 GHz</span>
+</span></span><span style=display:flex><span>       137,643,995      instructions:u                   <span style=color:#75715e>#    0.33  insn per cycle</span>
+</span></span><span style=display:flex><span>        17,233,971      branches:u                       <span style=color:#75715e>#   47.102 M/sec</span>
+</span></span><span style=display:flex><span>         1,496,232      branch-misses:u                  <span style=color:#75715e>#    8.68% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.004889550 seconds time elapsed
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sunrise@ubuntu:~/workspace/data$ perf stat -p <span style=color:#e6db74>`</span>pidof control_node<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;4277&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            644.55 msec task-clock:u                     <span style=color:#75715e>#    0.064 CPUs utilized</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>                 <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>       755,655,328      cycles:u                         <span style=color:#75715e>#    1.172 GHz</span>
+</span></span><span style=display:flex><span>       287,431,393      instructions:u                   <span style=color:#75715e>#    0.38  insn per cycle</span>
+</span></span><span style=display:flex><span>        40,744,616      branches:u                       <span style=color:#75715e>#   63.214 M/sec</span>
+</span></span><span style=display:flex><span>         6,137,673      branch-misses:u                  <span style=color:#75715e>#   15.06% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      10.005378124 seconds time elapsed
+</span></span></code></pre></div><p>加起来0.372个CPU核。很大的提高，但是其实是之前的测量不准确。</p><p>好像可以了吗，我们继续往后。</p><h2 id=v1-single-process-multiple-thread-26-dot-7>V1 single process, multiple thread 26.7%</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo perf record -g -p <span style=color:#e6db74>`</span>pidof giant_nodes_system_v1<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;7396&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>       2,667.23 msec task-clock:u                     <span style=color:#75715e>#    0.267 CPUs utilized</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>         90,099      page-faults:u                    <span style=color:#75715e>#   33.780 K/sec</span>
+</span></span><span style=display:flex><span>  2,989,886,366      cycles:u                         <span style=color:#75715e>#    1.121 GHz</span>
+</span></span><span style=display:flex><span>  1,768,020,433      instructions:u                   <span style=color:#75715e>#    0.59  insn per cycle</span>
+</span></span><span style=display:flex><span>    243,045,912      branches:u                       <span style=color:#75715e>#   91.123 M/sec</span>
+</span></span><span style=display:flex><span>     12,328,677      branch-misses:u                  <span style=color:#75715e>#    5.07% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   10.004910597 seconds time elapsed
+</span></span></code></pre></div><p>有点提高。把multi-process换成multi-thread确实减少了开销，具体是为什么，可以有时间的时候分析一下。</p><p>不过值得一提的是，如果想优化调度之类的问题，例如优先级，实时性，核亲和性，thread和process具备同样的功能，在Linux的处理里面，是不做区分的。</p><p>可能主要的区别就是内存空间的问题，process内部，可以不需要做地址的转换，共享同一个memory page，process之间就需要用shared memory相关的系统调用了。</p><p>然后继续分析，我们先跑一个<a href=https://github.com/brendangregg/FlameGraph>火焰图</a>。</p><figure><img src=../../ox-hugo/v1.svg><figcaption><a href=../../ox-hugo/v1.svg target=_blank rel="noopener noreferrer">interactive</a></figcaption></figure><p>从打印里面可以看出来，一个Image msg，从 <code>camera_node</code> 到 <code>perception_node</code> 已经经历了复制：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756955429.751859783<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>camera_node<span style=color:#f92672>]</span>: Publishing left image at address: 0xffff60001cf0
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756955429.752962456<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>perception_node<span style=color:#f92672>]</span>: Received left image at address: 0xffff68000b80
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756955429.754733717<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>perception_node<span style=color:#f92672>]</span>: Received right image at address: 0xffff6400a200
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756955429.754863010<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>perception_node<span style=color:#f92672>]</span>: Processing stereo images at addresses: left 0xffff68000b80, right 0xffff6400a200
+</span></span></code></pre></div><h2 id=v2-intra-process-zero-copy-16-dot-0>V2 intra-process zero-copy 16.0%</h2><p>如上面所说，如果我们把任务都保留在一个进程内，我们可以减少复制。</p><p>在ROS2中开启这个feature也很简单： <code>options.use_intra_process_comms(true)</code></p><p>测一下：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo perf record -g -p <span style=color:#e6db74>`</span>pidof giant_nodes_system_v2<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;15691&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>       1,597.49 msec task-clock:u                     <span style=color:#75715e>#    0.160 CPUs utilized</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>         25,076      page-faults:u                    <span style=color:#75715e>#   15.697 K/sec</span>
+</span></span><span style=display:flex><span>  1,837,091,696      cycles:u                         <span style=color:#75715e>#    1.150 GHz</span>
+</span></span><span style=display:flex><span>  1,010,977,273      instructions:u                   <span style=color:#75715e>#    0.55  insn per cycle</span>
+</span></span><span style=display:flex><span>    140,877,405      branches:u                       <span style=color:#75715e>#   88.187 M/sec</span>
+</span></span><span style=display:flex><span>      8,593,332      branch-misses:u                  <span style=color:#75715e>#    6.10% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   10.004934483 seconds time elapsed
+</span></span></code></pre></div><p>明显的提高啊。火焰图如下：</p><figure><img src=../../ox-hugo/v2.svg><figcaption><a href=../../ox-hugo/v2.svg target=_blank rel="noopener noreferrer">interactive</a></figcaption></figure><p>通过打印检查一下是否是同一个对象：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756956492.805418607<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>camera_node<span style=color:#f92672>]</span>: Publishing left image at address: 0xaaaab18bbb10
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756956492.805616065<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>perception_node<span style=color:#f92672>]</span>: Received left image at address: 0xaaaab18bbb10
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756956492.805697899<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>perception_node<span style=color:#f92672>]</span>: Received right image at address: 0xaaaab1793150
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>INFO<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>1756956492.805758066<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>perception_node<span style=color:#f92672>]</span>: Processing stereo images at addresses: left 0xaaaab18bbb10, right 0xaaaab1793150
+</span></span></code></pre></div><p>符合预期。</p><h2 id=v3-static-executor-6-dot-9>V3 Static Executor 6.9%</h2><p>火焰图中已经有很多是和消息的等待有关了，线程间同步。</p><p>此时想到，我们也许也不需要多线程，只需要把消息发送都用在single thread，各个node除了接受消息之外，自己起thread去做计算。</p><p>如果这样的话，<del>StaticSingleThreadedExecutor</del> 就很适合我们，得到第三版：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo perf record -g -p <span style=color:#e6db74>`</span>pidof giant_nodes_system_v3<span style=color:#e6db74>`</span> -- sleep <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;16150&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>         694.89 msec task-clock:u                     <span style=color:#75715e>#    0.069 CPUs utilized</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      page-faults:u                    <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>    874,690,659      cycles:u                         <span style=color:#75715e>#    1.259 GHz</span>
+</span></span><span style=display:flex><span>    466,580,545      instructions:u                   <span style=color:#75715e>#    0.53  insn per cycle</span>
+</span></span><span style=display:flex><span>     66,610,771      branches:u                       <span style=color:#75715e>#   95.858 M/sec</span>
+</span></span><span style=display:flex><span>      3,786,256      branch-misses:u                  <span style=color:#75715e>#    5.68% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   10.004895885 seconds time elapsed
+</span></span></code></pre></div><p>又是很明显的提高。</p><figure><img src=../../ox-hugo/v3.svg><figcaption><a href=../../ox-hugo/v3.svg target=_blank rel="noopener noreferrer">interactive</a></figcaption></figure><p>这个结果已经很好了。</p><h2 id=v4-tcmalloc-6-dot-3>V4 TCMalloc 6.3%</h2><p>从上面的思路来看，我们也不追求消除所有的内存操作，毕竟大部分的msg都是很小的，我们主要优化图像。
+而 <code>sensor_msgs::msg::Image</code> 是一个动态对象，除了对象头部信息，还有一个 <code>data</code> 是动态的 <code>vector</code> 。</p><p>就算是我们传递消息的时候做到了zero-copy，每次新的图片，在目前的实现中，也是一个新的对象，需要申请这个vector的内存。</p><p>从火焰图中，我们也看到了和很多page fault相关的部分 <del>el0_da</del>。</p><p>能不能优化这一点呢。可以，但是大部分思路都比较难搞。</p><ol><li>不用 <code>sensor_msgs::msg::Image</code> ，用一个静态的msg。但是代价就是现有的可视化工具都用不了了。</li><li>用 <code>sensor_msgs::msg::Image_&lt;VoidAlloc></code> ，但是给一个memory pool的简单实现。但是。。和1一样， <code>sensor_msgs::msg::Image_&lt;VoidAlloc></code> 其实也不被现有的工具支持，
+毕竟已经完全不是一个type了。</li><li>重载unique_ptr的delete，每次“释放”的时候，实际去做一个回收。实验下来，发现ROS有一个自己的delete，不能改变，具体原因也可以再看看。</li></ol><p>最后选了一个更粗暴的方法，既然我只关心图片的内存，而且图片的内存尺寸总是固定的。那么我可以要求malloc库针对重复分配的尺寸进行缓存。</p><p>这也就是（我理解的）<a href=https://github.com/google/tcmalloc>tcmalloc</a>的思路。</p><p>测试一下：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>LD_PRELOAD<span style=color:#f92672>=</span>/usr/lib/aarch64-linux-gnu/libtcmalloc_minimal.so.4 ros2 run ros2_efficiency_test giant_nodes_system_v3
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;17388&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>         631.34 msec task-clock:u                     <span style=color:#75715e>#    0.063 CPUs utilized</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>              <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>320</span>      page-faults:u                    <span style=color:#75715e>#  506.858 /sec</span>
+</span></span><span style=display:flex><span>    821,420,073      cycles:u                         <span style=color:#75715e>#    1.301 GHz</span>
+</span></span><span style=display:flex><span>    454,039,167      instructions:u                   <span style=color:#75715e>#    0.55  insn per cycle</span>
+</span></span><span style=display:flex><span>     64,927,835      branches:u                       <span style=color:#75715e>#  102.841 M/sec</span>
+</span></span><span style=display:flex><span>      3,489,579      branch-misses:u                  <span style=color:#75715e>#    5.37% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   10.004872700 seconds time elapsed
+</span></span></code></pre></div><p>好像不太明显。</p><h2 id=v5-cyclonedds-3-dot-8>V5 CycloneDDS 3.8%</h2><p>再往后就是感觉DDS本身的操作比较多了。</p><p>我们换一换试试：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>RMW_IMPLEMENTATION<span style=color:#f92672>=</span>rmw_cyclonedds_cpp LD_PRELOAD<span style=color:#f92672>=</span>/usr/lib/aarch64-linux-gnu/libtcmalloc_minimal.so.4 ros2 run ros2_efficiency_test giant_nodes_system_v3
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Performance counter stats <span style=color:#66d9ef>for</span> process id <span style=color:#e6db74>&#39;17646&#39;</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>          379.74 msec task-clock:u                     <span style=color:#75715e>#    0.038 CPUs utilized</span>
+</span></span><span style=display:flex><span>               <span style=color:#ae81ff>0</span>      context-switches:u               <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>               <span style=color:#ae81ff>0</span>      cpu-migrations:u                 <span style=color:#75715e>#    0.000 /sec</span>
+</span></span><span style=display:flex><span>               <span style=color:#ae81ff>3</span>      page-faults:u                    <span style=color:#75715e>#    7.900 /sec</span>
+</span></span><span style=display:flex><span>     445,157,443      cycles:u                         <span style=color:#75715e>#    1.172 GHz</span>
+</span></span><span style=display:flex><span>     179,113,939      instructions:u                   <span style=color:#75715e>#    0.40  insn per cycle</span>
+</span></span><span style=display:flex><span>      28,939,796      branches:u                       <span style=color:#75715e>#   76.209 M/sec</span>
+</span></span><span style=display:flex><span>       2,528,278      branch-misses:u                  <span style=color:#75715e>#    8.74% of all branches</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    10.004862817 seconds time elapsed
+</span></span></code></pre></div><p>挺好的提高。</p><h2 id=总结>总结</h2><p>代码放在：<a href=https://github.com/dvorak0/ros2_efficiency_test>https://github.com/dvorak0/ros2_efficiency_test</a></p><h3 id=todos>todos</h3><ol><li>同时考虑rosbag record</li><li>loaned messages接口测试。</li></ol></div></article></main><script src=https://utteranc.es/client.js repo=dvorak0/site issue-term=pathname theme=github-light crossorigin=anonymous async></script><script async src=https://www.yangzhenfei.com/js/mathjax-config.js></script><script type=text/javascript async src=https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js></script><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=../../posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/>鱼和熊掌我要兼得：ROS2适合量产吗</a></li><li><a href=../../posts/20250718102851-oop_considered_harmful/>OOP considered harmful</a></li><li><a href=../../posts/20250605170140-%E4%BA%BA%E7%B1%BBcot%E5%85%B8%E8%8C%83_%E5%BC%A0%E7%A5%A5%E9%9B%A8%E7%9A%84line_of_research/>人类CoT典范，张祥雨的Line of Research</a></li><li><a href=../../posts/20250516101712-building_music_theory_from_the_scratch/>Music Theory: Building from the Scratch</a></li><li><a href=../../posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/>E2E Self-Driving: 模仿可以产生智能吗？</a></li></ul></div></div></aside><footer><p>&copy; 2025 <a href=https://www.yangzhenfei.com/><b>Seeking Complexity</b></a>.
+<a href=https://github.com/dvorak0><b>Github</b></a>.
+<a href=https://twitter.com/dvorak0><b>Twitter</b></a>.</p></footer></body></html>

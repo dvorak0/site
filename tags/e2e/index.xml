@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>E2e on Seeking Complexity</title><link>https://www.yangzhenfei.com/tags/e2e/</link><description>Recent content in E2e on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 08 May 2025 12:14:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/tags/e2e/index.xml" rel="self" type="application/rss+xml"/><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p>一条漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p>
-&lt;p>从能吃下数据的尺度来排序：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Internet-Scale Data&lt;/p>
-&lt;p>无监督的训练掌握 &lt;strong>常识&lt;/strong>&lt;/p>
-&lt;p>DINOv2变成de facto image encoder，VLM公认有“常识”，所以可以帮助action变成VLA&lt;/p>
-&lt;p>自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>人类示教数据&lt;/p>
-&lt;p>模仿学习的数据介绍 &lt;strong>领域知识&lt;/strong>&lt;/p>
-&lt;p>Behavior Cloning + Video Generation-based Augmentation&lt;/p>
-&lt;p>更fancy的说法是world model，或者LeCun的JEPA&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>打分数据&lt;/p>
-&lt;p>在两个采样中，A比B更好，表达 &lt;strong>偏好&lt;/strong>&lt;/p>
-&lt;p>用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL&lt;/p>
-&lt;p>有一个机器臂的工作用了这个方法，&lt;a href="https://hil-serl.github.io/">HiL-serl&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>看起来能统一地解决自动驾驶和机械臂的问题。&lt;/p>
-&lt;p>今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p></description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p>(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p></description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p>大模型可以解决什么问题。&lt;/p></description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p>如果GPT可以生成下一个字符，它大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p>
-&lt;p>如果vision GPT可以预测下一张图，它大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>E2e on Seeking Complexity</title><link>https://www.yangzhenfei.com/tags/e2e/</link><description>Recent content in E2e on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 08 May 2025 18:12:03 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/tags/e2e/index.xml" rel="self" type="application/rss+xml"/><item><title>E2E Self-Driving: 模仿可以产生智能吗？</title><link>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</link><pubDate>Thu, 08 May 2025 12:14:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250508121432-%E6%A8%A1%E4%BB%BF%E5%8F%AF%E4%BB%A5%E4%BA%A7%E7%94%9F%E6%99%BA%E8%83%BD%E5%90%97/</guid><description>&lt;p&gt;一条漂亮干净的路径，通往机器人的高可靠性终点。&lt;/p&gt;
+&lt;p&gt;从能吃下数据的尺度来排序：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Internet-Scale Data&lt;/p&gt;
+&lt;p&gt;无监督的训练掌握 &lt;strong&gt;常识&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DINOv2变成de facto image encoder，VLM公认有“常识”，所以可以帮助action变成VLA&lt;/p&gt;
+&lt;p&gt;自动驾驶中用视频生成做模拟器，可以不只利用驾驶数据，更多普通数据可以包含更多自然的知识&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;人类示教数据&lt;/p&gt;
+&lt;p&gt;模仿学习的数据介绍 &lt;strong&gt;领域知识&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Behavior Cloning + Video Generation-based Augmentation&lt;/p&gt;
+&lt;p&gt;更fancy的说法是world model，或者LeCun的JEPA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打分数据&lt;/p&gt;
+&lt;p&gt;在两个采样中，A比B更好，表达 &lt;strong&gt;偏好&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用交替训练的方法，同时训练Reward Model，以及用这个Reward Model支持RL&lt;/p&gt;
+&lt;p&gt;有一个机器臂的工作用了这个方法，&lt;a href="https://hil-serl.github.io/"&gt;HiL-serl&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;看起来能统一地解决自动驾驶和机械臂的问题。&lt;/p&gt;
+&lt;p&gt;今天主要讨论模仿学习如何结合视频生成解决分布漂移的死结。&lt;/p&gt;</description></item><item><title>E2E Self-Driving One-year Reflection</title><link>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</link><pubDate>Thu, 23 May 2024 10:59:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20240523105930-e2e_self_driving_one_year_reflection/</guid><description>&lt;p&gt;(shamefully)因为wayve的新融资，不免的再次想起这个话题。&lt;/p&gt;</description></item><item><title>E2E Self-Driving in the Era of GPT</title><link>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</link><pubDate>Wed, 22 Mar 2023 10:00:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230322100018-end_to_end_selfdriving_in_the_era_of_gpt/</guid><description>&lt;p&gt;大模型可以解决什么问题。&lt;/p&gt;</description></item><item><title>make generative model great again</title><link>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</link><pubDate>Fri, 17 Mar 2023 14:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230317142816-make_generative_model_great_again/</guid><description>&lt;p&gt;如果GPT可以生成下一个字符，它大概率掌握了语言类的一系列子任务：情绪分析、Q&amp;amp;A、翻译。&lt;/p&gt;
+&lt;p&gt;如果vision GPT可以预测下一张图，它大概率掌握了自动驾驶的一系列子任务：可行驶区域、动态物体识别、行为预测。&lt;/p&gt;</description></item></channel></rss>
