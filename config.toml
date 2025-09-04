@@ -4,6 +4,7 @@ title = 'Seeking Complexity'
 theme = 'smol'
 refLinksErrorLevel = "WARNING"
 relativeURLs = true
+enableGitInfo =true
 
 [sitemap]
   filename = 'sitemap.xml'
