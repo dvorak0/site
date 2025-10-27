@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 10 Sep 2025 11:35:39 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>鱼和熊掌我要兼得：ROS2适合量产吗</title><link>https://www.yangzhenfei.com/posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/</link><pubDate>Wed, 03 Sep 2025 17:54:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/</guid><description>&lt;p&gt;之前在学校的时候用ROS，在DJI的时候用一整套DJI自研的中间件。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Oct 2025 17:34:14 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>重新认识Chris Lattner</title><link>https://www.yangzhenfei.com/posts/20251027161231-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86chris_lattner/</link><pubDate>Mon, 27 Oct 2025 16:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20251027161231-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86chris_lattner/</guid><description>&lt;p&gt;Chris是谁？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Apple发明LLVM/Clang/Swift。&lt;/li&gt;
+&lt;li&gt;在Tesla另外自动驾驶芯片。&lt;/li&gt;
+&lt;li&gt;在Google发起MLIR&lt;/li&gt;
+&lt;li&gt;RISC-V商业化公司SiFive的VP&lt;/li&gt;
+&lt;li&gt;Modulr的创始人，发明Mojo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一系列光环的大佬。&lt;/p&gt;
+&lt;p&gt;记录这个文章的起点是，发现Chris在和geohot（&lt;a href="../posts/20230510165215-%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86geohot/"&gt;重新认识geohot&lt;/a&gt;中的geohot）就什么是AI compiler的终极形态的讨论：&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="../ox-hugo/2025-10-27_16-16-01_screenshot_hu_e5feea9c27bc4e0.webp" height="885" width="1280"&gt;
+ 
+
+ 
+ 
+
+ 
+&lt;/figure&gt;
+
+
+&lt;p&gt;可以说是正统派和野路子的正面交锋/交流。&lt;/p&gt;
+&lt;p&gt;Chris写了一个系列文章：&lt;a href="https://www.modular.com/blog/democratizing-compute-part-1-deepseeks-impact-on-ai"&gt;Democratizing AI Compute&lt;/a&gt;，讲述了自己为什么要创业做Mojo。&lt;/p&gt;
+&lt;p&gt;读完之后，感觉终于解决了我一个长久的困惑，TVM/XLA/Triton/cuTile&amp;hellip;似乎都在解决一个问题，AI编译器，他们究竟是什么关系。&lt;/p&gt;
+&lt;p&gt;所幸大佬站在浪潮之巅，亲身经历这一切，并慷慨地写了一个像是自传一样的总结，让我可以管中窥豹。&lt;/p&gt;
+&lt;p&gt;记录一下。&lt;/p&gt;</description></item><item><title>鱼和熊掌我要兼得：ROS2适合量产吗</title><link>https://www.yangzhenfei.com/posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/</link><pubDate>Wed, 03 Sep 2025 17:54:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/</guid><description>&lt;p&gt;之前在学校的时候用ROS，在DJI的时候用一整套DJI自研的中间件。&lt;/p&gt;
 &lt;p&gt;大家都认可ROS的易用性，但同时觉得它几乎成了“低效”和“实验室原型”的代名词。&lt;/p&gt;
 &lt;p&gt;所以在产品上，DJI毫不犹豫地选择了高效路线，搭建了一整套自研中间件。&lt;/p&gt;
 &lt;p&gt;我长期关注C++的&lt;a href="https://en.cppreference.com/w/cpp/language/Zero-overhead_principle.html"&gt;zero-overhead principle&lt;/a&gt;信条，所以始终觉得很不服气：为什么中间件就不能既好用，又高效？&lt;/p&gt;
@@ -139,7 +173,8 @@ mental strength是可以被锻炼的。
 &lt;p&gt;在历史上，也存在相当长的一段时间是以归纳作为最根本的真理的一段时期。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;归纳问题的经典哲学处理，意味着为归纳推理找到了正当理由，是苏格兰人大卫·休谟完成的。休谟突出了依据重复经验的模式的我们的日常推理，而不是演绎上的有效论证。比如我们相信面包对我们有益，因为过去一直如此，但是面包将来对我们有害至少是可以想象的。&lt;/p&gt;
-&lt;p&gt;休谟说对所有事情都坚持可靠的演绎上的正当有理的人会饿死的。替代激进怀疑论关于所有事物的无所作为，他提倡基于常识的实用怀疑论，这里接受归纳法是必然的。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;休谟说对所有事情都坚持可靠的演绎上的正当有理的人会饿死的。替代激进怀疑论关于所有事物的无所作为，他提倡基于常识的实用怀疑论，这里接受归纳法是必然的。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;今天才看到一个针对两个思考模型进行对比的文章。&lt;/p&gt;
 &lt;p&gt;文章的出发点是：如何平衡first principle和pattern matching。&lt;/p&gt;
 &lt;p&gt;&lt;a href="../ox-hugo/commoncog.com-How%20First%20Principles%20Thinking%20Fails.pdf"&gt;how first principles thinking fails&lt;/a&gt;&lt;/p&gt;</description></item><item><title>system_1_and_system_2</title><link>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</link><pubDate>Wed, 31 May 2023 14:18:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20230531141820-system_1_and_system_2/</guid><description>&lt;p&gt;一种把思维能力二分类的说法：直觉式的反应，和深思熟虑的反应。&lt;/p&gt;
@@ -297,7 +332,8 @@ mental strength是可以被锻炼的。
 &lt;p&gt;惭愧的是，虽然一直知道这本书，实际上却从来没有完整地阅读过。
 没想到这次阅读成了一次开端，让我有一种重新学习编程的感觉。&lt;/p&gt;</description></item><item><title>复合思考</title><link>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</link><pubDate>Tue, 22 Feb 2022 10:12:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220222101253-%E5%A4%8D%E5%90%88%E6%80%9D%E8%80%83/</guid><description>&lt;p&gt;&lt;a href=""&gt;forty-year_career&lt;/a&gt;中提到：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;One section in Coders at Work, I believe it was Joe Armstrong’s, described spending four hours a week thinking about the future. Each week, their thinking would compound on the previous week’s, letting them see further and further into the future. Over time they were dreaming far beyond their contemporaries.&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>public_or_private</title><link>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</link><pubDate>Tue, 15 Feb 2022 20:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</guid><description>&lt;p&gt;&lt;a href="https://news.ycombinator.com/item?id=34223288"&gt;https://news.ycombinator.com/item?id=34223288&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One section in Coders at Work, I believe it was Joe Armstrong’s, described spending four hours a week thinking about the future. Each week, their thinking would compound on the previous week’s, letting them see further and further into the future. Over time they were dreaming far beyond their contemporaries.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>public_or_private</title><link>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</link><pubDate>Tue, 15 Feb 2022 20:38:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220215203814-public_or_private/</guid><description>&lt;p&gt;&lt;a href="https://news.ycombinator.com/item?id=34223288"&gt;https://news.ycombinator.com/item?id=34223288&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;悲观者常常正确，乐观者往往成功&lt;/p&gt;
 &lt;p&gt;反省，忽略了&lt;a href=""&gt;forty-year_career&lt;/a&gt;中的内容。&lt;/p&gt;</description></item><item><title>guide of emacs for vim user</title><link>https://www.yangzhenfei.com/posts/20220209192754-emacs/</link><pubDate>Wed, 09 Feb 2022 19:27:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20220209192754-emacs/</guid><description>&lt;h2 id="目标用户"&gt;目标用户&lt;/h2&gt;
 &lt;h3 id="singularity追求者"&gt;singularity追求者&lt;/h3&gt;
