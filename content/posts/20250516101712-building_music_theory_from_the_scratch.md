@@ -166,7 +166,7 @@ plot(f"{t} divisions (notes)", [(octaves, 'k', "octaves"), (fifth, 'r', "fifths"
 
 所以严格来说，十二平均律是方便，但是不够好听或者说和谐的那一个。
 
-除了这两个之外，还有一些其他的律。甚至这也算一个专门的领域：[律学](https://zh.wikipedia.org/zh-hans/%E5%BE%8B%E5%AD%A6)。
+除了这两个之外，还有一些其他的律。甚至这也算一个专门的领域：[律学](https://en.wikipedia.org/wiki/Musical_temperament)。
 
 
 ## 第二章 旋律和和弦的关系 {#第二章-旋律和和弦的关系}
