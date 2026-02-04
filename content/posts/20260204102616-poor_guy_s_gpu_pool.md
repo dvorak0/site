@@ -89,6 +89,13 @@ vast.ai并不预设有很大的数据（我瞎猜的，主要是因为存储空�
     在[wandb](https://wandb.ai)的log里面，能很清楚的看到网络流量的使用：
 
     {{< figure src="/ox-hugo/2026-02-04_11-36-05_screenshot.png" >}}
+3.  你也可以像[geohot]({{< relref "20230510165215-重新认识geohot.md" >}})一样自己写一个tiny s3：[https://github.com/geohot/minikeyvalue](https://github.com/geohot/minikeyvalue)
+
+    之前看到这个repo的时候，不知道他要干什么。。。
+
+    直到这次开始把GPU和数据通过网络去连接，才明白。
+
+    这个项目也是挺有意思的。完全就是简单的用多个nginx作为volume server，然后用一个简单的中心节点做负载均衡。
 
 
 ## audit log {#audit-log}
