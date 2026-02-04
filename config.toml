@@ -5,6 +5,7 @@ theme = 'smol'
 refLinksErrorLevel = "WARNING"
 relativeURLs = true
 enableGitInfo =true
+pagination.pagerSize = 20
 
 [sitemap]
   filename = 'sitemap.xml'
