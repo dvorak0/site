@@ -102,6 +102,8 @@ vast.ai并不预设有很大的数据（我瞎猜的，主要是因为存储空�
 
 `vastai show audit-logs` 可以给详细的统计信息，Team中不同的member的使用量什么的，如果想搞也可以，不过也没必要吧，毕竟vastai相比正规军，已经便宜太多了。。。
 
+{{< figure src="/ox-hugo/2026-02-06_14-13-59_screenshot.png" >}}
+
 
 ## 螺蛳壳里做道场 {#螺蛳壳里做道场}
 
