@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 06 Feb 2026 14:14:33 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>一个使用体验很好的GPU云：vast.ai</title><link>https://www.yangzhenfei.com/posts/20260204102616-poor_guy_s_gpu_pool/</link><pubDate>Wed, 04 Feb 2026 10:26:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260204102616-poor_guy_s_gpu_pool/</guid><description>&lt;p&gt;起点是，自己有时候想做一点简单的实验，需要一个云上的GPU。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 12 May 2026 18:05:00 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>鱼和熊掌系列(2): ROS2的python可以变快吗</title><link>https://www.yangzhenfei.com/posts/20260512180501-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E7%B3%BB%E5%88%97_2_ros2%E7%9A%84python%E5%8F%AF%E4%BB%A5%E5%8F%98%E5%BF%AB%E5%90%97/</link><pubDate>Tue, 12 May 2026 18:05:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260512180501-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E7%B3%BB%E5%88%97_2_ros2%E7%9A%84python%E5%8F%AF%E4%BB%A5%E5%8F%98%E5%BF%AB%E5%90%97/</guid><description>&lt;p&gt;上次讨论了&lt;a href="../posts/20250903175454-%E9%B1%BC%E5%92%8C%E7%86%8A%E6%8E%8C%E6%88%91%E8%A6%81%E5%85%BC%E5%BE%97_ros2%E9%80%82%E5%90%88%E9%87%8F%E4%BA%A7%E5%90%97/"&gt;鱼和熊掌我要兼得：ROS2适合量产吗&lt;/a&gt;，基本回答了ROS2经过仔细调整之后，是不是可以性能很高。&lt;/p&gt;
+&lt;p&gt;是的，3.8%单核，在地瓜X5平台。&lt;/p&gt;
+&lt;p&gt;当时还是漏掉了一些东西，比如重要的，&lt;a href="https://github.com/UniflexAI/tinynav"&gt;https://github.com/UniflexAI/tinynav&lt;/a&gt; 基本是用python的。&lt;/p&gt;
+&lt;p&gt;那么问题就是：&lt;/p&gt;
+&lt;p&gt;可以偷懒，在量产系统用中，用ROS2 python node吗。&lt;/p&gt;
+&lt;p&gt;先说结论：可以很接近，但是依旧有明显差距。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="../ox-hugo/2026-05-14_22-55-00_screenshot_hu_b4f4c405bf1d9503.webp" height="704" width="1280"&gt;
+ 
+
+ 
+ 
+
+ 
+&lt;/figure&gt;</description></item><item><title>一个使用体验很好的GPU云：vast.ai</title><link>https://www.yangzhenfei.com/posts/20260204102616-poor_guy_s_gpu_pool/</link><pubDate>Wed, 04 Feb 2026 10:26:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260204102616-poor_guy_s_gpu_pool/</guid><description>&lt;p&gt;起点是，自己有时候想做一点简单的实验，需要一个云上的GPU。&lt;/p&gt;
 &lt;p&gt;找了一圈，发现&lt;a href="https://vast.ai"&gt;vast.ai&lt;/a&gt;的使用方式感觉非常惊艳，从2C消费电子的视角来看，使用体验很好。&lt;/p&gt;
 &lt;p&gt;在工作中也用了一段时间了，所以想描述一下我是怎么使用vast.ai的，为什么我喜欢使用它。&lt;/p&gt;</description></item><item><title>Agentic Coding</title><link>https://www.yangzhenfei.com/posts/20260109144352-agentic_coding/</link><pubDate>Fri, 09 Jan 2026 14:43:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260109144352-agentic_coding/</guid><description>&lt;p&gt;用AI写代码已经成为共识，但是怎么用依旧属于混沌时代（起码在今天）。&lt;/p&gt;
 &lt;p&gt;不同人有不同的写法，甚至包括Claude Code的作者&lt;a href="https://x.com/bcherny"&gt;Boris Cherny&lt;/a&gt;也说自己也在探索怎么使用这个工具。&lt;/p&gt;
