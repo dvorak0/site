@@ -29,6 +29,11 @@ pagination.pagerSize = 20
         url = "/tags/"
         weight = 2
   [[menu.main]]
+        identifier = "categories"
+        name = "Projects"
+        url = "/categories/"
+        weight = 2
+  [[menu.main]]
         identifier = "about"
         name = "About"
         url = "/about/"
