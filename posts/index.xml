@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jul 2026 00:11:27 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>pi.cpp: Robot Foundation Models inference in C/C++</title><link>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</link><pubDate>Fri, 03 Jul 2026 17:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</guid><description>&lt;p&gt;如果没有精确的测量，那么优化就没有意义。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Seeking Complexity</title><link>https://www.yangzhenfei.com/posts/</link><description>Recent content in Posts on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jul 2026 00:44:42 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>tinynav 2.0: rethinking VLN</title><link>https://www.yangzhenfei.com/posts/20260709001921-tinynav2/</link><pubDate>Thu, 09 Jul 2026 00:19:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260709001921-tinynav2/</guid><description>&lt;p&gt;继&lt;a href="../posts/20251231104543-e2e_self_driving_%E5%8A%A8%E6%89%8B%E5%86%993000%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%B3%BB%E7%BB%9F/"&gt;E2E Self-Driving：3000行的端到端导航tinynav+tinybev&lt;/a&gt;之后，tinynav这一套软件已经解决了不少项目，有一些是公开的，有一些还没有公开。&lt;/p&gt;
+&lt;p&gt;在没有宣传的情况下，也被国内的一些公众号发现了，心里很是感激。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="../ox-hugo/2026-07-08_23-26-06_screenshot_hu_73d89f36b7d00d55.webp" height="1012" width="1280"&gt;
+ 
+
+ 
+ 
+
+ 
+&lt;/figure&gt;
+
+
+&lt;p&gt;最近准备发布一个大点的更新。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;整体增加了&lt;a href="https://pypi.org/project/tinynav/"&gt;CLI&lt;/a&gt;工具：方便上手，更重要的是，便于LLM调用。以及我们有APP啦。&lt;/li&gt;
+&lt;li&gt;用我们的方式实现了language navigation。&lt;/li&gt;
+&lt;li&gt;实现了real2sim pipeline。&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>pi.cpp: Robot Foundation Models inference in C/C++</title><link>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</link><pubDate>Fri, 03 Jul 2026 17:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</guid><description>&lt;p&gt;如果没有精确的测量，那么优化就没有意义。&lt;/p&gt;
 &lt;p&gt;在众多的模型PR之后，我想了解两个问题：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;这些模型在有限的算力下（200T以内），能跑在端测吗&lt;/li&gt;
@@ -104,14 +131,14 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;在 &lt;strong&gt;具身智能&lt;/strong&gt; 的热潮之下，第一点让头脑冷静的，可能就得是劝人分清本体控制能力和智能能力。&lt;/p&gt;
-&lt;p&gt;不仅定义范畴不同，实际上技术上的最佳实践也分道扬镳。&lt;/p&gt;
+&lt;p&gt;在 &lt;strong&gt;具身智能&lt;/strong&gt; 的热潮下，可能首先需要做的，就是分清本体控制能力和智能能力。&lt;/p&gt;
+&lt;p&gt;它们不仅定义不同，技术路线也已经分道扬镳。&lt;/p&gt;
 &lt;p&gt;我更关注智能，而其中，相比于手上的能力，我也更关注腿上的能力，也就是导航的能力。&lt;/p&gt;
 &lt;p&gt;我计划动手写一套导航软件，可以：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;多本体：四足狗，人形，小车&lt;/li&gt;
 &lt;li&gt;代码精简：选择这个领域的一些最佳实践，并且适合作为各种想法的试验田&lt;/li&gt;
-&lt;li&gt;容易上手：尽量少的需要调的参数，至少针对特定的本体和计算平台，开箱即用。&lt;/li&gt;
+&lt;li&gt;容易上手：尽量少地需要调参，至少针对特定的本体和计算平台，开箱即用。&lt;/li&gt;
 &lt;/ol&gt;</description></item><item><title>简明控制理论：写在电磁悬挂国产化的2025年</title><link>https://www.yangzhenfei.com/posts/20251031162057-%E7%AE%80%E6%98%8E%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA_%E5%86%99%E5%9C%A8%E7%94%B5%E7%A3%81%E6%82%AC%E6%8C%82%E5%9B%BD%E4%BA%A7%E5%8C%96%E7%9A%842025%E5%B9%B4/</link><pubDate>Fri, 31 Oct 2025 16:20:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20251031162057-%E7%AE%80%E6%98%8E%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA_%E5%86%99%E5%9C%A8%E7%94%B5%E7%A3%81%E6%82%AC%E6%8C%82%E5%9B%BD%E4%BA%A7%E5%8C%96%E7%9A%842025%E5%B9%B4/</guid><description>&lt;p&gt;自己本来算是计算机的背景，感谢这个教育让我有了一种“离散”的世界观。&lt;/p&gt;
 &lt;p&gt;后面做机器人，接触到很多控制背景的朋友，简单了解下发现这是一个和计算机相爱相杀的学科。&lt;/p&gt;
 &lt;p&gt;互相重复且独立地发明了不少相似的概念。更重要地，展示了一种“连续”的世界观。&lt;/p&gt;
@@ -173,35 +200,7 @@
  
 
  
-&lt;/figure&gt;</description></item><item><title>tinynav 2.0</title><link>https://www.yangzhenfei.com/posts/20250814114404-tinynav/</link><pubDate>Thu, 14 Aug 2025 11:44:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250814114404-tinynav/</guid><description>&lt;p&gt;继&lt;a href="../posts/20251231104543-e2e_self_driving_%E5%8A%A8%E6%89%8B%E5%86%993000%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%B3%BB%E7%BB%9F/"&gt;E2E Self-Driving：3000行的端到端导航tinynav+tinybev&lt;/a&gt;之后，tinynav这一套软件已经解决了不少项，有一些是公开的，有一些还没有公开。&lt;/p&gt;
-&lt;p&gt;在没有宣传的情况下，也被国内的一些公众号发现了，心里很是感激。&lt;/p&gt;
-&lt;figure&gt;
- 
-
- 
- 
-
- 
- 
- 
- 
- &lt;img src="../ox-hugo/2026-07-08_23-26-06_screenshot_hu_73d89f36b7d00d55.webp" height="1012" width="1280"&gt;
- 
-
- 
- 
-
- 
-&lt;/figure&gt;
-
-
-&lt;p&gt;最近准备发布一个大点的更新。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;整体增加了&lt;a href="https://pypi.org/project/tinynav/"&gt;CLI&lt;/a&gt;工具：方便上手，更重要的是，便于LLM调用。以及我们有APP啦。&lt;/li&gt;
-&lt;li&gt;有APP啦&lt;/li&gt;
-&lt;li&gt;用我们的方式实现了language navigation。&lt;/li&gt;
-&lt;li&gt;实现了real2sim pipeline。&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>OOP considered harmful</title><link>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</link><pubDate>Fri, 18 Jul 2025 10:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</guid><description>&lt;p&gt;一直想记录一下这一点。&lt;/p&gt;
+&lt;/figure&gt;</description></item><item><title>OOP considered harmful</title><link>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</link><pubDate>Fri, 18 Jul 2025 10:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250718102851-oop_considered_harmful/</guid><description>&lt;p&gt;一直想记录一下这一点。&lt;/p&gt;
 &lt;p&gt;现在互联网上很讲究“觉醒”，类似忽然发现小时候习以为常的事情，其实是PUA什么的。&lt;/p&gt;
 &lt;p&gt;虽然用在这里不是很恰当，但是感觉在我所需要的领域里面，OOP确实带来的都是不好的体验。&lt;/p&gt;
 &lt;p&gt;但是这个不好来自哪里，做了很多次尝试才慢慢清晰。&lt;/p&gt;
