@@ -1,1 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TinyNav: A Lightweight, Hackable System to Guide Your Robots Anywhere on Seeking Complexity</title><link>https://www.yangzhenfei.com/categories/tinynav-a-lightweight-hackable-system-to-guide-your-robots-anywhere/</link><description>Recent content in TinyNav: A Lightweight, Hackable System to Guide Your Robots Anywhere on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 03 Jul 2026 17:32:41 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/categories/tinynav-a-lightweight-hackable-system-to-guide-your-robots-anywhere/index.xml" rel="self" type="application/rss+xml"/><item><title>tinynav 2.0</title><link>https://www.yangzhenfei.com/posts/20250814114404-tinynav/</link><pubDate>Thu, 14 Aug 2025 11:44:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250814114404-tinynav/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TinyNav: A Lightweight, Hackable System to Guide Your Robots Anywhere on Seeking Complexity</title><link>https://www.yangzhenfei.com/categories/tinynav-a-lightweight-hackable-system-to-guide-your-robots-anywhere/</link><description>Recent content in TinyNav: A Lightweight, Hackable System to Guide Your Robots Anywhere on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jul 2026 00:11:27 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/categories/tinynav-a-lightweight-hackable-system-to-guide-your-robots-anywhere/index.xml" rel="self" type="application/rss+xml"/><item><title>E2E Self-Driving：3000行的端到端导航tinynav+tinybev</title><link>https://www.yangzhenfei.com/posts/20251231104543-e2e_self_driving_%E5%8A%A8%E6%89%8B%E5%86%993000%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%B3%BB%E7%BB%9F/</link><pubDate>Wed, 31 Dec 2025 10:45:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20251231104543-e2e_self_driving_%E5%8A%A8%E6%89%8B%E5%86%993000%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%B3%BB%E7%BB%9F/</guid><description>&lt;p&gt;人形机器人最近吸引了非常多的目光。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="../../ox-hugo/2026-07-08_22-10-33_screenshot_hu_e73ce3dba9aeabb6.webp" height="720" width="1280"&gt;
+ 
+
+ 
+ 
+
+ 
+&lt;/figure&gt;
+
+
+&lt;p&gt;在 &lt;strong&gt;具身智能&lt;/strong&gt; 的热潮之下，第一点让头脑冷静的，可能就得是劝人分清本体控制能力和智能能力。&lt;/p&gt;
+&lt;p&gt;不仅定义范畴不同，实际上技术上的最佳实践也分道扬镳。&lt;/p&gt;
+&lt;p&gt;我更关注智能，而其中，相比于手上的能力，我也更关注腿上的能力，也就是导航的能力。&lt;/p&gt;
+&lt;p&gt;我计划动手写一套导航软件，可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;多本体：四足狗，人形，小车&lt;/li&gt;
+&lt;li&gt;代码精简：选择这个领域的一些最佳实践，并且适合作为各种想法的试验田&lt;/li&gt;
+&lt;li&gt;容易上手：尽量少的需要调的参数，至少针对特定的本体和计算平台，开箱即用。&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>tinynav 2.0</title><link>https://www.yangzhenfei.com/posts/20250814114404-tinynav/</link><pubDate>Thu, 14 Aug 2025 11:44:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20250814114404-tinynav/</guid><description>&lt;p&gt;继&lt;a href="../../posts/20251231104543-e2e_self_driving_%E5%8A%A8%E6%89%8B%E5%86%993000%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AB%AF%E5%88%B0%E7%AB%AF%E7%B3%BB%E7%BB%9F/"&gt;E2E Self-Driving：3000行的端到端导航tinynav+tinybev&lt;/a&gt;之后，tinynav这一套软件已经解决了不少项，有一些是公开的，有一些还没有公开。&lt;/p&gt;
+&lt;p&gt;在没有宣传的情况下，也被国内的一些公众号发现了，心里很是感激。&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="../../ox-hugo/2026-07-08_23-26-06_screenshot_hu_73d89f36b7d00d55.webp" height="1012" width="1280"&gt;
+ 
+
+ 
+ 
+
+ 
+&lt;/figure&gt;
+
+
+&lt;p&gt;最近准备发布一个大点的更新。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;整体增加了&lt;a href="https://pypi.org/project/tinynav/"&gt;CLI&lt;/a&gt;工具：方便上手，更重要的是，便于LLM调用。以及我们有APP啦。&lt;/li&gt;
+&lt;li&gt;有APP啦&lt;/li&gt;
+&lt;li&gt;用我们的方式实现了language navigation。&lt;/li&gt;
+&lt;li&gt;实现了real2sim pipeline。&lt;/li&gt;
+&lt;/ol&gt;</description></item></channel></rss>

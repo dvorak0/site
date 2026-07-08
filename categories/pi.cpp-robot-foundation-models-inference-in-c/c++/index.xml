@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pi.cpp: Robot Foundation Models Inference in C/C++ on Seeking Complexity</title><link>https://www.yangzhenfei.com/categories/pi.cpp-robot-foundation-models-inference-in-c/c++/</link><description>Recent content in Pi.cpp: Robot Foundation Models Inference in C/C++ on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 03 Jul 2026 17:32:41 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/categories/pi.cpp-robot-foundation-models-inference-in-c/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>pi.cpp: Robot Foundation Models inference in C/C++</title><link>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</link><pubDate>Fri, 03 Jul 2026 17:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pi.cpp: Robot Foundation Models Inference in C/C++ on Seeking Complexity</title><link>https://www.yangzhenfei.com/categories/pi.cpp-robot-foundation-models-inference-in-c/c++/</link><description>Recent content in Pi.cpp: Robot Foundation Models Inference in C/C++ on Seeking Complexity</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jul 2026 00:11:27 +0800</lastBuildDate><atom:link href="https://www.yangzhenfei.com/categories/pi.cpp-robot-foundation-models-inference-in-c/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>pi.cpp: Robot Foundation Models inference in C/C++</title><link>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</link><pubDate>Fri, 03 Jul 2026 17:28:00 +0800</pubDate><guid>https://www.yangzhenfei.com/posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/</guid><description>&lt;p&gt;如果没有精确的测量，那么优化就没有意义。&lt;/p&gt;
+&lt;p&gt;在众多的模型PR之后，我想了解两个问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这些模型在有限的算力下（200T以内），能跑在端测吗&lt;/li&gt;
+&lt;li&gt;如果可以，那么更大更慢的模型，是不是性能更好&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;为了回答这个问题，第一步我希望有一个准确的时间测量，最好，这个测量的结果，可以帮助我更好地做端测部署。&lt;/p&gt;
+&lt;p&gt;这里介绍最近做的一个工作，受llama.cpp启发，它的名字是pi.cpp：&lt;/p&gt;
+&lt;figure&gt;
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ &lt;img src="../../../ox-hugo/2026-07-08_23-59-55_screenshot_hu_305b05856bf3d8e6.webp" height="692" width="1280"&gt;
+ 
+
+ 
+ 
+
+ 
+&lt;/figure&gt;</description></item></channel></rss>
