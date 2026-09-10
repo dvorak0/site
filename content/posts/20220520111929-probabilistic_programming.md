@@ -226,6 +226,19 @@ plt.show()
       margin-top: 1em;
       font-weight: bold;
     }
+    @media (prefers-color-scheme: dark) {
+      #depth-widget {
+        background: #1f1f1f;
+        border-color: #555;
+      }
+      #depth-widget input,
+      #depth-widget select {
+        color-scheme: dark;
+        color: #fff;
+        background: #2a2a2a;
+        border-color: #666;
+      }
+    }
   </style>
 
   <label for="mode">Focal Length Input Mode:</label>
