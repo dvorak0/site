@@ -1,0 +1,127 @@
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=description content="self-reflections of Zhenfei Yang"><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><style type=text/css>body{font-family:monospace}</style><title>muse/dots/manus 2.0，以及(无人关心的)openclaw 2.0</title><link rel=stylesheet href=../../css/style.css></head><body><header><script defer src=https://worker.yangzhenfei.com/a.js></script><script defer>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-JHXS14NDHV")</script><script defer src=https://cloud.umami.is/script.js data-website-id=045b5d99-a38d-410c-984f-5ac9e7cc7b76></script>========================<br>== <a href=https://www.yangzhenfei.com/>Seeking Complexity</a> ==<br>========================<div style=float:right></div><br><p><nav><a href=../../><b>Start</b></a>.
+<a href=../../posts/><b>Posts</b></a>.
+<a href=../../categories/><b>Projects</b></a>.
+<a href=../../tags/><b>Tags</b></a>.
+<a href=../../about/><b>About</b></a>.</nav></p></header><main><article><h1>muse/dots/manus 2.0，以及(无人关心的)openclaw 2.0</h1><b><time>2026-09-30 10:40:00</time></b>
+<a href=../../tags/public>PUBLIC</a><div><figure><img src=../../ox-hugo/side-by-side_hu_a2fc0bc182ada1e6.webp height=449 width=1280></figure><p>从3月份到9月份，从openclaw的爆火，到各家都推出了自己的集成化产品。</p><p>使用AI的侧重点也跟着发生了变化，讲讲新一轮刷新工具之后的一些特性：</p><p>连续数天连续工作的能力，记忆层，远程访问的体验，笔记本和手机任务接力，数据备份。</p><p>以及影响更深远的，GPT-6-Astra对具身模型的影响。</p><h2 id=几个使用模式>几个使用模式</h2><ol><li><p>[强]能够比较长时间的工作
+如果选一个指标来评价AI的进步，可能会使用自主工作的时间长度。</p><p>Devin在2024年3月13发布的时候，就是希望做一个完全异步的工作流。
+回想起来那个时候还是比较难的。</p><p>今天讨论这个问题，可能大家反而会觉得，Coding Agent本应该能连续工作。</p><p><figure><img src=../../ox-hugo/2026-09-30_12-36-06_screenshot.png alt></figure>反而变成我是少见的openclaw受害者。</p><figure><img src=../../ox-hugo/2026-09-30_12-25-54_screenshot_hu_e7dd956c35780573.webp height=2474 width=1280></figure><p>不过我现在也不知道是为什么。。。其他agent可能都符合这个需求。</p></li><li><p>[强]能在VPS常驻，并手机访问，有通知</p><p>为什么openclaw在上面提到有这么严重的问题，还在用。。</p><p>就是因为适应了discord这个界面：</p><figure><img src=../../ox-hugo/2026-09-30_12-34-48_screenshot_hu_ba506f88fd992196.webp height=952 width=1280></figure><p>完美符合，还有一个很清晰的project/workspace/session管理，有通知。</p><p>新方案里面用<a href=https://pi-web.dev/>pi-web</a>，通过<a href=https://tailscale.com/docs/features/tailscale-serve>tailscale serve</a>可以用类似<a href=https://ubuntu-s-1vcpu-2gb-sfo3-01.taile1547.ts.net/>https://ubuntu-s-1vcpu-2gb-sfo3-01.taile1547.ts.net/</a>形式的链接访问。</p><p>但是没有通知。</p></li><li><p>[中]同一个任务，手机和笔记本可以接力工作
+discord和pi-web都满足。</p><p>其中不满足的反而是Codex的remote，可能是一个短期的问题，但是当前Codex的Linux客户端没有Remote标签。</p><p>所以可以用手机连接VPS上的codex，但是笔记本反而不行，web和cli和desktop都不行。</p></li><li><p>[强]比较好的记忆</p><p>openclaw给我的感觉一个是比较复杂：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>  plugins: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    entries: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>      <span style=color:#e6db74>&#34;memory-wiki&#34;</span>: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        enabled: true,
+</span></span><span style=display:flex><span>        config: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>          vaultMode: <span style=color:#e6db74>&#34;isolated&#34;</span>,
+</span></span><span style=display:flex><span>          vault: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            scope: <span style=color:#e6db74>&#34;global&#34;</span>,
+</span></span><span style=display:flex><span>            path: <span style=color:#e6db74>&#34;~/.openclaw/wiki/main&#34;</span>,
+</span></span><span style=display:flex><span>            renderMode: <span style=color:#e6db74>&#34;obsidian&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          obsidian: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            enabled: true,
+</span></span><span style=display:flex><span>            useOfficialCli: true,
+</span></span><span style=display:flex><span>            vaultName: <span style=color:#e6db74>&#34;OpenClaw Wiki&#34;</span>,
+</span></span><span style=display:flex><span>            openAfterWrites: false,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          bridge: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            enabled: false,
+</span></span><span style=display:flex><span>            readMemoryArtifacts: true,
+</span></span><span style=display:flex><span>            indexDreamReports: true,
+</span></span><span style=display:flex><span>            indexDailyNotes: true,
+</span></span><span style=display:flex><span>            indexMemoryRoot: true,
+</span></span><span style=display:flex><span>            followMemoryEvents: true,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          unsafeLocal: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            allowPrivateMemoryCoreAccess: false,
+</span></span><span style=display:flex><span>            paths: <span style=color:#f92672>[]</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          ingest: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            autoCompile: true,
+</span></span><span style=display:flex><span>            maxConcurrentJobs: 1,
+</span></span><span style=display:flex><span>            allowUrlIngest: true,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          search: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            backend: <span style=color:#e6db74>&#34;shared&#34;</span>,
+</span></span><span style=display:flex><span>            corpus: <span style=color:#e6db74>&#34;wiki&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          context: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            includeCompiledDigestPrompt: false,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>          render: <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>            preserveHumanBlocks: true,
+</span></span><span style=display:flex><span>            createBacklinks: true,
+</span></span><span style=display:flex><span>            createDashboards: true,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>}</span>,
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><p>实际体感好像也不够好。比如经常忘记 <code>ssh zhenfei@100.90.100.64</code> 还是 <code>ssh root@100.90.100.64</code> 。</p><p>codex反而默认的配置好像就比较好。</p><p>总结来看，现在的记忆好像也经历了一次变化，整体趋势都是更多的交给模型去做。</p><p>古早的做法是Vector retrieval，需要传一个embedding API。</p><p>典型代表有<a href=https://mem0.ai/>mem0</a>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>写入 add<span style=color:#f92672>(</span>对话, user_id<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    最近消息 <span style=color:#f92672>=</span> 读取该会话最近 <span style=color:#ae81ff>10</span> 条消息
+</span></span><span style=display:flex><span>    旧记忆 <span style=color:#f92672>=</span> 在该用户范围内，向量检索最相关的 <span style=color:#ae81ff>10</span> 条记忆
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    新事实 <span style=color:#f92672>=</span> LLM<span style=color:#f92672>(</span>对话, 最近消息, 旧记忆<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># LLM 从用户和助手消息中提取值得记住的事实；</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 旧记忆用于判断哪些事实已经记过</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> 事实 in 新事实:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> 与旧记忆语义重复: 跳过    <span style=color:#75715e># 主要由 LLM 判断</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> MD5<span style=color:#f92672>(</span>事实文本<span style=color:#f92672>)</span> 已存在: 跳过 <span style=color:#75715e># 精确去重</span>
+</span></span><span style=display:flex><span>        向量 <span style=color:#f92672>=</span> embed<span style=color:#f92672>(</span>事实文本<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>        批量存入向量库<span style=color:#f92672>(</span>事实, 向量, user_id, 时间等元数据<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>        记录变更历史、提取并关联实体
+</span></span><span style=display:flex><span>    保存最近消息
+</span></span><span style=display:flex><span>读取 search<span style=color:#f92672>(</span>问题, user_id<span style=color:#f92672>)</span>:
+</span></span><span style=display:flex><span>    候选 <span style=color:#f92672>=</span> 向量检索<span style=color:#f92672>(</span>问题, user_id<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    关键词分 <span style=color:#f92672>=</span> BM25<span style=color:#f92672>(</span>问题<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    实体加分 <span style=color:#f92672>=</span> 匹配问题中的实体
+</span></span><span style=display:flex><span>    对候选计算综合分 <span style=color:#f92672>=</span> <span style=color:#f92672>(</span>语义分 + 关键词分 + 实体加分<span style=color:#f92672>)</span> / 可用信号的最大分
+</span></span><span style=display:flex><span>    过滤过期和低于语义阈值的候选
+</span></span><span style=display:flex><span>    返回 Top-K（可选重排）
+</span></span></code></pre></div><p>更潮流的实现可能反而是rg-based，比如codex的：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>Codex session / rollout
+</span></span><span style=display:flex><span>        │
+</span></span><span style=display:flex><span>        ▼
+</span></span><span style=display:flex><span>┌─────────────────────┐
+</span></span><span style=display:flex><span>│ Phase 1: Extraction │
+</span></span><span style=display:flex><span>│ LLM 提取 raw memory │
+</span></span><span style=display:flex><span>└──────────┬──────────┘
+</span></span><span style=display:flex><span>           │
+</span></span><span style=display:flex><span>           ▼
+</span></span><span style=display:flex><span>      SQLite state DB
+</span></span><span style=display:flex><span>           │
+</span></span><span style=display:flex><span>           ▼
+</span></span><span style=display:flex><span>┌─────────────────────────┐
+</span></span><span style=display:flex><span>│ Phase 2: Consolidation  │
+</span></span><span style=display:flex><span>│ 后台 Agent 整理 Memory  │
+</span></span><span style=display:flex><span>└────────────┬────────────┘
+</span></span><span style=display:flex><span>             │
+</span></span><span style=display:flex><span>             ▼
+</span></span><span style=display:flex><span>     ~/.codex/memories/
+</span></span><span style=display:flex><span>             │
+</span></span><span style=display:flex><span>      ┌──────┴───────┐
+</span></span><span style=display:flex><span>      ▼              ▼
+</span></span><span style=display:flex><span>memory_summary.md   MEMORY.md
+</span></span><span style=display:flex><span>                      │
+</span></span><span style=display:flex><span>                      ▼
+</span></span><span style=display:flex><span>               topic / skills / files
+</span></span><span style=display:flex><span>                      │
+</span></span><span style=display:flex><span>                      ▼
+</span></span><span style=display:flex><span>                  Codex Agent
+</span></span></code></pre></div><p>单独的saas实现有字节的<a href=https://openviking.ai/>OpenViking</a>，甚至把做了一个vfs的抽象：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>                   OpenViking
+</span></span><span style=display:flex><span>                     │
+</span></span><span style=display:flex><span>     ┌───────────────┼───────────────┐
+</span></span><span style=display:flex><span>     ↓               ↓               ↓
+</span></span><span style=display:flex><span>文件系统语义层      精确检索层        向量检索层
+</span></span><span style=display:flex><span>viking://...       grep/glob       Embedding
+</span></span><span style=display:flex><span>     │                               ↓
+</span></span><span style=display:flex><span>L0/L1/L2                         Vector Index
+</span></span><span style=display:flex><span>     │                               │
+</span></span><span style=display:flex><span>     └───────────────┬───────────────┘
+</span></span><span style=display:flex><span>                     ↓
+</span></span><span style=display:flex><span>                  Recall
+</span></span></code></pre></div></li><li><p>[弱]能比较好的备份</p><p>本来的想法是备份“记忆”，发现记忆现在没有形成共识。</p><p>另外的想法就是备份对话记录了，可以用self-host <a href=https://stift.sh/>stift</a>：</p><figure><img src=../../ox-hugo/2026-09-30_13-08-45_screenshot_hu_d12c1d242f27e1a5.webp height=328 width=1280></figure><p>这个时候就觉得openclaw把会话存储改成sqlite很奇怪了。</p></li><li><p>[负分] 会不会进故纸堆了
+一些所谓的agent特性，会不会慢慢都消失掉了。</p><p>从A社精简system_prompts到codex删除/todos。</p><p>现在哪些命令依旧是有用的：</p><ul><li>goal mode/plan mode：好像基本没用了</li><li>subagent：很多时候可以被AI自主的起后台任务代替</li><li>RAG：上面提过了，相比rg-based momory来说，更难融入LLM训练过程</li><li>skiils：也许会被自己提炼的记忆代替，或者agent的通信板代替</li></ul></li></ol><h2 id=仿真是rsi吗>仿真是RSI吗</h2><p>如果说很多硬件相关的调试还是人作为瓶颈，是不是仿真或者说特指sim2real应该能完全自主地优化。</p><p>短期的milestone也许是，工作了100个小时之后，发了一个固件可以让QA去测试抓取。</p><p>因为目前的抓取整体上是依赖仿真数据的，（但是评价不是）。</p><h2 id=gpt-6-astra是怎么做的>GPT-6-Astra是怎么做的</h2><p>可能单纯是，让模型去学习了所有的任务：</p><ul><li>写诗</li><li>写代码</li><li>传统几何</li><li>闭环控制<ul><li>衣服</li><li>抽屉</li><li>导航</li></ul></li></ul><p>如果所有我们认为的子领域的任务，都是OpenAI训练GPT-6的一类数据呢。</p><p>很荣幸成为bootloader的一环。</p><p>对我们来说，还是要快速论证，任务和数据的关联关系，模型只是验证这个关联关系的手段。</p></div></article></main><script src=https://utteranc.es/client.js repo=dvorak0/site issue-term=pathname theme=preferred-color-scheme crossorigin=anonymous async></script><script async src=https://www.yangzhenfei.com/js/mathjax-config.js></script><script type=text/javascript async src=https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.min.js></script><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=../../posts/20260930104045-muse_dots_manus_2_0_%E4%BB%A5%E5%8F%8A_%E6%97%A0%E4%BA%BA%E5%85%B3%E5%BF%83%E7%9A%84_openclaw_2_0/>muse/dots/manus 2.0，以及(无人关心的)openclaw 2.0</a></li><li><a href=../../posts/20260709001921-tinynav2/>tinynav 2.0: rethinking VLN</a></li><li><a href=../../posts/20260703172820-pi_cpp_robot_foundation_models_inference_in_c_c/>pi.cpp: Robot Foundation Models inference in C/C++</a></li><li><a href=../../posts/20260630172942-context_over_control/>组织劣化的秘密：Control over Context</a></li><li><a href=../../posts/20260518113317-%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86_2_%E5%85%B3%E4%BA%8E%E7%9A%AE%E8%B4%A8%E9%86%87%E7%9A%84%E4%B8%80%E5%88%87/>精力管理(2)：交感神经和皮质醇</a></li></ul></div></div></aside><footer><p>&copy; 2026 <a href=https://www.yangzhenfei.com/><b>Seeking Complexity</b></a>.
+<a href=https://github.com/dvorak0><b>Github</b></a>.
+<a href=https://twitter.com/dvorak0><b>Twitter</b></a>.</p></footer></body></html>
