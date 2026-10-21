@@ -46,6 +46,8 @@ draft = false
 
     新方案里面用[pi-web](https://pi-web.dev/)，通过[tailscale serve](https://tailscale.com/docs/features/tailscale-serve)可以用类似[https://ubuntu-s-1vcpu-2gb-sfo3-01.taile1547.ts.net/](https://ubuntu-s-1vcpu-2gb-sfo3-01.taile1547.ts.net/)形式的链接访问。
 
+    或者用[Cloudflare Tunnel](https://developers.cloudflare.com/tunnel/)，通过[https://pi-web.yangzhenfei.com/](https://pi-web.yangzhenfei.com/)访问。
+
     但是没有通知。
 3.  [中]同一个任务，手机和笔记本可以接力工作
     discord和pi-web都满足。
@@ -208,10 +210,11 @@ draft = false
 
     现在哪些命令依旧是有用的：
 
-    -   goal mode/plan mode：好像基本没用了
     -   subagent：很多时候可以被AI自主的起后台任务代替
     -   RAG：上面提过了，相比rg-based momory来说，更难融入LLM训练过程
     -   skiils：也许会被自己提炼的记忆代替，或者agent的通信板代替
+    -   plan mode：好像基本没用了
+    -   goal mode：好像有用
 
 
 ## 仿真是RSI吗 {#仿真是rsi吗}
